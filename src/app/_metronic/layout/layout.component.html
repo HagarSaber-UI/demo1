@@ -4,7 +4,7 @@
   <div class="app-page flex-column flex-column-fluid" id="kt_app_page">
     <ng-container *ngIf="appHeaderDisplay">
       <!--begin::Header-->
-      <app-header id="kt_app_header" class="app-header" [ngClass]="appHeaderDefaultClass">
+      <app-header id="kt_app_header" class="app-header bg-white" [ngClass]="appHeaderDefaultClass">
       </app-header>
       <!--end::Header-->
     </ng-container>
@@ -36,10 +36,10 @@
           </app-content>
         </div>
         <!--end::Content wrapper-->
-        <ng-container *ngIf="appFooterDisplay">
+        <!-- <ng-container *ngIf="appFooterDisplay">
           <app-footer class="app-footer" [ngClass]="appFooterCSSClass" id="kt_app_footer"
             [appFooterContainerCSSClass]="appFooterContainerCSSClass"></app-footer>
-        </ng-container>
+        </ng-container> -->
       </div>
       <!--end:::Main-->
     </div>

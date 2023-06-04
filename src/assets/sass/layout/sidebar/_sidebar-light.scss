@@ -24,24 +24,24 @@
                 }
 
                 @include menu-link-default-state( 
-                    $title-color: var(--#{$prefix}gray-700), 
-                    $icon-color: var(--#{$prefix}gray-500), 
-                    $bullet-color: var(--#{$prefix}gray-500), 
-                    $arrow-color: var(--#{$prefix}gray-500),
+                    $title-color: var(--#{$prefix}gray-900), 
+                    $icon-color: var(--#{$prefix}gray-900), 
+                    $bullet-color: var(--#{$prefix}gray-900), 
+                    $arrow-color: var(--#{$prefix}gray-900),
                     $bg-color: null  
                 );
                 
                 @include menu-link-hover-state( 
                     $title-color: var(--#{$prefix}gray-900), 
-                    $icon-color: var(--#{$prefix}gray-700), 
-                    $bullet-color: var(--#{$prefix}gray-700), 
-                    $arrow-color: var(--#{$prefix}gray-700), 
-                    $bg-color: null
+                    $icon-color: var(--#{$prefix}gray-900), 
+                    $bullet-color: var(--#{$prefix}gray-900), 
+                    $arrow-color: var(--#{$prefix}gray-900), 
+                    $bg-color: #F6F8FA
                 );
                 
                 @include menu-link-show-state( 
                     $title-color: var(--#{$prefix}gray-900), 
-                    $icon-color: var(--#{$prefix}gray-700), 
+                    $icon-color: var(--#{$prefix}gray-900), 
                     $bullet-color: var(--#{$prefix}gray-700), 
                     $arrow-color: var(--#{$prefix}gray-700), 
                     $bg-color: null
@@ -49,7 +49,7 @@
                 
                 @include menu-link-here-state( 
                     $title-color: var(--#{$prefix}gray-900), 
-                    $icon-color: var(--#{$prefix}gray-700), 
+                    $icon-color: var(--#{$prefix}gray-900), 
                     $bullet-color: var(--#{$prefix}gray-700), 
                     $arrow-color: var(--#{$prefix}gray-700), 
                     $bg-color: null
@@ -71,12 +71,12 @@
     .app-header {
         background-color: var(--#{$prefix}app-bg-color);
         box-shadow: none;
-        border-bottom: 1px dashed var(--#{$prefix}app-sidebar-light-separator-color);
+        // border-bottom: 1px dashed var(--#{$prefix}app-sidebar-light-separator-color);
     }
 
     .app-sidebar {
         .app-sidebar-logo {
-            border-bottom: 1px dashed var(--#{$prefix}app-sidebar-light-separator-color);
+            border-bottom: 1px solid var(--#{$prefix}app-sidebar-light-separator-color);
         }
     }
 }
