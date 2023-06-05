@@ -1,6 +1,7 @@
 {
   "name": "demo1",
   "version": "8.1.7",
+  "homepage":"https://hagarsaber-ui.github.io/demo1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
