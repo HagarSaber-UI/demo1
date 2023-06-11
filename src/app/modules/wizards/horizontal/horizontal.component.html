@@ -1,4 +1,517 @@
-<div class="card">
+<!-- TEAM BLOCK============================================================= -->
+<div class="card mb-5 mb-xl-8 card-box-shadow border border-gray-200">
+  <!-- begin::Header -->
+  <div class="card-header border-0 pt-5">
+    <!-- <h3 class="card-title align-items-start flex-column">
+      <span class="card-label fw-bolder fs-3 mb-1">Team</span>
+    </h3> -->
+    <div class="align-items-start flex-column">
+      <div class="position-relative my-1">
+        <app-keenicon name="magnifier"
+          class="fs-5 text-gray-500 position-absolute top-50 translate-middle ps-15"></app-keenicon>
+        <input type="text" class="w-325px fs-6 form-control form-control-solid  form-control-lg px-15"
+          name="Search Team" value="" placeholder="Search by name, company or pm" />
+      </div>
+
+    </div>
+
+    <div class="card-toolbar">
+      <!-- <a href="#" class="btn btn-sm btn-primary btn-active-primary btn-flex ">
+        <app-keenicon name="plus-square" class="text-secondary fs-3 me-1"></app-keenicon>
+        New Record
+      </a> -->
+      <div class="d-flex align-items-center">
+        <span class="fw-bold text-dark me-3 w-70px"> Sort By:</span>
+        <select name="page" class="min-w-80px form-select form-select-solid form-select-lg">
+          <option value="">Creation Date: Ascending</option>
+          <option selected value="5">Creation Date: Ascending</option>
+          <option value="GBP">1</option>
+          <option value="AUD">2</option>
+          <option value="JPY">3</option>
+          <option value="SEK">4</option>
+          <option value="CAD">5</option>
+          <option value="CHF">6</option>
+        </select>
+      </div>
+
+    </div>
+  </div>
+  <!-- end::Header -->
+  <!-- begin::Body -->
+  <div class="card-body py-3">
+    <!-- begin::Table container -->
+    <div class="table-responsive">
+      <!-- begin::Table -->
+      <table class="table align-middle gs-0 gy-7 table-row-dashed table-row-gray-300">
+        <!-- begin::Table head -->
+        <thead>
+          <tr class="fw-bolder text-muted ">
+            <th class=" min-w-200px rounded-start">Project</th>
+            <!-- min-w-325px -->
+            <th class="min-w-125px">Type</th>
+            <!-- min-w-125px -->
+            <th class="min-w-125px">Name/Company</th>
+            <th class="min-w-150px">Account Manager</th>
+            <th class="min-w-150px">Status</th>
+            <th>Cost</th>
+            <th>Due Date</th>
+            <th class="min-w-200px text-end rounded-end">Actions</th>
+          </tr>
+        </thead>
+        <!-- end::Table head -->
+        <!-- begin::Table body -->
+        <tbody>
+          <tr>
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <div class="d-flex justify-content-start flex-column">
+                  <span class="text-gray-500 fw-bold  d-block fs-7">
+                    #124545 | 9/19/2022
+                  </span>
+                  <span class="text-dark fw-bold  d-block fs-7">
+                    Website localization from English into French and German
+                  </span>
+                </div>
+
+              </div>
+
+            </td>
+            <td>
+              <div class="d-flex align-items-center">
+                <app-keenicon name="screen" class="fs-3 me-2"></app-keenicon>
+                <a href="#" class="text-dark fw-bolder text-hover-primary d-block  fs-6">
+                  Website
+                </a>
+              </div>
+
+            </td>
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <a href="#" class="text-dark fw-bolder text-hover-primary mb-1 fs-6">
+                  Adham Sabry
+                </a>
+                <span class="text-gray-500 fw-bold  d-block fs-7">
+                  P&G
+                </span>
+              </div>
+
+            </td>
+            <td>
+              <a href="#" class="text-dark fw-bolder text-hover-primary mb-1 fs-6">
+                Sarah Lee
+              </a>
+            </td>
+            <td>
+              <span class="badge badge-light-warning  fs-7 fw-bold">Pending Approval</span>
+            </td>
+
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <p class="text-dark fw-bolder text-hover-primary mb-1 fs-6">
+                  $1,250
+                </p>
+              </div>
+            </td>
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <p class="text-dark fw-bolder text-hover-primary mb-1 fs-6">
+                  10/19/2023
+                </p>
+              </div>
+            </td>
+            <td class="text-end">
+              <a href="#" class="
+                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
+                me-3
+              ">
+                <app-keenicon name="magnifier" class="fs-3"></app-keenicon>
+              </a>
+
+              <a href="#" class="
+                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
+                
+              ">
+                <app-keenicon name="pencil" class="fs-3"></app-keenicon>
+              </a>
+
+
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <div class="d-flex justify-content-start flex-column">
+                  <span class="text-gray-500 fw-bold  d-block fs-7">
+                    #124545 | 9/19/2022
+                  </span>
+                  <span class="text-dark fw-bold  d-block fs-7">
+                    Website localization from English into French and German
+                  </span>
+                </div>
+
+              </div>
+
+            </td>
+            <td>
+              <div class="d-flex align-items-center">
+                <app-keenicon name="document" class="fs-3 me-2"></app-keenicon>
+                <a href="#" class="text-dark fw-bolder text-hover-primary d-block  fs-6">
+                  Document
+                </a>
+              </div>
+
+            </td>
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <a href="#" class="text-dark fw-bolder text-hover-primary mb-1 fs-6">
+                  Mona Qadry
+                </a>
+                <span class="text-gray-500 fw-bold  d-block fs-7">
+                  P&G
+                </span>
+              </div>
+
+            </td>
+            <td>
+              <a href="#" class="text-dark fw-bolder text-hover-primary mb-1 fs-6">
+                Maria Rodriguez
+              </a>
+            </td>
+            <td>
+              <span class="badge badge-light-info  fs-7 fw-bold">Submitted</span>
+            </td>
+
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <p class="text-dark fw-bolder text-hover-primary mb-1 fs-6">
+                  $2,391
+                </p>
+              </div>
+            </td>
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <p class="text-dark fw-bolder text-hover-primary mb-1 fs-6">
+                  10/19/2023
+                </p>
+              </div>
+            </td>
+            <td class="text-end">
+              <a href="#" class="
+                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
+                me-3
+              ">
+                <app-keenicon name="magnifier" class="fs-3"></app-keenicon>
+              </a>
+
+              <a href="#" class="
+                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
+                
+              ">
+                <app-keenicon name="pencil" class="fs-3"></app-keenicon>
+              </a>
+
+
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <div class="d-flex justify-content-start flex-column">
+                  <span class="text-gray-500 fw-bold  d-block fs-7">
+                    #124545 | 9/19/2022
+                  </span>
+                  <span class="text-dark fw-bold  d-block fs-7">
+                    Website localization from English into French and German
+                  </span>
+                </div>
+
+              </div>
+
+            </td>
+            <td>
+              <div class="d-flex align-items-center">
+                <app-keenicon name="code" class="fs-3 me-2"></app-keenicon>
+                <a href="#" class="text-dark fw-bolder text-hover-primary d-block  fs-6">
+                  Software
+                </a>
+              </div>
+
+            </td>
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <a href="#" class="text-dark fw-bolder text-hover-primary mb-1 fs-6">
+                  John Martin
+                </a>
+                <span class="text-gray-500 fw-bold  d-block fs-7">
+                  Google
+                </span>
+              </div>
+
+            </td>
+            <td>
+              <a href="#" class="text-dark fw-bolder text-hover-primary mb-1 fs-6">
+                Olivia Nguyen
+              </a>
+            </td>
+            <td>
+              <span class="badge badge-light-info  fs-7 fw-bold">Submitted</span>
+            </td>
+
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <p class="text-dark fw-bolder text-hover-primary mb-1 fs-6">
+                  $2,391
+                </p>
+              </div>
+            </td>
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <p class="text-dark fw-bolder text-hover-primary mb-1 fs-6">
+                  10/19/2023
+                </p>
+              </div>
+            </td>
+            <td class="text-end">
+              <a href="#" class="
+                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
+                me-3
+              ">
+                <app-keenicon name="magnifier" class="fs-3"></app-keenicon>
+              </a>
+
+              <a href="#" class="
+                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
+                
+              ">
+                <app-keenicon name="pencil" class="fs-3"></app-keenicon>
+              </a>
+
+
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <div class="d-flex justify-content-start flex-column">
+                  <span class="text-gray-500 fw-bold  d-block fs-7">
+                    #124545 | 9/19/2022
+                  </span>
+                  <span class="text-dark fw-bold  d-block fs-7">
+                    Website localization from English into French and German
+                  </span>
+                </div>
+
+              </div>
+
+            </td>
+            <td>
+              <div class="d-flex align-items-center">
+                <app-keenicon name="picture" class="fs-3 me-2"></app-keenicon>
+                <a href="#" class="text-dark fw-bolder text-hover-primary d-block  fs-6">
+                  Multimedia
+                </a>
+              </div>
+
+            </td>
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <a href="#" class="text-dark fw-bolder text-hover-primary mb-1 fs-6">
+                  Noreldin Mahmoud
+                </a>
+                <span class="text-gray-500 fw-bold  d-block fs-7">
+                  P&G
+                </span>
+              </div>
+
+            </td>
+            <td>
+              <a href="#" class="text-dark fw-bolder text-hover-primary mb-1 fs-6">
+                Kim Chang
+              </a>
+            </td>
+            <td>
+              <span class="badge badge-light-danger  fs-7 fw-bold">Canceled</span>
+            </td>
+
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <p class="text-dark fw-bolder text-hover-primary mb-1 fs-6">
+                  $1,250
+                </p>
+              </div>
+            </td>
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <p class="text-dark fw-bolder text-hover-primary mb-1 fs-6">
+                  10/19/2023
+                </p>
+              </div>
+            </td>
+            <td class="text-end">
+              <a href="#" class="
+                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
+                me-3
+              ">
+                <app-keenicon name="magnifier" class="fs-3"></app-keenicon>
+              </a>
+
+              <a href="#" class="
+                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
+                
+              ">
+                <app-keenicon name="pencil" class="fs-3"></app-keenicon>
+              </a>
+
+
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <div class="d-flex justify-content-start flex-column">
+                  <span class="text-gray-500 fw-bold  d-block fs-7">
+                    #124545 | 9/19/2022
+                  </span>
+                  <span class="text-dark fw-bold  d-block fs-7">
+                    Website localization from English into French and German
+                  </span>
+                </div>
+
+              </div>
+
+            </td>
+            <td>
+              <div class="d-flex align-items-center">
+                <app-keenicon name="messages" class="fs-3 me-2"></app-keenicon>
+                <a href="#" class="text-dark fw-bolder text-hover-primary d-block  fs-6">
+                  Interpretation
+                </a>
+              </div>
+
+            </td>
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <a href="#" class="text-dark fw-bolder text-hover-primary mb-1 fs-6">
+                  Adham Sabry
+                </a>
+                <span class="text-gray-500 fw-bold  d-block fs-7">
+                  P&G
+                </span>
+              </div>
+
+            </td>
+            <td>
+              <a href="#" class="text-dark fw-bolder text-hover-primary mb-1 fs-6">
+                Sarah Lee
+              </a>
+            </td>
+            <td>
+              <span class="badge badge-light-primary  fs-7 fw-bold">Rejected</span>
+            </td>
+
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <p class="text-dark fw-bolder text-hover-primary mb-1 fs-6">
+                  $1,250
+                </p>
+              </div>
+            </td>
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <p class="text-dark fw-bolder text-hover-primary mb-1 fs-6">
+                  10/19/2023
+                </p>
+              </div>
+            </td>
+            <td class="text-end">
+              <a href="#" class="
+                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
+                me-3
+              ">
+                <app-keenicon name="magnifier" class="fs-3"></app-keenicon>
+              </a>
+
+              <a href="#" class="
+                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
+                
+              ">
+                <app-keenicon name="pencil" class="fs-3"></app-keenicon>
+              </a>
+
+
+            </td>
+          </tr>
+
+
+        </tbody>
+        <!-- end::Table body -->
+      </table>
+      <!-- end::Table -->
+    </div>
+    <!-- end::Table container -->
+  </div>
+  <div class="card-footer border-0">
+    <div class="d-flex flex-stack flex-wrap ">
+      <div class="fs-6 fw-bold text-gray-700">
+        <div class="d-inline-flex align-items-center">
+          <span class="me-3">Showing</span>
+          <select name="page" class="form-select form-select-solid form-select-lg">
+            <option value="">Select..</option>
+            <option selected value="5">5</option>
+            <option value="GBP">1</option>
+            <option value="AUD">2</option>
+            <option value="JPY">3</option>
+            <option value="SEK">4</option>
+            <option value="CAD">5</option>
+            <option value="CHF">6</option>
+          </select>
+        </div>
+
+      </div>
+
+      <ul class="pagination">
+        <li class="page-item previous">
+          <a class="page-link cursor-pointer">
+            <i class="previous"></i>
+          </a>
+        </li>
+
+        <li class="page-item active">
+          <a class="page-link cursor-pointer"> 1 </a>
+        </li>
+
+        <li class="page-item">
+          <a class="page-link cursor-pointer"> 2 </a>
+        </li>
+
+        <li class="page-item">
+          <a class="page-link cursor-pointer"> 3 </a>
+        </li>
+
+        <li class="page-item">
+          <a class="page-link cursor-pointer"> 4 </a>
+        </li>
+
+        <li class="page-item">
+          <a class="page-link cursor-pointer"> 5 </a>
+        </li>
+
+        <li class="page-item">
+          <a class="page-link cursor-pointer"> 6 </a>
+        </li>
+
+        <li class="page-item next">
+          <a class="page-link cursor-pointer">
+            <i class="next"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- begin::Body -->
+</div>
+
+<!-- <div class="card">
   <div class="card-body">
     <div
       class="stepper stepper-links d-flex flex-column pt-15"
@@ -134,4 +647,4 @@
       </form>
     </div>
   </div>
-</div>
+</div> -->

@@ -1,170 +1,597 @@
-<div class="d-flex flex-wrap flex-stack mb-6">
-  <h3 class="fw-bolder my-2">
-    My Campaigns
-    <span class="fs-6 text-gray-400 fw-bold ms-1">30 Days</span>
-  </h3>
-
-  <div class="d-flex align-items-center my-2">
-    <div class="w-100px me-5">
-      <select
-        name="status"
-        data-control="select2"
-        data-hide-search="true"
-        class="form-select form-select-white form-select-sm"
-      >
-        <option value="1" selected>30 Days</option>
-        <option value="2">90 Days</option>
-        <option value="3">6 Months</option>
-        <option value="4">1 Year</option>
-      </select>
+<!-- TEAM BLOCK============================================================= -->
+<div class="card mb-5 mb-xl-8 card-box-shadow border border-gray-200">
+  <!-- begin::Header -->
+  <div class="card-header border-0 pt-5">
+    <h3 class="card-title align-items-start flex-column">
+      <span class="card-label fw-bolder fs-3 mb-1">Tasks</span>
+    </h3>
+    <div class="card-toolbar">
+      <a href="#" class="btn btn-sm btn-primary btn-active-primary btn-flex ">
+        <app-keenicon name="plus-square" class="text-secondary fs-3 me-1"></app-keenicon>
+        New Task
+      </a>
     </div>
-    <button
-      class="btn btn-primary btn-sm"
-      data-bs-toggle="tooltip"
-      title="Coming soon"
-    >
-      Add Campaign
-    </button>
   </div>
+  <!-- end::Header -->
+  <!-- begin::Body -->
+  <div class="card-body py-3">
+    <!-- begin::Table container -->
+    <div class="table-responsive">
+      <!-- begin::Table -->
+      <table class="table align-middle gs-0 gy-7 table-row-dashed table-row-gray-300">
+        <!-- begin::Table head -->
+        <thead>
+          <tr class="fw-bolder text-muted ">
+            <th class="w-25px">
+              <div class="
+                  form-check form-check-sm form-check-custom form-check-solid
+                ">
+                <input class="form-check-input" type="checkbox" value="1" data-kt-check="true"
+                  data-kt-check-target=".widget-9-check" />
+              </div>
+            </th>
+            <th class="min-w-125px">Task</th>
+            <!-- min-w-325px -->
+            <th class="min-w-150px">Vendor</th>
+            <!-- min-w-125px -->
+            <th class="min-w-150px">Language Pair</th>
+            <th class="min-w-100px">Estimation</th>
+            <th class="min-w-125px">Progress</th>
+            <th class="min-w-100px">Note</th>
+            <th class="min-w-200px text-end rounded-end">Actions</th>
+          </tr>
+        </thead>
+        <!-- end::Table head -->
+        <!-- begin::Table body -->
+        <tbody>
+          <tr>
+            <td>
+              <div class="
+                  form-check form-check-sm form-check-custom form-check-solid
+                ">
+                <input class="form-check-input widget-9-check" type="checkbox" value="1" />
+              </div>
+            </td>
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <a href="#" class="text-dark fw-bolder text-hover-primary mb-1 fs-6">
+                  Internal Kickoff
+                </a>
+              </div>
+
+            </td>
+            <td>
+              <a href="#" class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6">
+                Sarah Lee
+              </a>
+            </td>
+            <td>
+              <a href="#" class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6">
+                -
+              </a>
+            </td>
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <span class="text-gray-600 fw-bold  d-block fs-7">
+                  10/19/2023
+
+                </span>
+                <span class="text-gray-600 fw-bold  d-block fs-7">
+                  12/1/2023
+                </span>
+              </div>
+            </td>
+            <td class="text-end">
+              <div class="d-flex flex-column w-100 me-2">
+                <div class="d-flex flex-stack mb-2">
+                  <span class="text-muted me-2 fs-7 fw-bold">50%</span>
+                </div>
+                <div class="progress h-6px w-100">
+                  <div class="progress-bar bg-primary" role="progressbar" [style.width]="'50%'"></div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <p class="text-dark fw-bolder text-hover-primary mb-1 fs-6">
+                  This is just a note can be added here
+                </p>
+              </div>
+            </td>
+            <td class="text-end">
+
+
+              <a href="#" class="
+                btn btn-icon btn-bg-light   btn-sm
+                me-3
+              ">
+                <app-keenicon name="pencil" class="fs-3"></app-keenicon>
+              </a>
+              <a href="#" class="btn btn-icon btn-bg-light  btn-sm me-3">
+                <app-keenicon name="trash" class="fs-3 text-danger"></app-keenicon>
+              </a>
+              <a href="#" class="btn btn-icon btn-bg-warning  btn-sm me-3">
+                <app-keenicon name="tablet-up" class="fs-3 text-white"></app-keenicon>
+              </a>
+              <a href="#" class="btn btn-icon btn-bg-primary btn-sm">
+                <app-keenicon name="wrench" class="fs-3 text-white"></app-keenicon>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="
+                  form-check form-check-sm form-check-custom form-check-solid
+                ">
+                <input class="form-check-input widget-9-check" type="checkbox" value="1" />
+              </div>
+            </td>
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <a href="#" class="text-dark fw-bolder text-hover-primary mb-1 fs-6">
+                  Client Orientation
+                </a>
+              </div>
+
+            </td>
+            <td>
+              <a href="#" class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6">
+                Maria Rodriguez
+              </a>
+            </td>
+            <td>
+              <a href="#" class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6">
+                -
+              </a>
+            </td>
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <span class="text-gray-600 fw-bold  d-block fs-7">
+                  10/19/2023
+
+                </span>
+                <span class="text-gray-600 fw-bold  d-block fs-7">
+                  12/1/2023
+                </span>
+              </div>
+            </td>
+            <td class="text-end">
+              <div class="d-flex flex-column w-100 me-2">
+                <div class="d-flex flex-stack mb-2">
+                  <span class="text-muted me-2 fs-7 fw-bold">70%</span>
+                </div>
+                <div class="progress h-6px w-100">
+                  <div class="progress-bar bg-success" role="progressbar" [style.width]="'70%'"></div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <p class="text-dark fw-bolder text-hover-primary mb-1 fs-6">
+                  This is just a note can be added here
+                </p>
+              </div>
+            </td>
+            <td class="text-end">
+
+
+              <a href="#" class="
+                btn btn-icon btn-bg-light   btn-sm
+                me-3
+              ">
+                <app-keenicon name="pencil" class="fs-3"></app-keenicon>
+              </a>
+              <a href="#" class="btn btn-icon btn-bg-light  btn-sm me-3">
+                <app-keenicon name="trash" class="fs-3 text-danger"></app-keenicon>
+              </a>
+              <a href="#" class="btn btn-icon btn-bg-warning  btn-sm me-3">
+                <app-keenicon name="tablet-up" class="fs-3 text-white"></app-keenicon>
+              </a>
+              <a href="#" class="btn btn-icon btn-bg-primary btn-sm">
+                <app-keenicon name="wrench" class="fs-3 text-white"></app-keenicon>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="
+                  form-check form-check-sm form-check-custom form-check-solid
+                ">
+                <input class="form-check-input widget-9-check" type="checkbox" value="1" />
+              </div>
+            </td>
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <a href="#" class="text-dark fw-bolder text-hover-primary mb-1 fs-6">
+                  Subject Matter Research
+                </a>
+              </div>
+
+            </td>
+            <td>
+              <a href="#" class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6">
+                Olivia Nguyen
+              </a>
+            </td>
+            <td>
+              <a href="#" class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6">
+                -
+              </a>
+            </td>
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <span class="text-gray-600 fw-bold  d-block fs-7">
+                  10/19/2023
+
+                </span>
+                <span class="text-gray-600 fw-bold  d-block fs-7">
+                  12/1/2023
+                </span>
+              </div>
+            </td>
+            <td class="text-end">
+              <div class="d-flex flex-column w-100 me-2">
+                <div class="d-flex flex-stack mb-2">
+                  <span class="text-muted me-2 fs-7 fw-bold">70%</span>
+                </div>
+                <div class="progress h-6px w-100">
+                  <div class="progress-bar bg-success" role="progressbar" [style.width]="'70%'"></div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <p class="text-dark fw-bolder text-hover-primary mb-1 fs-6">
+                  This is just a note can be added here
+                </p>
+              </div>
+            </td>
+            <td class="text-end">
+
+
+              <a href="#" class="
+                btn btn-icon btn-bg-light   btn-sm
+                me-3
+              ">
+                <app-keenicon name="pencil" class="fs-3"></app-keenicon>
+              </a>
+              <a href="#" class="btn btn-icon btn-bg-light  btn-sm me-3">
+                <app-keenicon name="trash" class="fs-3 text-danger"></app-keenicon>
+              </a>
+              <a href="#" class="btn btn-icon btn-bg-warning  btn-sm me-3">
+                <app-keenicon name="tablet-up" class="fs-3 text-white"></app-keenicon>
+              </a>
+              <a href="#" class="btn btn-icon btn-bg-primary btn-sm">
+                <app-keenicon name="wrench" class="fs-3 text-white"></app-keenicon>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="
+                  form-check form-check-sm form-check-custom form-check-solid
+                ">
+                <input class="form-check-input widget-9-check" type="checkbox" value="1" />
+              </div>
+            </td>
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <a href="#" class="text-dark fw-bolder text-hover-primary mb-1 fs-6">
+                  Glossary Development
+                </a>
+              </div>
+
+            </td>
+            <td>
+              <a href="#" class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6">
+                Kim Chang
+              </a>
+            </td>
+            <td>
+              <a href="#" class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6">
+                English - English (UK)
+              </a>
+            </td>
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <span class="text-gray-600 fw-bold  d-block fs-7">
+                  10/19/2023
+
+                </span>
+                <span class="text-gray-600 fw-bold  d-block fs-7">
+                  12/1/2023
+                </span>
+              </div>
+            </td>
+            <td class="text-end">
+              <div class="d-flex flex-column w-100 me-2">
+                <div class="d-flex flex-stack mb-2">
+                  <span class="text-muted me-2 fs-7 fw-bold">Not started</span>
+                </div>
+                <div class="progress h-6px w-100">
+                  <div class="progress-bar bg-success" role="progressbar" [style.width]="'0'"></div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <p class="text-dark fw-bolder text-hover-primary mb-1 fs-6">
+                  -
+                </p>
+              </div>
+            </td>
+            <td class="text-end">
+
+
+              <a href="#" class="
+                btn btn-icon btn-bg-light   btn-sm
+                me-3
+              ">
+                <app-keenicon name="pencil" class="fs-3"></app-keenicon>
+              </a>
+              <a href="#" class="btn btn-icon btn-bg-light  btn-sm me-3">
+                <app-keenicon name="trash" class="fs-3 text-danger"></app-keenicon>
+              </a>
+              <a href="#" class="btn btn-icon btn-bg-warning  btn-sm me-3">
+                <app-keenicon name="tablet-up" class="fs-3 text-white"></app-keenicon>
+              </a>
+              <a href="#" class="btn btn-icon btn-bg-primary btn-sm">
+                <app-keenicon name="wrench" class="fs-3 text-white"></app-keenicon>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="
+                  form-check form-check-sm form-check-custom form-check-solid
+                ">
+                <input class="form-check-input widget-9-check" type="checkbox" value="1" />
+              </div>
+            </td>
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <a href="#" class="text-dark fw-bolder text-hover-primary mb-1 fs-6">
+                  Translating & Editing
+                </a>
+                <div class="d-flex align-items-center">
+                  <app-keenicon name="check-circle" class="me-2 fs-3 text-success"></app-keenicon>
+                  <!-- text-muted fw-bold text-muted d-block fs-7 -->
+                  <span class="text-gray-500 fw-bolder fs-7">
+                    Work order created
+                  </span>
+                </div>
+              </div>
+
+            </td>
+            <td>
+              <a href="#" class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6">
+                Lucas Silva
+              </a>
+            </td>
+            <td>
+              <a href="#" class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6">
+                English - English (UK)
+              </a>
+            </td>
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <span class="text-gray-600 fw-bold  d-block fs-7">
+                  10/19/2023
+
+                </span>
+                <span class="text-gray-600 fw-bold  d-block fs-7">
+                  12/1/2023
+                </span>
+              </div>
+            </td>
+            <td class="text-end">
+              <div class="d-flex flex-column w-100 me-2">
+                <div class="d-flex flex-stack mb-2">
+                  <span class="text-muted me-2 fs-7 fw-bold">40%</span>
+                </div>
+                <div class="progress h-6px w-100">
+                  <div class="progress-bar bg-success" role="progressbar" [style.width]="'40%'"></div>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <p class="text-dark fw-bolder text-hover-primary mb-1 fs-6">
+                  -
+                </p>
+              </div>
+            </td>
+            <td class="text-end">
+
+
+              <a href="#" class="
+                btn btn-icon btn-bg-light   btn-sm
+                me-3
+              ">
+                <app-keenicon name="pencil" class="fs-3"></app-keenicon>
+              </a>
+              <a href="#" class="btn btn-icon btn-bg-light  btn-sm me-3">
+                <app-keenicon name="trash" class="fs-3 text-danger"></app-keenicon>
+              </a>
+              <a href="#" class="btn btn-icon btn-bg-warning  btn-sm me-3">
+                <app-keenicon name="tablet-up" class="fs-3 text-white"></app-keenicon>
+              </a>
+              <a href="#" class="btn btn-icon btn-bg-primary btn-sm">
+                <app-keenicon name="wrench" class="fs-3 text-white"></app-keenicon>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+        <!-- end::Table body -->
+      </table>
+      <!-- end::Table -->
+    </div>
+    <!-- end::Table container -->
+  </div>
+  <div class="card-footer border-0">
+    <div class="d-flex flex-stack flex-wrap ">
+      <div class="fs-6 fw-bold text-gray-700">
+        <div class="d-inline-flex align-items-center">
+          <span class="me-3">Showing</span>
+          <select name="page" class="form-select form-select-solid form-select-lg">
+            <option value="">Select..</option>
+            <option selected value="5">5</option>
+            <option value="GBP">1</option>
+            <option value="AUD">2</option>
+            <option value="JPY">3</option>
+            <option value="SEK">4</option>
+            <option value="CAD">5</option>
+            <option value="CHF">6</option>
+          </select>
+        </div>
+
+      </div>
+
+      <ul class="pagination">
+        <li class="page-item previous">
+          <a class="page-link cursor-pointer">
+            <i class="previous"></i>
+          </a>
+        </li>
+
+        <li class="page-item active">
+          <a class="page-link cursor-pointer"> 1 </a>
+        </li>
+
+        <li class="page-item">
+          <a class="page-link cursor-pointer"> 2 </a>
+        </li>
+
+        <li class="page-item">
+          <a class="page-link cursor-pointer"> 3 </a>
+        </li>
+
+        <li class="page-item">
+          <a class="page-link cursor-pointer"> 4 </a>
+        </li>
+
+        <li class="page-item">
+          <a class="page-link cursor-pointer"> 5 </a>
+        </li>
+
+        <li class="page-item">
+          <a class="page-link cursor-pointer"> 6 </a>
+        </li>
+
+        <li class="page-item next">
+          <a class="page-link cursor-pointer">
+            <i class="next"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- begin::Body -->
 </div>
 
-<div class="row g-6 g-xl-9">
-  <div class="col-sm-6 col-xl-4">
-    <app-card5
-      image="./assets/media/svg/brand-logos/twitch.svg"
-      title="Twitch Posts"
-      description="$500.00"
-      status="down"
-      [statusValue]="40.5"
-      statusDesc="more impressions"
-      [progress]="0.5"
-      progressType="MRR"
-    ></app-card5>
+<!-- DiSPLAY:NONE============================================================= -->
+<div style="display: none;">
+  <div class="d-flex flex-wrap flex-stack mb-6">
+    <h3 class="fw-bolder my-2">
+      My Campaigns
+      <span class="fs-6 text-gray-400 fw-bold ms-1">30 Days</span>
+    </h3>
+
+    <div class="d-flex align-items-center my-2">
+      <div class="w-100px me-5">
+        <select name="status" data-control="select2" data-hide-search="true"
+          class="form-select form-select-white form-select-sm">
+          <option value="1" selected>30 Days</option>
+          <option value="2">90 Days</option>
+          <option value="3">6 Months</option>
+          <option value="4">1 Year</option>
+        </select>
+      </div>
+      <button class="btn btn-primary btn-sm" data-bs-toggle="tooltip" title="Coming soon">
+        Add Campaign
+      </button>
+    </div>
   </div>
-  <div class="col-sm-6 col-xl-4">
-    <app-card5
-      image="./assets/media/svg/brand-logos/twitter.svg"
-      title="Twitter Followers"
-      description="807k"
-      status="up"
-      [statusValue]="17.62"
-      statusDesc="Followers growth"
-      [progress]="5"
-      progressType="New trials"
-    ></app-card5>
+
+  <div class="row g-6 g-xl-9">
+    <div class="col-sm-6 col-xl-4">
+      <app-card5 image="./assets/media/svg/brand-logos/twitch.svg" title="Twitch Posts" description="$500.00"
+        status="down" [statusValue]="40.5" statusDesc="more impressions" [progress]="0.5"
+        progressType="MRR"></app-card5>
+    </div>
+    <div class="col-sm-6 col-xl-4">
+      <app-card5 image="./assets/media/svg/brand-logos/twitter.svg" title="Twitter Followers" description="807k"
+        status="up" [statusValue]="17.62" statusDesc="Followers growth" [progress]="5"
+        progressType="New trials"></app-card5>
+    </div>
+    <div class="col-sm-6 col-xl-4">
+      <app-card5 image="./assets/media/svg/brand-logos/spotify.svg" title="Spotify Listeners" description="1,073"
+        status="down" [statusValue]="10.45" statusDesc="Less comments than usual" [progress]="40"
+        progressType="Impressions"></app-card5>
+    </div>
+    <div class="col-sm-6 col-xl-4">
+      <app-card5 image="./assets/media/svg/brand-logos/pinterest-p.svg" title="Pinterest Posts" description="97"
+        status="up" [statusValue]="26.1" statusDesc="More posts" [progress]="10" progressType="Spend"></app-card5>
+    </div>
+    <div class="col-sm-6 col-xl-4">
+      <app-card5 image="./assets/media/svg/brand-logos/github.svg" title="Github Contributes" description="4,109"
+        status="down" [statusValue]="32.8" statusDesc="Less contributions" [progress]="40"
+        progressType="Dispute"></app-card5>
+    </div>
+    <div class="col-sm-6 col-xl-4">
+      <app-card5 image="./assets/media/svg/brand-logos/youtube-play.svg" title="Youtube Subscribers" description="354"
+        status="up" [statusValue]="29.45" statusDesc="Subscribers growth" [progress]="40"
+        progressType="Subscribers"></app-card5>
+    </div>
+    <div class="col-sm-6 col-xl-4">
+      <app-card5 image="./assets/media/svg/brand-logos/telegram.svg" title="Telegram Posts" description="566"
+        status="up" [statusValue]="11.4" statusDesc="more clicks" [progress]="40" progressType="Profit"></app-card5>
+    </div>
+    <div class="col-sm-6 col-xl-4">
+      <app-card5 image="./assets/media/svg/brand-logos/reddit.svg" title="Reddit Awards" description="2.1M" status="up"
+        [statusValue]="46.7" statusDesc="more adds" [progress]="0.0" progressType="Retention"></app-card5>
+    </div>
   </div>
-  <div class="col-sm-6 col-xl-4">
-    <app-card5
-      image="./assets/media/svg/brand-logos/spotify.svg"
-      title="Spotify Listeners"
-      description="1,073"
-      status="down"
-      [statusValue]="10.45"
-      statusDesc="Less comments than usual"
-      [progress]="40"
-      progressType="Impressions"
-    ></app-card5>
+
+  <div class="d-flex flex-stack flex-wrap pt-10">
+    <div class="fs-6 fw-bold text-gray-700">Showing 1 to 10 of 50 entries</div>
+
+    <ul class="pagination">
+      <li class="page-item previous">
+        <a class="page-link cursor-pointer">
+          <i class="previous"></i>
+        </a>
+      </li>
+
+      <li class="page-item active">
+        <a class="page-link cursor-pointer"> 1 </a>
+      </li>
+
+      <li class="page-item">
+        <a class="page-link cursor-pointer"> 2 </a>
+      </li>
+
+      <li class="page-item">
+        <a class="page-link cursor-pointer"> 3 </a>
+      </li>
+
+      <li class="page-item">
+        <a class="page-link cursor-pointer"> 4 </a>
+      </li>
+
+      <li class="page-item">
+        <a class="page-link cursor-pointer"> 5 </a>
+      </li>
+
+      <li class="page-item">
+        <a class="page-link cursor-pointer"> 6 </a>
+      </li>
+
+      <li class="page-item next">
+        <a class="page-link cursor-pointer">
+          <i class="next"></i>
+        </a>
+      </li>
+    </ul>
   </div>
-  <div class="col-sm-6 col-xl-4">
-    <app-card5
-      image="./assets/media/svg/brand-logos/pinterest-p.svg"
-      title="Pinterest Posts"
-      description="97"
-      status="up"
-      [statusValue]="26.1"
-      statusDesc="More posts"
-      [progress]="10"
-      progressType="Spend"
-    ></app-card5>
-  </div>
-  <div class="col-sm-6 col-xl-4">
-    <app-card5
-      image="./assets/media/svg/brand-logos/github.svg"
-      title="Github Contributes"
-      description="4,109"
-      status="down"
-      [statusValue]="32.8"
-      statusDesc="Less contributions"
-      [progress]="40"
-      progressType="Dispute"
-    ></app-card5>
-  </div>
-  <div class="col-sm-6 col-xl-4">
-    <app-card5
-      image="./assets/media/svg/brand-logos/youtube-play.svg"
-      title="Youtube Subscribers"
-      description="354"
-      status="up"
-      [statusValue]="29.45"
-      statusDesc="Subscribers growth"
-      [progress]="40"
-      progressType="Subscribers"
-    ></app-card5>
-  </div>
-  <div class="col-sm-6 col-xl-4">
-    <app-card5
-      image="./assets/media/svg/brand-logos/telegram.svg"
-      title="Telegram Posts"
-      description="566"
-      status="up"
-      [statusValue]="11.4"
-      statusDesc="more clicks"
-      [progress]="40"
-      progressType="Profit"
-    ></app-card5>
-  </div>
-  <div class="col-sm-6 col-xl-4">
-    <app-card5
-      image="./assets/media/svg/brand-logos/reddit.svg"
-      title="Reddit Awards"
-      description="2.1M"
-      status="up"
-      [statusValue]="46.7"
-      statusDesc="more adds"
-      [progress]="0.0"
-      progressType="Retention"
-    ></app-card5>
-  </div>
-</div>
-
-<div class="d-flex flex-stack flex-wrap pt-10">
-  <div class="fs-6 fw-bold text-gray-700">Showing 1 to 10 of 50 entries</div>
-
-  <ul class="pagination">
-    <li class="page-item previous">
-      <a class="page-link cursor-pointer">
-        <i class="previous"></i>
-      </a>
-    </li>
-
-    <li class="page-item active">
-      <a class="page-link cursor-pointer"> 1 </a>
-    </li>
-
-    <li class="page-item">
-      <a class="page-link cursor-pointer"> 2 </a>
-    </li>
-
-    <li class="page-item">
-      <a class="page-link cursor-pointer"> 3 </a>
-    </li>
-
-    <li class="page-item">
-      <a class="page-link cursor-pointer"> 4 </a>
-    </li>
-
-    <li class="page-item">
-      <a class="page-link cursor-pointer"> 5 </a>
-    </li>
-
-    <li class="page-item">
-      <a class="page-link cursor-pointer"> 6 </a>
-    </li>
-
-    <li class="page-item next">
-      <a class="page-link cursor-pointer">
-        <i class="next"></i>
-      </a>
-    </li>
-  </ul>
 </div>
