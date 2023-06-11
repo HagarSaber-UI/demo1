@@ -1,210 +1,585 @@
-<div class="d-flex flex-wrap flex-stack mb-6">
-  <h3 class="fw-bolder my-2">
-    My Projects Hagar
-    
-    <span class="fs-6 text-gray-400 fw-bold ms-1">Active</span>
-  </h3>
-
-  <div class="d-flex flex-wrap my-2">
-    <div class="me-4">
-      <select
-        name="status"
-        data-control="select2"
-        data-hide-search="true"
-        class="form-select form-select-sm form-select-white w-125px"
-        defaultValue="Active"
-      >
-        <option value="Active">Active</option>
-        <option value="Approved">In Progress</option>
-        <option value="Declined">To Do</option>
-        <option value="In Progress">Completed</option>
-      </select>
+<!-- TEAM BLOCK============================================================= -->
+<div class="card mb-5 mb-xl-8 card-box-shadow border border-gray-200">
+  <!-- begin::Header -->
+  <div class="card-header border-0 pt-5">
+    <h3 class="card-title align-items-start flex-column">
+      <span class="card-label fw-bolder fs-3 mb-1">Team</span>
+      <!-- <span class="text-muted mt-1 fw-bold fs-7">Over 500 new products</span> -->
+    </h3>
+    <div class="card-toolbar">
+      <a href="#" class="btn btn-sm btn-primary btn-active-primary btn-flex ">
+        <app-keenicon name="plus-square" class="text-secondary fs-3 me-1"></app-keenicon>
+        New Record
+      </a>
     </div>
-    <a
-      class="btn btn-primary btn-sm cursor-pointer"
-      data-bs-toggle="modal"
-      data-bs-target="#kt_modal_create_project"
-    >
-      New Project
-    </a>
   </div>
+  <!-- end::Header -->
+  <!-- begin::Body -->
+  <div class="card-body py-3">
+    <!-- begin::Table container -->
+    <div class="table-responsive">
+      <!-- begin::Table -->
+      <table class="table align-middle gs-0 gy-7 table-row-dashed table-row-gray-300">
+        <!-- begin::Table head -->
+        <thead>
+          <tr class="fw-bolder text-muted ">
+            <th class="  rounded-start">Role</th>
+            <!-- min-w-325px -->
+            <th class="">Vendor</th>
+            <!-- min-w-125px -->
+            <th class="min-w-125px">ISO</th>
+            <th class="min-w-200px">Rating</th>
+            <th class="min-w-150px">Note</th>
+            <th class="min-w-200px text-end rounded-end">Actions</th>
+          </tr>
+        </thead>
+        <!-- end::Table head -->
+        <!-- begin::Table body -->
+        <tbody>
+          <tr>
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <a href="#" class="text-dark fw-bolder text-hover-primary mb-1 fs-6">
+                  QA/Tester
+                </a>
+              </div>
+
+            </td>
+            <td>
+              <a href="#" class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6">
+                Samir Sabry
+              </a>
+            </td>
+            <td>
+              <span class="badge badge-light-warning  fs-7 fw-bold">Not Compliant</span>
+            </td>
+            <td>
+              <div class="d-flex align-items-center">
+                <div class="rating">
+                  <div class="rating-label me-2 ">
+                    <i class="bi bi-star-fill fs-5"></i>
+                  </div>
+                  <div class="rating-label me-2 ">
+                    <i class="bi bi-star-fill fs-5"></i>
+                  </div>
+                  <div class="rating-label me-2 ">
+                    <i class="bi bi-star-fill fs-5"></i>
+                  </div>
+                  <div class="rating-label me-2 ">
+                    <i class="bi bi-star-fill fs-5"></i>
+                  </div>
+                  <div class="rating-label me-2 ">
+                    <i class="bi bi-star-fill fs-5"></i>
+                  </div>
+                </div>
+                <a href="#" class="
+              btn btn-icon btn-bg-light btn-active-color-primary btn-sm
+              me-3
+            ">
+                  <app-keenicon name="exit-right-corner" class="fs-3"></app-keenicon>
+                </a>
+
+              </div>
+            </td>
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <p class="text-dark fw-bolder text-hover-primary mb-1 fs-6">
+                  -
+                </p>
+              </div>
+            </td>
+            <td class="text-end">
+              <a href="#" class="btn btn-sm
+              me-3 btn-bg-success btn-color-white  px-4 py-2">
+
+                <app-keenicon name="abstract-23" class="fs-3 text-white"></app-keenicon>
+
+                Rate </a>
+
+              <a href="#" class="
+                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
+                me-3
+              ">
+                <app-keenicon name="pencil" class="fs-3"></app-keenicon>
+              </a>
+              <a href="#" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm">
+                <app-keenicon name="trash" class="fs-3"></app-keenicon>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <a href="#" class="text-dark fw-bolder text-hover-primary mb-1 fs-6">
+                  Translator/Editor
+                </a>
+              </div>
+
+            </td>
+            <td>
+              <a href="#" class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6">
+                Sonia Graham
+              </a>
+            </td>
+            <td>
+              <span class="badge badge-light-success  fs-7 fw-bold">Compliant</span>
+            </td>
+            <td>
+              <div class="d-flex align-items-center">
+                <div class="rating">
+                  <div class="rating-label me-2 checked">
+                    <i class="bi bi-star-fill fs-5"></i>
+                  </div>
+                  <div class="rating-label me-2 ">
+                    <i class="bi bi-star-fill fs-5"></i>
+                  </div>
+                  <div class="rating-label me-2 ">
+                    <i class="bi bi-star-fill fs-5"></i>
+                  </div>
+                  <div class="rating-label me-2 ">
+                    <i class="bi bi-star-fill fs-5"></i>
+                  </div>
+                  <div class="rating-label me-2 ">
+                    <i class="bi bi-star-fill fs-5"></i>
+                  </div>
+                </div>
+                <a href="#" class="
+              btn btn-icon btn-bg-light btn-active-color-primary btn-sm
+              me-3
+            ">
+                  <app-keenicon name="exit-right-corner" class="fs-3"></app-keenicon>
+                </a>
+
+              </div>
+            </td>
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <p class="text-dark fw-bolder text-hover-primary mb-1 fs-6">
+                  This is a note related to this vendor
+                </p>
+              </div>
+            </td>
+            <td class="text-end">
+              <a href="#" class="btn btn-sm
+              me-3 btn-bg-success btn-color-white  px-4 py-2">
+
+                <app-keenicon name="abstract-23" class="fs-3 text-white"></app-keenicon>
+
+                Rate </a>
+
+              <a href="#" class="
+                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
+                me-3
+              ">
+                <app-keenicon name="pencil" class="fs-3"></app-keenicon>
+              </a>
+              <a href="#" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm">
+                <app-keenicon name="trash" class="fs-3"></app-keenicon>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <a href="#" class="text-dark fw-bolder text-hover-primary mb-1 fs-6">
+                  Project Manager
+                </a>
+              </div>
+
+            </td>
+            <td>
+              <a href="#" class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6">
+                Noureldin Mahmoud
+              </a>
+            </td>
+            <td>
+              <span class="badge badge-light-success  fs-7 fw-bold">Compliant</span>
+            </td>
+            <td>
+              <div class="d-flex align-items-center">
+                <div class="rating">
+                  <div class="rating-label me-2 checked">
+                    <i class="bi bi-star-fill fs-5"></i>
+                  </div>
+                  <div class="rating-label me-2 checked">
+                    <i class="bi bi-star-fill fs-5"></i>
+                  </div>
+                  <div class="rating-label me-2 checked">
+                    <i class="bi bi-star-fill fs-5"></i>
+                  </div>
+                  <div class="rating-label me-2 ">
+                    <i class="bi bi-star-fill fs-5"></i>
+                  </div>
+                  <div class="rating-label me-2 ">
+                    <i class="bi bi-star-fill fs-5"></i>
+                  </div>
+                </div>
+                <a href="#" class="
+              btn btn-icon btn-bg-light btn-active-color-primary btn-sm
+              me-3
+            ">
+                  <app-keenicon name="exit-right-corner" class="fs-3"></app-keenicon>
+                </a>
+
+              </div>
+            </td>
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <p class="text-dark fw-bolder text-hover-primary mb-1 fs-6">
+                  This is a note related to this vendor
+                </p>
+              </div>
+            </td>
+            <td class="text-end">
+              <a href="#" class="btn btn-sm
+              me-3 btn-bg-success btn-color-white  px-4 py-2">
+
+                <app-keenicon name="abstract-23" class="fs-3 text-white"></app-keenicon>
+
+                Rate </a>
+
+              <a href="#" class="
+                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
+                me-3
+              ">
+                <app-keenicon name="pencil" class="fs-3"></app-keenicon>
+              </a>
+              <a href="#" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm">
+                <app-keenicon name="trash" class="fs-3"></app-keenicon>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <a href="#" class="text-dark fw-bolder text-hover-primary mb-1 fs-6">
+                  DTP Specialist
+                </a>
+              </div>
+
+            </td>
+            <td>
+              <a href="#" class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6">
+                Mona Qadry
+              </a>
+            </td>
+            <td>
+              <span class="badge badge-light-success  fs-7 fw-bold">Compliant</span>
+            </td>
+            <td>
+              <div class="d-flex align-items-center">
+                <div class="rating">
+                  <div class="rating-label me-2 checked">
+                    <i class="bi bi-star-fill fs-5"></i>
+                  </div>
+                  <div class="rating-label me-2 ">
+                    <i class="bi bi-star-fill fs-5"></i>
+                  </div>
+                  <div class="rating-label me-2 ">
+                    <i class="bi bi-star-fill fs-5"></i>
+                  </div>
+                  <div class="rating-label me-2 ">
+                    <i class="bi bi-star-fill fs-5"></i>
+                  </div>
+                  <div class="rating-label me-2 ">
+                    <i class="bi bi-star-fill fs-5"></i>
+                  </div>
+                </div>
+                <a href="#" class="
+              btn btn-icon btn-bg-light btn-active-color-primary btn-sm
+              me-3
+            ">
+                  <app-keenicon name="exit-right-corner" class="fs-3"></app-keenicon>
+                </a>
+
+              </div>
+            </td>
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <p class="text-dark fw-bolder text-hover-primary mb-1 fs-6">
+                  This is a note related to this vendor
+                </p>
+              </div>
+            </td>
+            <td class="text-end">
+              <a href="#" class="btn btn-sm
+              me-3 btn-bg-success btn-color-white  px-4 py-2">
+
+                <app-keenicon name="abstract-23" class="fs-3 text-white"></app-keenicon>
+
+                Rate </a>
+
+              <a href="#" class="
+                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
+                me-3
+              ">
+                <app-keenicon name="pencil" class="fs-3"></app-keenicon>
+              </a>
+              <a href="#" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm">
+                <app-keenicon name="trash" class="fs-3"></app-keenicon>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <a href="#" class="text-dark fw-bolder text-hover-primary mb-1 fs-6">
+                  Account Manager
+                </a>
+              </div>
+
+            </td>
+            <td>
+              <a href="#" class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6">
+                Lucas Silva
+              </a>
+            </td>
+            <td>
+              <span class="badge badge-light-warning  fs-7 fw-bold">Not Compliant</span>
+            </td>
+            <td>
+              <div class="d-flex align-items-center">
+                <div class="rating">
+                  <div class="rating-label me-2 checked">
+                    <i class="bi bi-star-fill fs-5"></i>
+                  </div>
+                  <div class="rating-label me-2 checked">
+                    <i class="bi bi-star-fill fs-5"></i>
+                  </div>
+                  <div class="rating-label me-2 checked">
+                    <i class="bi bi-star-fill fs-5"></i>
+                  </div>
+                  <div class="rating-label me-2 ">
+                    <i class="bi bi-star-fill fs-5"></i>
+                  </div>
+                  <div class="rating-label me-2 ">
+                    <i class="bi bi-star-fill fs-5"></i>
+                  </div>
+                </div>
+                <a href="#" class="
+              btn btn-icon btn-bg-light btn-active-color-primary btn-sm
+              me-3
+            ">
+                  <app-keenicon name="exit-right-corner" class="fs-3"></app-keenicon>
+                </a>
+
+              </div>
+            </td>
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <p class="text-dark fw-bolder text-hover-primary mb-1 fs-6">
+                  This is a note related to this vendor
+                </p>
+              </div>
+            </td>
+            <td class="text-end">
+              <a href="#" class="btn btn-sm
+              me-3 btn-bg-success btn-color-white  px-4 py-2">
+
+                <app-keenicon name="abstract-23" class="fs-3 text-white"></app-keenicon>
+
+                Rate </a>
+
+              <a href="#" class="
+                btn btn-icon btn-bg-light btn-active-color-primary btn-sm
+                me-3
+              ">
+                <app-keenicon name="pencil" class="fs-3"></app-keenicon>
+              </a>
+              <a href="#" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm">
+                <app-keenicon name="trash" class="fs-3"></app-keenicon>
+              </a>
+            </td>
+          </tr>
+
+        </tbody>
+        <!-- end::Table body -->
+      </table>
+      <!-- end::Table -->
+    </div>
+    <!-- end::Table container -->
+  </div>
+  <div class="card-footer border-0">
+    <div class="d-flex flex-stack flex-wrap ">
+      <div class="fs-6 fw-bold text-gray-700">
+        <div class="d-inline-flex align-items-center">
+          <span class="me-3">Showing</span>
+          <select name="page" class="form-select form-select-solid form-select-lg">
+            <option value="">Select..</option>
+            <option selected value="5">5</option>
+            <option value="GBP">1</option>
+            <option value="AUD">2</option>
+            <option value="JPY">3</option>
+            <option value="SEK">4</option>
+            <option value="CAD">5</option>
+            <option value="CHF">6</option>
+          </select>
+        </div>
+
+      </div>
+
+      <ul class="pagination">
+        <li class="page-item previous">
+          <a class="page-link cursor-pointer">
+            <i class="previous"></i>
+          </a>
+        </li>
+
+        <li class="page-item active">
+          <a class="page-link cursor-pointer"> 1 </a>
+        </li>
+
+        <li class="page-item">
+          <a class="page-link cursor-pointer"> 2 </a>
+        </li>
+
+        <li class="page-item">
+          <a class="page-link cursor-pointer"> 3 </a>
+        </li>
+
+        <li class="page-item">
+          <a class="page-link cursor-pointer"> 4 </a>
+        </li>
+
+        <li class="page-item">
+          <a class="page-link cursor-pointer"> 5 </a>
+        </li>
+
+        <li class="page-item">
+          <a class="page-link cursor-pointer"> 6 </a>
+        </li>
+
+        <li class="page-item next">
+          <a class="page-link cursor-pointer">
+            <i class="next"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- begin::Body -->
 </div>
 
-<div class="row g-6 g-xl-9">
-  <div class="col-md-6 col-xl-4">
-    <app-card2
-      icon="./assets/media/svg/brand-logos/plurk.svg"
-      badgeColor="primary"
-      status="In Progress"
-      statusColor="primary"
-      title="Fitnes App"
-      description="CRM App application to HR efficiency"
-      date="May 10, 2021"
-      budget="$284,900.00"
-      [progress]="50"
-      [users]="users1"
-    ></app-card2>
-  </div>
+<!-- DiSPLAY:NONE============================================================= -->
+<div style="display: none;">
+  <div class="d-flex flex-wrap flex-stack mb-6">
+    <h3 class="fw-bolder my-2">
+      My Projects Hagar
 
-  <div class="col-md-6 col-xl-4">
-    <app-card2
-      icon="./assets/media/svg/brand-logos/disqus.svg"
-      badgeColor="info"
-      status="Pending"
-      statusColor="info"
-      title="Leaf CRM"
-      description="CRM App application to HR efficiency"
-      date="May 10, 2021"
-      budget="$36,400.00"
-      [progress]="30"
-      [users]="users2"
-    ></app-card2>
-  </div>
+      <span class="fs-6 text-gray-400 fw-bold ms-1">Active</span>
+    </h3>
 
-  <div class="col-md-6 col-xl-4">
-    <app-card2
-      icon="./assets/media/svg/brand-logos/figma-1.svg"
-      badgeColor="success"
-      status="Completed"
-      statusColor="success"
-      title="Atica Banking"
-      description="CRM App application to HR efficiency"
-      date="Mar 14, 2021"
-      budget="$605,100.00"
-      [progress]="100"
-      [users]="users3"
-    ></app-card2>
-  </div>
-
-  <div class="col-md-6 col-xl-4">
-    <app-card2
-      icon="./assets/media/svg/brand-logos/sentry-3.svg"
-      badgeColor="info"
-      status="Pending"
-      statusColor="info"
-      title="Finance Dispatch"
-      description="CRM App application to HR efficiency"
-      date="Mar 14, 2021"
-      budget="$605,100.00"
-      [progress]="60"
-      [users]="users4"
-    ></app-card2>
-  </div>
-
-  <div class="col-md-6 col-xl-4">
-    <app-card2
-      icon="./assets/media/svg/brand-logos/xing-icon.svg"
-      badgeColor="primary"
-      status="In Progress"
-      statusColor="primary"
-      title="9 Degree"
-      description="CRM App application to HR efficiency"
-      date="Mar 14, 2021"
-      budget="$605,100.00"
-      [progress]="40"
-      [users]="users5"
-    ></app-card2>
-  </div>
-
-  <div class="col-md-6 col-xl-4">
-    <app-card2
-      icon="./assets/media/svg/brand-logos/tvit.svg"
-      badgeColor="primary"
-      status="In Progress"
-      statusColor="primary"
-      title="9 Degree"
-      description="CRM App application to HR efficiency"
-      date="Mar 14, 2021"
-      budget="$605,100.00"
-      [progress]="70"
-      [users]="users6"
-    ></app-card2>
-  </div>
-
-  <div class="col-md-6 col-xl-4">
-    <app-card2
-      icon="./assets/media/svg/brand-logos/aven.svg"
-      badgeColor="primary"
-      status="In Progress"
-      statusColor="primary"
-      title="Buldozer CRM"
-      description="CRM App application to HR efficiency"
-      date="Mar 14, 2021"
-      budget="$605,100.00"
-      [progress]="70"
-      [users]="users7"
-    ></app-card2>
-  </div>
-
-  <div class="col-md-6 col-xl-4">
-    <app-card2
-      icon="./assets/media/svg/brand-logos/treva.svg"
-      badgeColor="danger"
-      status="Overdue"
-      statusColor="danger"
-      title="Aviasales App"
-      description="CRM App application to HR efficiency"
-      date="Mar 14, 2021"
-      budget="$605,100.00"
-      [progress]="10"
-      [users]="users8"
-    ></app-card2>
-  </div>
-
-  <div class="col-md-6 col-xl-4">
-    <app-card2
-      icon="./assets/media/svg/brand-logos/kanba.svg"
-      badgeColor="success"
-      status="Completed"
-      statusColor="success"
-      title="Oppo CRM"
-      description="CRM App application to HR efficiency"
-      date="Mar 14, 2021"
-      budget="$605,100.00"
-      [progress]="100"
-      [users]="users9"
-    ></app-card2>
-  </div>
-</div>
-
-<div class="d-flex flex-stack flex-wrap pt-10">
-  <div class="fs-6 fw-bold text-gray-700">Showing 1 to 10 of 50 entries</div>
-
-  <ul class="pagination">
-    <li class="page-item previous">
-      <a class="page-link cursor-pointer">
-        <i class="previous"></i>
+    <div class="d-flex flex-wrap my-2">
+      <div class="me-4">
+        <select name="status" data-control="select2" data-hide-search="true"
+          class="form-select form-select-sm form-select-white w-125px" defaultValue="Active">
+          <option value="Active">Active</option>
+          <option value="Approved">In Progress</option>
+          <option value="Declined">To Do</option>
+          <option value="In Progress">Completed</option>
+        </select>
+      </div>
+      <a class="btn btn-primary btn-sm cursor-pointer" data-bs-toggle="modal" data-bs-target="#kt_modal_create_project">
+        New Project
       </a>
-    </li>
+    </div>
+  </div>
 
-    <li class="page-item active">
-      <a class="page-link cursor-pointer"> 1 </a>
-    </li>
+  <div class="row g-6 g-xl-9">
+    <div class="col-md-6 col-xl-4">
+      <app-card2 icon="./assets/media/svg/brand-logos/plurk.svg" badgeColor="primary" status="In Progress"
+        statusColor="primary" title="Fitnes App" description="CRM App application to HR efficiency" date="May 10, 2021"
+        budget="$284,900.00" [progress]="50" [users]="users1"></app-card2>
+    </div>
 
-    <li class="page-item">
-      <a class="page-link cursor-pointer"> 2 </a>
-    </li>
+    <div class="col-md-6 col-xl-4">
+      <app-card2 icon="./assets/media/svg/brand-logos/disqus.svg" badgeColor="info" status="Pending" statusColor="info"
+        title="Leaf CRM" description="CRM App application to HR efficiency" date="May 10, 2021" budget="$36,400.00"
+        [progress]="30" [users]="users2"></app-card2>
+    </div>
 
-    <li class="page-item">
-      <a class="page-link cursor-pointer"> 3 </a>
-    </li>
+    <div class="col-md-6 col-xl-4">
+      <app-card2 icon="./assets/media/svg/brand-logos/figma-1.svg" badgeColor="success" status="Completed"
+        statusColor="success" title="Atica Banking" description="CRM App application to HR efficiency"
+        date="Mar 14, 2021" budget="$605,100.00" [progress]="100" [users]="users3"></app-card2>
+    </div>
 
-    <li class="page-item">
-      <a class="page-link cursor-pointer"> 4 </a>
-    </li>
+    <div class="col-md-6 col-xl-4">
+      <app-card2 icon="./assets/media/svg/brand-logos/sentry-3.svg" badgeColor="info" status="Pending"
+        statusColor="info" title="Finance Dispatch" description="CRM App application to HR efficiency"
+        date="Mar 14, 2021" budget="$605,100.00" [progress]="60" [users]="users4"></app-card2>
+    </div>
 
-    <li class="page-item">
-      <a class="page-link cursor-pointer"> 5 </a>
-    </li>
+    <div class="col-md-6 col-xl-4">
+      <app-card2 icon="./assets/media/svg/brand-logos/xing-icon.svg" badgeColor="primary" status="In Progress"
+        statusColor="primary" title="9 Degree" description="CRM App application to HR efficiency" date="Mar 14, 2021"
+        budget="$605,100.00" [progress]="40" [users]="users5"></app-card2>
+    </div>
 
-    <li class="page-item">
-      <a class="page-link cursor-pointer"> 6 </a>
-    </li>
+    <div class="col-md-6 col-xl-4">
+      <app-card2 icon="./assets/media/svg/brand-logos/tvit.svg" badgeColor="primary" status="In Progress"
+        statusColor="primary" title="9 Degree" description="CRM App application to HR efficiency" date="Mar 14, 2021"
+        budget="$605,100.00" [progress]="70" [users]="users6"></app-card2>
+    </div>
 
-    <li class="page-item next">
-      <a class="page-link cursor-pointer">
-        <i class="next"></i>
-      </a>
-    </li>
-  </ul>
+    <div class="col-md-6 col-xl-4">
+      <app-card2 icon="./assets/media/svg/brand-logos/aven.svg" badgeColor="primary" status="In Progress"
+        statusColor="primary" title="Buldozer CRM" description="CRM App application to HR efficiency"
+        date="Mar 14, 2021" budget="$605,100.00" [progress]="70" [users]="users7"></app-card2>
+    </div>
+
+    <div class="col-md-6 col-xl-4">
+      <app-card2 icon="./assets/media/svg/brand-logos/treva.svg" badgeColor="danger" status="Overdue"
+        statusColor="danger" title="Aviasales App" description="CRM App application to HR efficiency"
+        date="Mar 14, 2021" budget="$605,100.00" [progress]="10" [users]="users8"></app-card2>
+    </div>
+
+    <div class="col-md-6 col-xl-4">
+      <app-card2 icon="./assets/media/svg/brand-logos/kanba.svg" badgeColor="success" status="Completed"
+        statusColor="success" title="Oppo CRM" description="CRM App application to HR efficiency" date="Mar 14, 2021"
+        budget="$605,100.00" [progress]="100" [users]="users9"></app-card2>
+    </div>
+  </div>
+
+  <div class="d-flex flex-stack flex-wrap pt-10">
+    <div class="fs-6 fw-bold text-gray-700">Showing 1 to 10 of 50 entries</div>
+
+    <ul class="pagination">
+      <li class="page-item previous">
+        <a class="page-link cursor-pointer">
+          <i class="previous"></i>
+        </a>
+      </li>
+
+      <li class="page-item active">
+        <a class="page-link cursor-pointer"> 1 </a>
+      </li>
+
+      <li class="page-item">
+        <a class="page-link cursor-pointer"> 2 </a>
+      </li>
+
+      <li class="page-item">
+        <a class="page-link cursor-pointer"> 3 </a>
+      </li>
+
+      <li class="page-item">
+        <a class="page-link cursor-pointer"> 4 </a>
+      </li>
+
+      <li class="page-item">
+        <a class="page-link cursor-pointer"> 5 </a>
+      </li>
+
+      <li class="page-item">
+        <a class="page-link cursor-pointer"> 6 </a>
+      </li>
+
+      <li class="page-item next">
+        <a class="page-link cursor-pointer">
+          <i class="next"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
 </div>

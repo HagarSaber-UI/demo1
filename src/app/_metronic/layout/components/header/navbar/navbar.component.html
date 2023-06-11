@@ -1,7 +1,7 @@
 <!--begin::Search-->
 <div class="d-none app-navbar-item align-items-stretch" [ngClass]="itemClass">
   <!--begin::Search-->
-  <div id="kt_header_search" class="header-search d-flex align-items-stretch" data-kt-search-keypress="true"
+  <div id="kt_header_search" class=" header-search d-flex align-items-stretch" data-kt-search-keypress="true"
     data-kt-search-min-length="2" data-kt-search-enter="enter" data-kt-search-layout="menu"
     data-kt-menu-trigger="{default: 'hover'}" data-kt-menu-overflow="false" data-kt-menu-permanent="true"
     data-kt-menu-placement="bottom-end" data-kt-search="true">
@@ -15,7 +15,12 @@
     <app-search-result-inner data-kt-search-element="content" data-kt-menu="true"
       class="menu menu-sub menu-sub-dropdown p-7 w-325px w-md-375px"></app-search-result-inner>
   </div>
-
+  <!-- <div class="position-relative my-1">
+    <app-keenicon name="magnifier"
+      class="fs-5 text-gray-500 position-absolute top-50 translate-middle ps-15"></app-keenicon>
+    <input type="text" class="w-325px fs-6 form-control form-control  form-control-lg px-15" name="Search Team" value=""
+      placeholder="Search by name, company or pm" />
+  </div> -->
 </div>
 <!--end::Search-->
 
