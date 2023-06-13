@@ -5,11 +5,13 @@ const Routing: Routes = [
     path: 'dashboard',
     loadChildren: () =>
       import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
+    data: { layout: 'light-sidebar' },
   },
   {
-    path: 'builder',
+    path: 'contacts',
     loadChildren: () =>
       import('./builder/builder.module').then((m) => m.BuilderModule),
+    data: { layout: 'light-sidebar' },
   },
   {
     path: 'crafted/pages/profile',
@@ -21,8 +23,8 @@ const Routing: Routes = [
     path: 'crafted/account',
     loadChildren: () =>
       import('../modules/account/account.module').then((m) => m.AccountModule),
-    data: { layout: 'dark-header' },
-  },
+    data: { layout: "'dark-header' , 'light-sidebar'" },
+    },
   {
     path: 'crafted/pages/wizards',
     loadChildren: () =>

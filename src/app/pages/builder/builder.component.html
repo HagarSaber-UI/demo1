@@ -1,371 +1,1211 @@
-<div class="card mb-10">
-  <div class="card-body d-flex align-items-center p-5 p-lg-8">
-    <!-- begin::Icon -->
-    <div class="d-flex h-50px w-50px h-lg-80px w-lg-80px flex-shrink-0 flex-center position-relative align-self-start align-self-lg-center mt-3 mt-lg-0">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="text-primary h-75px w-75px h-lg-100px w-lg-100px position-absolute opacity-5">
-        <path fill="currentColor" d="M10.2,21.23,4.91,18.17a3.58,3.58,0,0,1-1.8-3.11V8.94a3.58,3.58,0,0,1,1.8-3.11L10.2,2.77a3.62,3.62,0,0,1,3.6,0l5.29,3.06a3.58,3.58,0,0,1,1.8,3.11v6.12a3.58,3.58,0,0,1-1.8,3.11L13.8,21.23A3.62,3.62,0,0,1,10.2,21.23Z"/>
-      </svg>
-
-      <app-keenicon name="wrench" class="fs-2x fs-lg-3x text-primary position-absolute"></app-keenicon>
-    </div>
-    <!-- end::Icon  -->
-
-    <!-- begin::Description  -->
-    <div class="ms-6">
-      <p class="list-unstyled text-gray-600 fw-bold fs-6 p-0 m-0">
-        The layout builder is to assist your set and configure your preferred
-        project layout specifications and preview it in real-time and export the
-        HTML template with its includable partials of this demo. The downloaded
-        version does not include the assets folder since the layout builder's
-        main purpose is to help to generate the final HTML code without hassle.
-        Layout builder changes don't affect pages with layout wrappers.
-      </p>
-    </div>
-    <!-- end::Description  -->
-  </div>
-</div>
-
-<div class="card card-custom">
-  <!-- begin::Header -->
-  <div class="card-header card-header-stretch overflow-auto">
-    <ul class="
-        nav nav-stretch nav-line-tabs
-        fw-bold
-        border-transparent
-        flex-nowrap
-      " role="tablist">
-
-      <li class="nav-item">
-        <a class="nav-link cursor-pointer" [ngClass]="{ active: activeTab === 'Sidebar' }"
-          (click)="setActiveTab('Sidebar')" role="tab">
-          Sidebar
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link cursor-pointer" [ngClass]="{ active: activeTab === 'Header' }"
-          (click)="setActiveTab('Header')" role="tab">
-          Header
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link cursor-pointer" [ngClass]="{ active: activeTab === 'Toolbar' }"
-          (click)="setActiveTab('Toolbar')" role="tab">
-          Toolbar
-        </a>
-      </li>
-    </ul>
-  </div>
-  <!-- end::Header -->
-  <!-- begin::Form -->
-  <form class="form" novalidate #form="ngForm" (ngSubmit)="submitPreview()">
-    <!-- begin::Body -->
-    <div class="card-body">
-      <div class="tab-content pt-3">
-
-        <!-- begin::Sidebar -->
-        <div class="tab-pane" [ngClass]="{ active: activeTab === 'Sidebar' }">
-          <div class="form-group d-flex flex-stack">
-            <div class="d-flex flex-column">
-              <h4 class="fw-bold text-dark">Fixed</h4>
-              <div class="fs-7 fw-semibold text-muted">Fixed sidebar mode</div>
-            </div>
-            <div class="d-flex justify-content-end">
-              <div class="form-check form-check-custom form-check-solid form-check-success form-switch">
-
-
-                <div class="
-                    form-check form-check-custom form-check-solid form-switch
-                    mb-2
-                  ">
-                  <input class="form-check-input" type="checkbox" name="model.app.sidebar.default.fixed.desktop"
-                    [(ngModel)]="model.app.sidebar.default.fixed.desktop" />
-                </div>
-
-              </div>
-            </div>
-          </div>
-          <div class="separator separator-dashed my-6"></div>
-          <div class="form-group d-flex flex-stack">
-            <div class="d-flex flex-column">
-              <h4 class="fw-bold text-dark">Minimize</h4>
-              <div class="fs-7 fw-semibold text-muted">Sidebar minimize mode</div>
-            </div>
-            <div class="d-flex justify-content-end">
-              <div class="form-check form-check-custom form-check-solid form-check-success form-switch">
-
-                <div class="
-                form-check form-check-custom form-check-solid form-check-success form-switch
-                  ">
-                  <input class="form-check-input" type="checkbox"
-                    name="model.app.sidebar.default.minimize.desktop.enabled"
-                    [(ngModel)]="model.app.sidebar.default.minimize.desktop.enabled" />
-                  <label class="form-check-label text-gray-700 fw-bold"
-                    for="kt_builder_sidebar_minimize_desktop_enabled" data-bs-toggle="tooltip"
-                    data-kt-initialized="1">Minimize Toggle</label>
-                </div>
-                <div class="
-                form-check form-check-custom form-check-solid form-check-success form-switch ms-10
-                  ">
-                  <input class="form-check-input" type="checkbox"
-                    name="model.app.sidebar.default.minimize.desktop.hoverable"
-                    [(ngModel)]="model.app.sidebar.default.minimize.desktop.hoverable" />
-                  <label class="form-check-label text-gray-700 fw-bold"
-                    for="kt_builder_sidebar_minimize_desktop_hoverable" data-bs-toggle="tooltip"
-                    data-kt-initialized="1">Hoverable</label>
-                </div>
-                <div class="
-                form-check form-check-custom form-check-solid form-check-success form-switch ms-10
-                  ">
-                  <input class="form-check-input" type="checkbox"
-                    name="model.app.sidebar.default.minimize.desktop.default"
-                    [(ngModel)]="model.app.sidebar.default.minimize.desktop.default" />
-                  <label class="form-check-label text-gray-700 fw-bold"
-                    for="kt_builder_sidebar_minimize_desktop_default" data-bs-toggle="tooltip"
-                    data-kt-initialized="1">Default Minimized</label>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- end::Sidebar -->
-
-        <!-- begin::Header -->
-        <div class="tab-pane" [ngClass]="{ active: activeTab === 'Header' }">
-          <div class="form-group d-flex flex-stack">
-            <div class="d-flex flex-column">
-              <h4 class="fw-bold text-dark">Fixed</h4>
-              <div class="fs-7 fw-semibold text-muted">Fixed header mode</div>
-            </div>
-            <div class="d-flex justify-content-end">
-              <div class="form-check form-check-custom form-check-solid form-check-success form-switch">
-                <div class="
-                    form-check form-check-custom form-check-solid form-switch
-                    mb-2
-                  ">
-                  <input class="form-check-input" type="checkbox" name="model.app.header.default.fixed.desktop"
-                    [(ngModel)]="model.app.header.default.fixed.desktop" />
-                </div>
-
-              </div>
-            </div>
-          </div>
-          <div class="separator separator-dashed my-6"></div>
-
-          <div class="form-group d-flex flex-stack">
-            <div class="d-flex flex-column">
-              <h4 class="fw-bold text-dark">Content</h4>
-              <div class="fs-7 fw-semibold text-muted">Header content type</div>
-            </div>
-            <div class="d-flex justify-content-end">
-              <!--begin::Check-->
-              <div class="form-check form-check-custom form-check-success form-check-solid form-check-sm ms-10">
-                <input class="form-check-input" type="radio" checked="checked" value="menu"
-                  id="kt_builder_header_content_menu" name="model.app.header.default.content"
-                  [(ngModel)]="model.app.header.default.content" value="menu">
-                <!--begin::Label-->
-                <label class="form-check-label text-gray-700 fw-bold text-nowrap"
-                  for="kt_builder_header_content_menu">Menu</label>
-                <!--end::Label-->
-              </div>
-              <!--end::Check-->
-              <!--begin::Check-->
-              <div class="form-check form-check-custom form-check-success form-check-solid form-check-sm ms-10">
-                <input class="form-check-input" type="radio" value="page-title"
-                  id="kt_builder_header_content_page-title" name="layout-builder[layout][app][header][default][content]"
-                  name="model.app.header.default.content" value="page-title"
-                  [(ngModel)]="model.app.header.default.content">
-                <!--begin::Label-->
-                <label class="form-check-label text-gray-700 fw-bold text-nowrap"
-                  for="kt_builder_header_content_page-title">Page Title</label>
-                <!--end::Label-->
-              </div>
-              <!--end::Check-->
-            </div>
-          </div>
-        </div>
-        <!-- end::Header -->
-
-        <!-- begin::Toolbar -->
-        <div class="tab-pane" [ngClass]="{ active: activeTab === 'Toolbar' }">
-          <div class="form-group d-flex flex-stack">
-            <div class="d-flex flex-column">
-              <h4 class="fw-bold text-dark">Fixed</h4>
-              <div class="fs-7 fw-semibold text-muted">Fixed toolbar mode</div>
-            </div>
-            <div class="d-flex justify-content-end">
-              <div class="d-flex justify-content-end">
-                <!--begin::Check-->
-                <div class="form-check form-check-custom form-check-solid form-check-success form-switch me-10">
-                  <input class="form-check-input w-45px h-30px" type="checkbox"
-                    name="layout-builder[layout][app][toolbar][fixed][desktop]" id="kt_builder_toolbar_fixed_desktop"
-                    name="model.app.toolbar.fixed.desktop" [(ngModel)]="model.app.toolbar.fixed.desktop">
-                  <!--begin::Label-->
-                  <label class="form-check-label text-gray-700 fw-bold" for="kt_builder_toolbar_fixed_desktop">Desktop
-                    Mode</label>
-                  <!--end::Label-->
-                </div>
-                <!--end::Check-->
-                <!--begin::Check-->
-                <div class="form-check form-check-custom form-check-solid form-check-success form-switch">
-                  <input class="form-check-input w-45px h-30px" type="checkbox" name="model.app.toolbar.fixed.mobile"
-                    [(ngModel)]="model.app.toolbar.fixed.mobile" id="kt_builder_toolbar_fixed_mobile">
-                  <!--begin::Label-->
-                  <label class="form-check-label text-gray-700 fw-bold" for="kt_builder_toolbar_fixed_mobile">Mobile
-                    Mode</label>
-                  <!--end::Label-->
-                </div>
-                <!--end::Check-->
-              </div>
-            </div>
-          </div>
-          <div class="separator separator-dashed my-6"></div>
-          <div class="mb-6">
-            <h4 class="fw-bold text-dark">Layout</h4>
-            <div class="fw-semibold text-muted fs-7 d-block lh-1">Select a toolbar layout</div>
-          </div>
-          <div data-kt-buttons="true"
-            data-kt-buttons-target=".form-check-image:not(.disabled),.form-check-input:not([disabled])"
-            data-kt-initialized="1">
-            <!--begin::Option-->
-            <label class="form-check-image form-check-success mb-10"
-              [ngClass]="{'active': model.app.toolbar.layout === 'classic'}">
-              <!--begin::Image-->
-              <div class="form-check-wrapper">
-                <img src="./assets/media/misc/layout/toolbar-classic.png" class="mw-100" alt="">
-              </div>
-              <!--end::Image-->
-              <!--begin::Check-->
-              <div class="form-check form-check-custom form-check-success form-check-sm form-check-solid">
-                <input class="form-check-input" type="radio" checked="checked" value="classic"
-                  name="model.app.toolbar.layout" [(ngModel)]="model.app.toolbar.layout">
-                <!--begin::Label-->
-                <div class="form-check-label text-gray-800">Classic</div>
-                <!--end::Label-->
-              </div>
-              <!--end::Check-->
-            </label>
-            <!--end::Option-->
-            <!--begin::Option-->
-            <label class="form-check-image form-check-success mb-10"
-              [ngClass]="{'active': model.app.toolbar.layout === 'saas'}">
-              <!--begin::Image-->
-              <div class="form-check-wrapper">
-                <img src="./assets/media/misc/layout/toolbar-saas.png" class="mw-100" alt="">
-              </div>
-              <!--end::Image-->
-              <!--begin::Check-->
-              <div class="form-check form-check-custom form-check-success form-check-sm form-check-solid">
-                <input class="form-check-input" type="radio" value="saas" name="model.app.toolbar.layout"
-                  [(ngModel)]="model.app.toolbar.layout">
-                <!--begin::Label-->
-                <div class="form-check-label text-gray-800">SaaS</div>
-                <!--end::Label-->
-              </div>
-              <!--end::Check-->
-            </label>
-            <!--end::Option-->
-            <!--begin::Option-->
-            <label class="form-check-image form-check-success mb-10"
-              [ngClass]="{'active': model.app.toolbar.layout === 'accounting'}">
-              <!--begin::Image-->
-              <div class="form-check-wrapper">
-                <img src="./assets/media/misc/layout/toolbar-accounting.png" class="mw-100" alt="">
-              </div>
-              <!--end::Image-->
-              <!--begin::Check-->
-              <div class="form-check form-check-custom form-check-success form-check-sm form-check-solid">
-                <input class="form-check-input" type="radio" value="accounting" name="model.app.toolbar.layout"
-                  [(ngModel)]="model.app.toolbar.layout">
-                <!--begin::Label-->
-                <div class="form-check-label text-gray-800">Accounting</div>
-                <!--end::Label-->
-              </div>
-              <!--end::Check-->
-            </label>
-            <!--end::Option-->
-            <!--begin::Option-->
-            <label class="form-check-image form-check-success mb-10"
-              [ngClass]="{'active': model.app.toolbar.layout === 'extended'}">
-              <!--begin::Image-->
-              <div class="form-check-wrapper">
-                <img src="./assets/media/misc/layout/toolbar-extended.png" class="mw-100" alt="">
-              </div>
-              <!--end::Image-->
-              <!--begin::Check-->
-              <div class="form-check form-check-custom form-check-success form-check-sm form-check-solid">
-                <input class="form-check-input" type="radio" value="extended" name="model.app.toolbar.layout"
-                  [(ngModel)]="model.app.toolbar.layout">
-                <!--begin::Label-->
-                <div class="form-check-label text-gray-800">Extended</div>
-                <!--end::Label-->
-              </div>
-              <!--end::Check-->
-            </label>
-            <!--end::Option-->
-            <!--begin::Option-->
-            <label class="form-check-image form-check-success mb-10"
-              [ngClass]="{'active': model.app.toolbar.layout === 'reports'}">
-              <!--begin::Image-->
-              <div class="form-check-wrapper">
-                <img src="./assets/media/misc/layout/toolbar-reports.png" class="mw-100" alt="">
-              </div>
-              <!--end::Image-->
-              <!--begin::Check-->
-              <div class="form-check form-check-custom form-check-success form-check-sm form-check-solid">
-                <input class="form-check-input" type="radio" value="reports" name="model.app.toolbar.layout"
-                  [(ngModel)]="model.app.toolbar.layout">
-                <!--begin::Label-->
-                <div class="form-check-label text-gray-800">Reports</div>
-                <!--end::Label-->
-              </div>
-              <!--end::Check-->
-            </label>
-            <!--end::Option-->
-          </div>
-        </div>
-        <!-- end::Toolbar -->
-      </div>
-    </div>
-    <!-- end::Body -->
-
-    <!-- begin::Footer -->
-    <div class="card-footer py-6">
-      <div class="row">
-        <div class="col-lg-3"></div>
-        <div class="col-lg-9">
-          <button type="button" (click)="submitPreview()" class="btn btn-primary me-2"
-            [disabled]="configLoading || resetLoading">
-            <ng-container *ngIf="!configLoading">
-              <span class="indicator-label">Preview</span>
-            </ng-container>
-
-            <ng-container *ngIf="configLoading">
-              <span class="indicator-progress" [style.display]="'block'">
-                Please wait...{{ " " }}
-                <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
-              </span>
-            </ng-container>
-          </button>
-
-          <button type="button" id="kt_layout_builder_reset" class="btn btn-active-light btn-color-muted"
-            (click)="resetPreview()" [disabled]="configLoading || resetLoading">
-            <ng-container *ngIf="!resetLoading">
-              <span class="indicator-label">Reset</span>
-            </ng-container>
-
-            <ng-container *ngIf="resetLoading">
-              <span class="indicator-progress" [style.display]="'block'">
-                Please wait...{{ " " }}
-                <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
-              </span>
-            </ng-container>
-          </button>
+<div class="row g-5 g-xxl-8">
+  <div class="col-xl-8">
+    <div class="card mb-5 mb-xxl-8 card-box-shadow border border-gray-200">
+      <div class="card-header  cursor-pointer  border-0 border-gray-300 border-dashed border-bottom-1" role="button"
+        data-bs-toggle="collapse" data-bs-target="#kt_account_profile_details" aria-expanded="true"
+        aria-controls="kt_account_profile_details">
+        <div class="card-title m-0">
+          <h3 class="fw-bolder m-0">General Information</h3>
         </div>
       </div>
-    </div>
+      <div id="" class="collapse show">
+        <form novalidate="" class="form">
+          <div class="card-body border-top p-9">
 
-    <!-- end::Footer -->
-  </form>
-  <!-- end::Form -->
-</div>
+            <div class="row flex-column mb-6">
+              <label class="col-md-6 col-form-label  fw-bold fs-6">Creation Date</label>
+              <div class="col-md-6 fv-row">
+                <div class="position-relative ">
+                  <app-keenicon name="calendar-2"
+                    class="fs-5 text-gray-500 position-absolute top-50 translate-middle ps-15"></app-keenicon>
+                  <input type="text" class="fs-6 form-control form-control-solid  form-control-lg px-13"
+                    name="Search Team" value="" placeholder="Pick Date" />
+                </div>
+              </div>
+            </div>
+            <div class="row flex-column mb-6">
+              <label class="col-md-6 col-form-label  fw-bold fs-6">Project Description</label>
+              <div class="col-md-12 fv-row">
+                <textarea rows="5"  class="form-control form-control-lg " placeholder="Pick Date" name="company"
+                  value="Pick Date" >
+                  </textarea>
+              </div>
+            </div>
+            <div class="row flex-column mb-6">
+              <label class="col-md-6 col-form-label  fw-bold fs-6">Additional Email(s)</label>
+              <div class="col-md-12 fv-row">
+                <input type="text" class="form-control form-control-lg form-control-solid" placeholder="" name="company"
+                  value="" />
+                <div class="form-text">
+                  You can add multiple emails with semicolon (;) separator
+                </div>
+              </div>
+            </div>
+            <div class="row mb-6 flex-column">
+              <label class="col-md-6 col-form-label  fw-bold fs-6">Turnaround Time</label>
+              <div class="col-md-6 fv-row">
+                <div class="row">
+                  <div class="col-md-3">
+                    <input type="text" class="text-gray-600 form-control form-control-lg form-control-solid"
+                      placeholder="00:00" name="company" value="00:00" />
+                  </div>
+                  <div class="col-md-9">
+                    <!-- <div class="align-items-start flex-column"> -->
+                    <div class="position-relative ">
+                      <app-keenicon name="calendar-2"
+                        class="fs-5 text-gray-500 position-absolute top-50 translate-middle ps-15"></app-keenicon>
+                      <input type="text" class="fs-6 form-control form-control-solid  form-control-lg px-13"
+                        name="Search Team" value="" placeholder="Pick Date" />
+                    </div>
+
+                    <!-- </div> -->
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+        </form>
+      </div>
+    </div>
+    <div class="card mb-5 mb-xxl-8 card-box-shadow border border-gray-200">
+      <div class="card-header  cursor-pointer  border-0 border-gray-300 border-dashed border-bottom-1" role="button"
+        data-bs-toggle="collapse" data-bs-target="#kt_account_notifications" aria-expanded="true"
+        aria-controls="kt_account_notifications">
+        <div class="card-title m-0">
+          <h3 class="fw-bolder m-0">Notifications</h3>
+        </div>
+      </div>
+      <div class="collapse show">
+        <form class="form">
+          <div class="card-body border-top px-9 pt-3 ">
+            <div class="table-responsive">
+              <!-- begin::Table -->
+              <table class="table fs-6   table-row-dashed table-row-gray-300 
+              g-5 gs-0 mb-0 fw-bold text-gray-700">
+                <!-- begin::Table head -->
+                <thead>
+                  <tr class="fw-bolder text-muted ">
+                    <th class="min-w-250px">Role</th>
+                    <th class="">Qty</th>
+                    <th class="">Rate</th>
+                    <th class=" ">Total</th>
+                    <th class=" text-end">Action</th>
+                  </tr>
+                </thead>
+                <!-- end::Table head -->
+                <!-- begin::Table body -->
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="d-flex justify-content-start flex-column">
+                        <span class="text-dark fw-bolder mb-1 fs-6">
+                          Translation, editing and proofreading (TEP) - New Words
+                        </span>
+                        <span class="text-muted fw-bolder  mb-1 fs-6">
+                          Hour
+                        </span>
+                      </div>
+
+                    </td>
+                    <td>
+                      <input type="text" class="form-control " name="name[]" placeholder="30" />
+
+                    </td>
+                    <td>
+                      <input type="text" class="form-control  " name="name[]" placeholder="0.4 USD" />
+                    </td>
+                    <td>
+                      <input type="text" class="form-control form-control-solid" name="name[]" placeholder="12 USD" />
+                    </td>
+
+                    <td class="text-end">
+                      <a href="#" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm">
+                        <app-keenicon name="trash" class="fs-3 text-danger"></app-keenicon>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex justify-content-start flex-column">
+                        <span class="text-dark fw-bolder mb-1 fs-6">
+                          Translation, editing and proofreading (TEP) - New Words
+                        </span>
+                        <span class="text-muted fw-bolder  mb-1 fs-6">
+                          Hour
+                        </span>
+                      </div>
+
+                    </td>
+                    <td>
+                      <input type="text" class="form-control " name="name[]" placeholder="30" />
+
+                    </td>
+                    <td>
+                      <input type="text" class="form-control  " name="name[]" placeholder="0.4 USD" />
+                    </td>
+                    <td>
+                      <input type="text" class="form-control form-control-solid" name="name[]" placeholder="12 USD" />
+                    </td>
+
+                    <td class="text-end">
+                      <a href="#" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm">
+                        <app-keenicon name="trash" class="fs-3 text-danger"></app-keenicon>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex justify-content-start flex-column">
+                        <span class="text-dark fw-bolder mb-1 fs-6">
+                          Translation, editing and proofreading (TEP) - New Words
+                        </span>
+                        <span class="text-muted fw-bolder  mb-1 fs-6">
+                          Hour
+                        </span>
+                      </div>
+
+                    </td>
+                    <td>
+                      <input type="text" class="form-control " name="name[]" placeholder="30" />
+
+                    </td>
+                    <td>
+                      <input type="text" class="form-control  " name="name[]" placeholder="0.4 USD" />
+                    </td>
+                    <td>
+                      <input type="text" class="form-control form-control-solid" name="name[]" placeholder="12 USD" />
+                    </td>
+
+                    <td class="text-end">
+                      <a href="#" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm">
+                        <app-keenicon name="trash" class="fs-3 text-danger"></app-keenicon>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex justify-content-start flex-column">
+                        <span class="text-dark fw-bolder mb-1 fs-6">
+                          Translation, editing and proofreading (TEP) - New Words
+                        </span>
+                        <span class="text-muted fw-bolder  mb-1 fs-6">
+                          Hour
+                        </span>
+                      </div>
+
+                    </td>
+                    <td>
+                      <input type="text" class="form-control " name="name[]" placeholder="30" />
+
+                    </td>
+                    <td>
+                      <input type="text" class="form-control  " name="name[]" placeholder="0.4 USD" />
+                    </td>
+                    <td>
+                      <input type="text" class="form-control form-control-solid" name="name[]" placeholder="12 USD" />
+                    </td>
+
+                    <td class="text-end">
+                      <a href="#" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm">
+                        <app-keenicon name="trash" class="fs-3 text-danger"></app-keenicon>
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+                <!-- end::Table body -->
+              </table>
+              <!-- end::Table -->
+              <div class="separator separator-dashed my-6"></div>
+
+              <div class="d-flex  align-items-center justify-content-between">
+                <div class="">
+                  <div class=" fv-row">
+                    <select class="fs-6 form-select  form-select-lg fw-bold" name="country">
+                      <option value="" selected>This is the service name which can be added to the above services
+                      </option>
+
+
+
+
+                      <option value="GY">Guyana</option>
+                      <option value="HT">Haiti</option>
+
+
+
+
+
+
+                    </select>
+
+                  </div>
+                </div>
+                <span class=" text-end fw-bold fs-3">
+                  <button class="text-dark btn btn-lg btn-light fw-bold ">
+                    Add A Service
+                  </button>
+                </span>
+              </div>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-4">
+    <div class="card mb-5 mb-xxl-8 card-box-shadow border border-gray-200">
+      <div class="card-header  cursor-pointer  border-0 border-gray-300 border-dashed border-bottom-1" role="button"
+        data-bs-toggle="collapse" data-bs-target="#kt_account_profile_details" aria-expanded="true"
+        aria-controls="kt_account_profile_details">
+        <div class="card-title m-0">
+          <h3 class="fw-bolder m-0">Total Work Order</h3>
+        </div>
+      </div>
+      <div id="kt_account_profile_details" class="collapse show">
+        <form novalidate="" class="form">
+          <div class="card-body border-top p-9">
+            <div class=" mb-6">
+              <label class=" col-form-label fw-bold fs-6">Subject Matter</label>
+              <div class=" fv-row">
+                <select class="form-select form-select-solid form-select-lg fw-bold" name="country">
+                  <option value="">General</option>
+                  <option value="AF">Afghanistan</option>
+                  <option value="AX">Aland Islands</option>
+                  <option value="AL">Albania</option>
+                  <option value="DZ">Algeria</option>
+                  <option value="AS">American Samoa</option>
+                  <option value="AD">Andorra</option>
+                  <option value="AO">Angola</option>
+                  <option value="AI">Anguilla</option>
+                  <option value="AQ">Antarctica</option>
+                  <option value="AG">Antigua and Barbuda</option>
+                  <option value="AR">Argentina</option>
+                  <option value="AM">Armenia</option>
+                  <option value="AW">Aruba</option>
+                  <option value="AU">Australia</option>
+                  <option value="AT">Austria</option>
+                  <option value="AZ">Azerbaijan</option>
+                  <option value="BS">Bahamas</option>
+                  <option value="BH">Bahrain</option>
+                  <option value="BD">Bangladesh</option>
+                  <option value="BB">Barbados</option>
+                  <option value="BY">Belarus</option>
+                  <option value="BE">Belgium</option>
+                  <option value="BZ">Belize</option>
+                  <option value="BJ">Benin</option>
+                  <option value="BM">Bermuda</option>
+                  <option value="BT">Bhutan</option>
+                  <option value="BO">Bolivia, Plurinational State of</option>
+                  <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+                  <option value="BA">Bosnia and Herzegovina</option>
+                  <option value="BW">Botswana</option>
+                  <option value="BV">Bouvet Island</option>
+                  <option value="BR">Brazil</option>
+                  <option value="IO">British Indian Ocean Territory</option>
+                  <option value="BN">Brunei Darussalam</option>
+                  <option value="BG">Bulgaria</option>
+                  <option value="BF">Burkina Faso</option>
+                  <option value="BI">Burundi</option>
+                  <option value="KH">Cambodia</option>
+                  <option value="CM">Cameroon</option>
+                  <option value="CA">Canada</option>
+                  <option value="CV">Cape Verde</option>
+                  <option value="KY">Cayman Islands</option>
+                  <option value="CF">Central African Republic</option>
+                  <option value="TD">Chad</option>
+                  <option value="CL">Chile</option>
+                  <option value="CN">China</option>
+                  <option value="CX">Christmas Island</option>
+                  <option value="CC">Cocos (Keeling) Islands</option>
+                  <option value="CO">Colombia</option>
+                  <option value="KM">Comoros</option>
+                  <option value="CG">Congo</option>
+                  <option value="CD">Congo, the Democratic Republic of the</option>
+                  <option value="CK">Cook Islands</option>
+                  <option value="CR">Costa Rica</option>
+                  <option value="CI">Côte d'Ivoire</option>
+                  <option value="HR">Croatia</option>
+                  <option value="CU">Cuba</option>
+                  <option value="CW">Curaçao</option>
+                  <option value="CY">Cyprus</option>
+                  <option value="CZ">Czech Republic</option>
+                  <option value="DK">Denmark</option>
+                  <option value="DJ">Djibouti</option>
+                  <option value="DM">Dominica</option>
+                  <option value="DO">Dominican Republic</option>
+                  <option value="EC">Ecuador</option>
+                  <option value="EG">Egypt</option>
+                  <option value="SV">El Salvador</option>
+                  <option value="GQ">Equatorial Guinea</option>
+                  <option value="ER">Eritrea</option>
+                  <option value="EE">Estonia</option>
+                  <option value="ET">Ethiopia</option>
+                  <option value="FK">Falkland Islands (Malvinas)</option>
+                  <option value="FO">Faroe Islands</option>
+                  <option value="FJ">Fiji</option>
+                  <option value="FI">Finland</option>
+                  <option value="FR">France</option>
+                  <option value="GF">French Guiana</option>
+                  <option value="PF">French Polynesia</option>
+                  <option value="TF">French Southern Territories</option>
+                  <option value="GA">Gabon</option>
+                  <option value="GM">Gambia</option>
+                  <option value="GE">Georgia</option>
+                  <option value="DE">Germany</option>
+                  <option value="GH">Ghana</option>
+                  <option value="GI">Gibraltar</option>
+                  <option value="GR">Greece</option>
+                  <option value="GL">Greenland</option>
+                  <option value="GD">Grenada</option>
+                  <option value="GP">Guadeloupe</option>
+                  <option value="GU">Guam</option>
+                  <option value="GT">Guatemala</option>
+                  <option value="GG">Guernsey</option>
+                  <option value="GN">Guinea</option>
+                  <option value="GW">Guinea-Bissau</option>
+                  <option value="GY">Guyana</option>
+                  <option value="HT">Haiti</option>
+                  <option value="HM">Heard Island and McDonald Islands</option>
+                  <option value="VA">Holy See (Vatican City State)</option>
+                  <option value="HN">Honduras</option>
+                  <option value="HK">Hong Kong</option>
+                  <option value="HU">Hungary</option>
+                  <option value="IS">Iceland</option>
+                  <option value="IN">India</option>
+                  <option value="ID">Indonesia</option>
+                  <option value="IR">Iran, Islamic Republic of</option>
+                  <option value="IQ">Iraq</option>
+                  <option value="IE">Ireland</option>
+                  <option value="IM">Isle of Man</option>
+                  <option value="IL">Israel</option>
+                  <option value="IT">Italy</option>
+                  <option value="JM">Jamaica</option>
+                  <option value="JP">Japan</option>
+                  <option value="JE">Jersey</option>
+                  <option value="JO">Jordan</option>
+                  <option value="KZ">Kazakhstan</option>
+                  <option value="KE">Kenya</option>
+                  <option value="KI">Kiribati</option>
+                  <option value="KP">Korea, Democratic People's Republic of</option>
+                  <option value="KW">Kuwait</option>
+                  <option value="KG">Kyrgyzstan</option>
+                  <option value="LA">Lao People's Democratic Republic</option>
+                  <option value="LV">Latvia</option>
+                  <option value="LB">Lebanon</option>
+                  <option value="LS">Lesotho</option>
+                  <option value="LR">Liberia</option>
+                  <option value="LY">Libya</option>
+                  <option value="LI">Liechtenstein</option>
+                  <option value="LT">Lithuania</option>
+                  <option value="LU">Luxembourg</option>
+                  <option value="MO">Macao</option>
+                  <option value="MK">
+                    Macedonia, the former Yugoslav Republic of
+                  </option>
+                  <option value="MG">Madagascar</option>
+                  <option value="MW">Malawi</option>
+                  <option value="MY">Malaysia</option>
+                  <option value="MV">Maldives</option>
+                  <option value="ML">Mali</option>
+                  <option value="MT">Malta</option>
+                  <option value="MH">Marshall Islands</option>
+                  <option value="MQ">Martinique</option>
+                  <option value="MR">Mauritania</option>
+                  <option value="MU">Mauritius</option>
+                  <option value="YT">Mayotte</option>
+                  <option value="MX">Mexico</option>
+                  <option value="FM">Micronesia, Federated States of</option>
+                  <option value="MD">Moldova, Republic of</option>
+                  <option value="MC">Monaco</option>
+                  <option value="MN">Mongolia</option>
+                  <option value="ME">Montenegro</option>
+                  <option value="MS">Montserrat</option>
+                  <option value="MA">Morocco</option>
+                  <option value="MZ">Mozambique</option>
+                  <option value="MM">Myanmar</option>
+                  <option value="NA">Namibia</option>
+                  <option value="NR">Nauru</option>
+                  <option value="NP">Nepal</option>
+                  <option value="NL">Netherlands</option>
+                  <option value="NC">New Caledonia</option>
+                  <option value="NZ">New Zealand</option>
+                  <option value="NI">Nicaragua</option>
+                  <option value="NE">Niger</option>
+                  <option value="NG">Nigeria</option>
+                  <option value="NU">Niue</option>
+                  <option value="NF">Norfolk Island</option>
+                  <option value="MP">Northern Mariana Islands</option>
+                  <option value="NO">Norway</option>
+                  <option value="OM">Oman</option>
+                  <option value="PK">Pakistan</option>
+                  <option value="PW">Palau</option>
+                  <option value="PS">Palestinian Territory, Occupied</option>
+                  <option value="PA">Panama</option>
+                  <option value="PG">Papua New Guinea</option>
+                  <option value="PY">Paraguay</option>
+                  <option value="PE">Peru</option>
+                  <option value="PH">Philippines</option>
+                  <option value="PN">Pitcairn</option>
+                  <option value="PL">Poland</option>
+                  <option value="PT">Portugal</option>
+                  <option value="PR">Puerto Rico</option>
+                  <option value="QA">Qatar</option>
+                  <option value="RE">Réunion</option>
+                  <option value="RO">Romania</option>
+                  <option value="RU">Russian Federation</option>
+                  <option value="RW">Rwanda</option>
+                  <option value="BL">Saint Barthélemy</option>
+                  <option value="SH">
+                    Saint Helena, Ascension and Tristan da Cunha
+                  </option>
+                  <option value="KN">Saint Kitts and Nevis</option>
+                  <option value="LC">Saint Lucia</option>
+                  <option value="MF">Saint Martin (French part)</option>
+                  <option value="PM">Saint Pierre and Miquelon</option>
+                  <option value="VC">Saint Vincent and the Grenadines</option>
+                  <option value="WS">Samoa</option>
+                  <option value="SM">San Marino</option>
+                  <option value="ST">Sao Tome and Principe</option>
+                  <option value="SA">Saudi Arabia</option>
+                  <option value="SN">Senegal</option>
+                  <option value="RS">Serbia</option>
+                  <option value="SC">Seychelles</option>
+                  <option value="SL">Sierra Leone</option>
+                  <option value="SG">Singapore</option>
+                  <option value="SX">Sint Maarten (Dutch part)</option>
+                  <option value="SK">Slovakia</option>
+                  <option value="SI">Slovenia</option>
+                  <option value="SB">Solomon Islands</option>
+                  <option value="SO">Somalia</option>
+                  <option value="ZA">South Africa</option>
+                  <option value="GS">
+                    South Georgia and the South Sandwich Islands
+                  </option>
+                  <option value="KR">South Korea</option>
+                  <option value="SS">South Sudan</option>
+                  <option value="ES">Spain</option>
+                  <option value="LK">Sri Lanka</option>
+                  <option value="SD">Sudan</option>
+                  <option value="SR">Suriname</option>
+                  <option value="SJ">Svalbard and Jan Mayen</option>
+                  <option value="SZ">Swaziland</option>
+                  <option value="SE">Sweden</option>
+                  <option value="CH">Switzerland</option>
+                  <option value="SY">Syrian Arab Republic</option>
+                  <option value="TW">Taiwan, Province of China</option>
+                  <option value="TJ">Tajikistan</option>
+                  <option value="TZ">Tanzania, United Republic of</option>
+                  <option value="TH">Thailand</option>
+                  <option value="TL">Timor-Leste</option>
+                  <option value="TG">Togo</option>
+                  <option value="TK">Tokelau</option>
+                  <option value="TO">Tonga</option>
+                  <option value="TT">Trinidad and Tobago</option>
+                  <option value="TN">Tunisia</option>
+                  <option value="TR">Turkey</option>
+                  <option value="TM">Turkmenistan</option>
+                  <option value="TC">Turks and Caicos Islands</option>
+                  <option value="TV">Tuvalu</option>
+                  <option value="UG">Uganda</option>
+                  <option value="UA">Ukraine</option>
+                  <option value="AE">United Arab Emirates</option>
+                  <option value="GB">United Kingdom</option>
+                  <option value="US">United States</option>
+                  <option value="UY">Uruguay</option>
+                  <option value="UZ">Uzbekistan</option>
+                  <option value="VU">Vanuatu</option>
+                  <option value="VE">Venezuela, Bolivarian Republic of</option>
+                  <option value="VN">Vietnam</option>
+                  <option value="VI">Virgin Islands</option>
+                  <option value="WF">Wallis and Futuna</option>
+                  <option value="EH">Western Sahara</option>
+                  <option value="YE">Yemen</option>
+                  <option value="ZM">Zambia</option>
+                  <option value="ZW">Zimbabwe</option>
+                </select>
+                <!-- <div class="fv-plugins-message-container">
+                  <div class="fv-help-block">Country is required</div>
+                </div> -->
+              </div>
+            </div>
+            <div class=" mb-6">
+              <label class="col-form-label  fw-bold fs-6">Language</label>
+              <div class=" fv-row">
+                <div class="badge badge-light-info fs-7 fw-bold px-4 py-4">
+                  German
+                </div>
+
+              </div>
+            </div>
+            <div class=" mb-6">
+              <label class=" col-form-label  fw-bold fs-6">Tax</label>
+              <div class=" fv-row">
+                <input type="text" class="form-control form-control-lg " placeholder="0 USD" name="company"
+                  value="0 USD" />
+              </div>
+            </div>
+
+            <div class="separator separator-dashed my-6"></div>
+            <div class="row mb-6 align-items-center">
+              <div class="col-lg-6">
+                <div class=" fv-row">
+                  <select class="form-select form-select-solid form-select-lg fw-bold" name="country">
+                    <option value="">USD</option>
+
+
+
+
+                    <option value="FJ">Fiji</option>
+                    <option value="FI">Finland</option>
+                    <option value="FR">France</option>
+                    <option value="GF">French Guiana</option>
+                    <option value="PF">French Polynesia</option>
+                    <option value="TF">French Southern Territories</option>
+                    <option value="GA">Gabon</option>
+                    <option value="GM">Gambia</option>
+                    <option value="GE">Georgia</option>
+                    <option value="DE">Germany</option>
+                    <option value="GH">Ghana</option>
+                    <option value="GI">Gibraltar</option>
+                    <option value="GR">Greece</option>
+                    <option value="GL">Greenland</option>
+                    <option value="GD">Grenada</option>
+                    <option value="GP">Guadeloupe</option>
+                    <option value="GU">Guam</option>
+                    <option value="GT">Guatemala</option>
+                    <option value="GG">Guernsey</option>
+                    <option value="GN">Guinea</option>
+                    <option value="GW">Guinea-Bissau</option>
+                    <option value="GY">Guyana</option>
+                    <option value="HT">Haiti</option>
+                    <option value="HM">Heard Island and McDonald Islands</option>
+                    <option value="VA">Holy See (Vatican City State)</option>
+                    <option value="HN">Honduras</option>
+                    <option value="HK">Hong Kong</option>
+                    <option value="HU">Hungary</option>
+                    <option value="IS">Iceland</option>
+                    <option value="IN">India</option>
+                    <option value="ID">Indonesia</option>
+                    <option value="IR">Iran, Islamic Republic of</option>
+                    <option value="IQ">Iraq</option>
+                    <option value="IE">Ireland</option>
+                    <option value="IM">Isle of Man</option>
+                    <option value="IL">Israel</option>
+                    <option value="IT">Italy</option>
+                    <option value="JM">Jamaica</option>
+                    <option value="JP">Japan</option>
+                    <option value="JE">Jersey</option>
+                    <option value="JO">Jordan</option>
+                    <option value="KZ">Kazakhstan</option>
+                    <option value="KE">Kenya</option>
+                    <option value="KI">Kiribati</option>
+                    <option value="KP">Korea, Democratic People's Republic of</option>
+                    <option value="KW">Kuwait</option>
+                    <option value="KG">Kyrgyzstan</option>
+                    <option value="LA">Lao People's Democratic Republic</option>
+                    <option value="LV">Latvia</option>
+                    <option value="LB">Lebanon</option>
+                    <option value="LS">Lesotho</option>
+                    <option value="LR">Liberia</option>
+                    <option value="LY">Libya</option>
+                    <option value="LI">Liechtenstein</option>
+                    <option value="LT">Lithuania</option>
+                    <option value="LU">Luxembourg</option>
+                    <option value="MO">Macao</option>
+                    <option value="MK">
+                      Macedonia, the former Yugoslav Republic of
+                    </option>
+                    <option value="MG">Madagascar</option>
+                    <option value="MW">Malawi</option>
+                    <option value="MY">Malaysia</option>
+                    <option value="MV">Maldives</option>
+                    <option value="ML">Mali</option>
+                    <option value="MT">Malta</option>
+                    <option value="MH">Marshall Islands</option>
+                    <option value="MQ">Martinique</option>
+                    <option value="MR">Mauritania</option>
+                    <option value="MU">Mauritius</option>
+                    <option value="YT">Mayotte</option>
+                    <option value="MX">Mexico</option>
+                    <option value="FM">Micronesia, Federated States of</option>
+                    <option value="MD">Moldova, Republic of</option>
+                    <option value="MC">Monaco</option>
+                    <option value="MN">Mongolia</option>
+                    <option value="ME">Montenegro</option>
+                    <option value="MS">Montserrat</option>
+                    <option value="MA">Morocco</option>
+                    <option value="MZ">Mozambique</option>
+                    <option value="MM">Myanmar</option>
+                    <option value="NA">Namibia</option>
+                    <option value="NR">Nauru</option>
+                    <option value="NP">Nepal</option>
+                    <option value="NL">Netherlands</option>
+                    <option value="NC">New Caledonia</option>
+                    <option value="NZ">New Zealand</option>
+                    <option value="NI">Nicaragua</option>
+                    <option value="NE">Niger</option>
+                    <option value="NG">Nigeria</option>
+                    <option value="NU">Niue</option>
+                    <option value="NF">Norfolk Island</option>
+                    <option value="MP">Northern Mariana Islands</option>
+                    <option value="NO">Norway</option>
+                    <option value="OM">Oman</option>
+                    <option value="PK">Pakistan</option>
+                    <option value="PW">Palau</option>
+                    <option value="PS">Palestinian Territory, Occupied</option>
+                    <option value="PA">Panama</option>
+                    <option value="PG">Papua New Guinea</option>
+                    <option value="PY">Paraguay</option>
+                    <option value="PE">Peru</option>
+                    <option value="PH">Philippines</option>
+                    <option value="PN">Pitcairn</option>
+                    <option value="PL">Poland</option>
+                    <option value="PT">Portugal</option>
+                    <option value="PR">Puerto Rico</option>
+                    <option value="QA">Qatar</option>
+                    <option value="RE">Réunion</option>
+                    <option value="RO">Romania</option>
+                    <option value="RU">Russian Federation</option>
+                    <option value="RW">Rwanda</option>
+                    <option value="BL">Saint Barthélemy</option>
+                    <option value="SH">
+                      Saint Helena, Ascension and Tristan da Cunha
+                    </option>
+                    <option value="KN">Saint Kitts and Nevis</option>
+                    <option value="LC">Saint Lucia</option>
+                    <option value="MF">Saint Martin (French part)</option>
+                    <option value="PM">Saint Pierre and Miquelon</option>
+                    <option value="VC">Saint Vincent and the Grenadines</option>
+                    <option value="WS">Samoa</option>
+                    <option value="SM">San Marino</option>
+                    <option value="ST">Sao Tome and Principe</option>
+                    <option value="SA">Saudi Arabia</option>
+                    <option value="SN">Senegal</option>
+                    <option value="RS">Serbia</option>
+                    <option value="SC">Seychelles</option>
+                    <option value="SL">Sierra Leone</option>
+                    <option value="SG">Singapore</option>
+                    <option value="SX">Sint Maarten (Dutch part)</option>
+                    <option value="SK">Slovakia</option>
+                    <option value="SI">Slovenia</option>
+                    <option value="SB">Solomon Islands</option>
+                    <option value="SO">Somalia</option>
+                    <option value="ZA">South Africa</option>
+                    <option value="GS">
+                      South Georgia and the South Sandwich Islands
+                    </option>
+                    <option value="KR">South Korea</option>
+                    <option value="SS">South Sudan</option>
+                    <option value="ES">Spain</option>
+                    <option value="LK">Sri Lanka</option>
+                    <option value="SD">Sudan</option>
+                    <option value="SR">Suriname</option>
+                    <option value="SJ">Svalbard and Jan Mayen</option>
+                    <option value="SZ">Swaziland</option>
+                    <option value="SE">Sweden</option>
+                    <option value="CH">Switzerland</option>
+                    <option value="SY">Syrian Arab Republic</option>
+                    <option value="TW">Taiwan, Province of China</option>
+                    <option value="TJ">Tajikistan</option>
+                    <option value="TZ">Tanzania, United Republic of</option>
+                    <option value="TH">Thailand</option>
+                    <option value="TL">Timor-Leste</option>
+                    <option value="TG">Togo</option>
+                    <option value="TK">Tokelau</option>
+                    <option value="TO">Tonga</option>
+                    <option value="TT">Trinidad and Tobago</option>
+                    <option value="TN">Tunisia</option>
+                    <option value="TR">Turkey</option>
+                    <option value="TM">Turkmenistan</option>
+                    <option value="TC">Turks and Caicos Islands</option>
+                    <option value="TV">Tuvalu</option>
+                    <option value="UG">Uganda</option>
+                    <option value="UA">Ukraine</option>
+                    <option value="AE">United Arab Emirates</option>
+                    <option value="GB">United Kingdom</option>
+                    <option value="US">United States</option>
+                    <option value="UY">Uruguay</option>
+                    <option value="UZ">Uzbekistan</option>
+                    <option value="VU">Vanuatu</option>
+                    <option value="VE">Venezuela, Bolivarian Republic of</option>
+                    <option value="VN">Vietnam</option>
+                    <option value="VI">Virgin Islands</option>
+                    <option value="WF">Wallis and Futuna</option>
+                    <option value="EH">Western Sahara</option>
+                    <option value="YE">Yemen</option>
+                    <option value="ZM">Zambia</option>
+                    <option value="ZW">Zimbabwe</option>
+                  </select>
+                  <!-- <div class="fv-plugins-message-container">
+        <div class="fv-help-block">Country is required</div>
+      </div> -->
+                </div>
+              </div>
+              <span class="col-lg-6 text-end fw-bold fs-3">12 $</span>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">
+                <button type="submit" href="#"
+                  class="text-secondary btn  btn-flex btn-primary fw-bold btn-flex flex-center  btn-lg btn-active-primary w-100">
+                  <app-keenicon class="fs-3 text-secondary" name="plus-square"></app-keenicon>
+                  <span class="text-secondary fw-bold ms-2 fs-4"> Create Work Order</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- DISPLY:NONE++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+  <div class="d-none d-flex flex-column flex-lg-row">
+    <!--begin::Content-->
+    <div class="flex-lg-row-fluid mb-10 mb-lg-0 me-lg-7 me-xl-10">
+      <!--begin::Card-->
+      <div class="card">
+        <div class="card-header border-0 cursor-pointer" role="button" data-bs-toggle="collapse" aria-expanded="true">
+          <div class="card-title m-0">
+            <h3 class="fw-bolder m-0">General Information</h3>
+          </div>
+        </div>
+        <!--begin::Card body-->
+        <div class="card-body p-12 border-top">
+          <!--begin::Form-->
+          <form action="">
+            <!--begin::Wrapper-->
+            <div class="d-flex flex-column align-items-start flex-xxl-row">
+              <!--begin::Input group-->
+              <div class="d-flex align-items-center flex-equal fw-row me-4 order-2" data-bs-toggle="tooltip"
+                data-bs-trigger="hover" title="Specify invoice date">
+                <!--begin::Date-->
+                <div class="fs-6 fw-bold text-gray-700 text-nowrap">Date:</div>
+                <!--end::Date-->
+                <!--begin::Input-->
+                <div class="position-relative d-flex align-items-center w-150px">
+                  <!--begin::Datepicker-->
+                  <input class="form-control form-control-transparent fw-bold pe-5" placeholder="Select date"
+                    name="invoice_date" />
+                  <!--end::Datepicker-->
+                  <!--begin::Icon-->
+                  <i class="ki-duotone ki-down fs-4 position-absolute ms-4 end-0"></i>
+                  <!--end::Icon-->
+                </div>
+                <!--end::Input-->
+              </div>
+              <!--end::Input group-->
+              <!--begin::Input group-->
+              <div class="d-flex flex-center flex-equal fw-row text-nowrap order-1 order-xxl-2 me-4"
+                data-bs-toggle="tooltip" data-bs-trigger="hover" title="Enter invoice number">
+                <span class="fs-2x fw-bold text-gray-800">Invoice #</span>
+                <input type="text" class="form-control form-control-flush fw-bold text-muted fs-3 w-125px"
+                  value="2021001" placehoder="..." />
+              </div>
+              <!--end::Input group-->
+              <!--begin::Input group-->
+              <div class="d-flex align-items-center justify-content-end flex-equal order-3 fw-row"
+                data-bs-toggle="tooltip" data-bs-trigger="hover" title="Specify invoice due date">
+                <!--begin::Date-->
+                <div class="fs-6 fw-bold text-gray-700 text-nowrap">Due Date:</div>
+                <!--end::Date-->
+                <!--begin::Input-->
+                <div class="position-relative d-flex align-items-center w-150px">
+                  <!--begin::Datepicker-->
+                  <input class="form-control form-control-transparent fw-bold pe-5" placeholder="Select date"
+                    name="invoice_due_date" />
+                  <!--end::Datepicker-->
+                  <!--begin::Icon-->
+                  <i class="ki-duotone ki-down fs-4 position-absolute end-0 ms-4"></i>
+                  <!--end::Icon-->
+                </div>
+                <!--end::Input-->
+              </div>
+              <!--end::Input group-->
+            </div>
+            <!--end::Top-->
+            <!--begin::Separator-->
+            <div class="separator separator-dashed my-6"></div>
+            <!--end::Separator-->
+            <!--begin::Wrapper-->
+            <div class="mb-0">
+              <!--begin::Row-->
+              <div class="row gx-10 mb-5">
+                <!--begin::Col-->
+                <div class="col-lg-6">
+                  <label class="form-label fs-6 fw-bold text-gray-700 mb-3">Bill From</label>
+                  <!--begin::Input group-->
+                  <div class="mb-5">
+                    <input type="text" class="form-control form-control-solid" placeholder="Name" />
+                  </div>
+                  <!--end::Input group-->
+                  <!--begin::Input group-->
+                  <div class="mb-5">
+                    <input type="text" class="form-control form-control-solid" placeholder="Email" />
+                  </div>
+                  <!--end::Input group-->
+                  <!--begin::Input group-->
+                  <div class="mb-5">
+                    <textarea name="notes" class="form-control form-control-solid" rows="3"
+                      placeholder="Who is this invoice from?"></textarea>
+                  </div>
+                  <!--end::Input group-->
+                </div>
+                <!--end::Col-->
+                <!--begin::Col-->
+                <div class="col-lg-6">
+                  <label class="form-label fs-6 fw-bold text-gray-700 mb-3">Bill To</label>
+                  <!--begin::Input group-->
+                  <div class="mb-5">
+                    <input type="text" class="form-control form-control-solid" placeholder="Name" />
+                  </div>
+                  <!--end::Input group-->
+                  <!--begin::Input group-->
+                  <div class="mb-5">
+                    <input type="text" class="form-control form-control-solid" placeholder="Email" />
+                  </div>
+                  <!--end::Input group-->
+                  <!--begin::Input group-->
+                  <div class="mb-5">
+                    <textarea name="notes" class="form-control form-control-solid" rows="3"
+                      placeholder="What is this invoice for?"></textarea>
+                  </div>
+                  <!--end::Input group-->
+                </div>
+                <!--end::Col-->
+              </div>
+              <!--end::Row-->
+              <!--begin::Table wrapper-->
+              <div class="table-responsive mb-10">
+                <!--begin::Table-->
+                <table class="table g-5 gs-0 mb-0 fw-bold text-gray-700">
+                  <!--begin::Table head-->
+                  <thead>
+                    <tr class="border-bottom fs-7 fw-bold text-gray-700 text-uppercase">
+                      <th class="min-w-300px w-475px">Role</th>
+                      <th class="min-w-100px w-100px">Qty</th>
+                      <th class="min-w-150px w-150px">Qty</th>
+                      <th class="min-w-100px w-150px ">Total</th>
+                      <th class="min-w-75px w-75px text-end">Action</th>
+                    </tr>
+                  </thead>
+                  <!--end::Table head-->
+                  <!--begin::Table body-->
+                  <tbody>
+                    <tr class="border-bottom border-bottom-dashed">
+                      <td class="pe-7">
+                        <input type="text" class="form-control form-control-solid mb-2" name="name[]"
+                          placeholder="Item name" />
+                        <input type="text" class="form-control form-control-solid" name="description[]"
+                          placeholder="Description" />
+                      </td>
+                      <td class="ps-0">
+                        <input class="form-control form-control-solid" type="number" min="1" name="quantity[]"
+                          placeholder="1" value="1" data-kt-element="quantity" />
+                      </td>
+                      <td>
+                        <input type="text" class="form-control form-control-solid text-end" name="price[]"
+                          placeholder="0.00" value="0.00" data-kt-element="price" />
+                      </td>
+                      <td class="pt-8 text-end text-nowrap">$
+                        <span data-kt-element="total">0.00</span>
+                      </td>
+                      <td class="pt-5 text-end">
+                        <button type="button" class="btn btn-sm btn-icon btn-active-color-primary py-5">
+                          <i class="ki-duotone ki-trash fs-3">
+                            <span class="path1"></span>
+                            <span class="path2"></span>
+                            <span class="path3"></span>
+                            <span class="path4"></span>
+                            <span class="path5"></span>
+                          </i>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                  <!--end::Table body-->
+                  <!--begin::Table foot-->
+                  <tfoot>
+                    <tr class="border-top border-top-dashed align-top fs-6 fw-bold text-gray-700">
+                      <th class="text-primary">
+                        <button class="btn btn-link py-1" data-kt-element="add-item">Add item</button>
+                      </th>
+                      <th colspan="2" class="border-bottom border-bottom-dashed ps-0">
+                        <div class="d-flex flex-column align-items-start">
+                          <div class="fs-5">Subtotal</div>
+                          <button class="btn btn-link py-1" data-bs-toggle="tooltip" data-bs-trigger="hover"
+                            title="Coming soon">Add tax</button>
+                          <button class="btn btn-link py-1" data-bs-toggle="tooltip" data-bs-trigger="hover"
+                            title="Coming soon">Add discount</button>
+                        </div>
+                      </th>
+                      <th colspan="2" class="border-bottom border-bottom-dashed text-end">$
+                        <span data-kt-element="sub-total">0.00</span>
+                      </th>
+                    </tr>
+                    <tr class="align-top fw-bold text-gray-700">
+                      <th></th>
+                      <th colspan="2" class="fs-4 ps-0">Total</th>
+                      <th colspan="2" class="text-end fs-4 text-nowrap">$
+                        <span data-kt-element="grand-total">0.00</span>
+                      </th>
+                    </tr>
+                  </tfoot>
+                  <!--end::Table foot-->
+                </table>
+              </div>
+              <!--end::Table-->
+              <!--begin::Item template-->
+              <table class="table d-none" data-kt-element="item-template">
+                <tr class="border-bottom border-bottom-dashed" data-kt-element="item">
+                  <td class="pe-7">
+                    <input type="text" class="form-control form-control-solid mb-2" name="name[]"
+                      placeholder="Item name" />
+                    <input type="text" class="form-control form-control-solid" name="description[]"
+                      placeholder="Description" />
+                  </td>
+                  <td class="ps-0">
+                    <input class="form-control form-control-solid" type="number" min="1" name="quantity[]"
+                      placeholder="1" data-kt-element="quantity" />
+                  </td>
+                  <td>
+                    <input type="text" class="form-control form-control-solid text-end" name="price[]"
+                      placeholder="0.00" data-kt-element="price" />
+                  </td>
+                  <td class="pt-8 text-end">$
+                    <span data-kt-element="total">0.00</span>
+                  </td>
+                  <td class="pt-5 text-end">
+                    <button type="button" class="btn btn-sm btn-icon btn-active-color-primary"
+                      data-kt-element="remove-item">
+                      <i class="ki-duotone ki-trash fs-3">
+                        <span class="path1"></span>
+                        <span class="path2"></span>
+                        <span class="path3"></span>
+                        <span class="path4"></span>
+                        <span class="path5"></span>
+                      </i>
+                    </button>
+                  </td>
+                </tr>
+              </table>
+              <table class="table d-none" data-kt-element="empty-template">
+                <tr data-kt-element="empty">
+                  <th colspan="5" class="text-muted text-center py-10">No items</th>
+                </tr>
+              </table>
+              <!--end::Item template-->
+              <!--begin::Notes-->
+              <div class="mb-0">
+                <label class="form-label fs-6 fw-bold text-gray-700">Notes</label>
+                <textarea name="notes" class="form-control form-control-solid" rows="3"
+                  placeholder="Thanks for your business"></textarea>
+              </div>
+              <!--end::Notes-->
+            </div>
+            <!--end::Wrapper-->
+          </form>
+          <!--end::Form-->
+        </div>
+        <!--end::Card body-->
+      </div>
+      <!--end::Card-->
+    </div>
+    <!--end::Content-->
+    <!--begin::Sidebar-->
+    <div class="flex-lg-auto min-w-lg-300px">
+      <!--begin::Card-->
+      <div class="card" data-kt-sticky="true" data-kt-sticky-name="invoice"
+        data-kt-sticky-offset="{default: false, lg: '200px'}" data-kt-sticky-width="{lg: '250px', lg: '300px'}"
+        data-kt-sticky-left="auto" data-kt-sticky-top="150px" data-kt-sticky-animation="false"
+        data-kt-sticky-zindex="95">
+        <div class="card-header border-0 cursor-pointer" role="button" data-bs-toggle="collapse"
+          data-bs-target="#kt_account_profile_details" aria-expanded="true" aria-controls="kt_account_profile_details">
+          <div class="card-title m-0">
+            <h3 class="fw-bolder m-0">General Information</h3>
+          </div>
+        </div>
+        <!--begin::Card body-->
+        <div class="card-body p-10 border-top">
+          <!--begin::Input group-->
+          <div class="mb-10">
+            <!--begin::Label-->
+            <label class="form-label fw-bold fs-6 text-gray-700">Subject Matter</label>
+            <!--end::Label-->
+            <!--begin::Select-->
+            <select name="currnecy" aria-label="Select a Timezone" data-control="select2"
+              data-placeholder="Select currency" class="form-select form-select-solid">
+              <option value="" selected>General</option>
+              <option data-kt-flag="flags/united-states.svg" value="USD">
+                <b>USD</b>&nbsp;-&nbsp;USA dollar
+              </option>
+              <option data-kt-flag="flags/united-kingdom.svg" value="GBP">
+                <b>GBP</b>&nbsp;-&nbsp;British pound
+              </option>
+              <option data-kt-flag="flags/australia.svg" value="AUD">
+                <b>AUD</b>&nbsp;-&nbsp;Australian dollar
+              </option>
+              <option data-kt-flag="flags/japan.svg" value="JPY">
+                <b>JPY</b>&nbsp;-&nbsp;Japanese yen
+              </option>
+              <option data-kt-flag="flags/sweden.svg" value="SEK">
+                <b>SEK</b>&nbsp;-&nbsp;Swedish krona
+              </option>
+              <option data-kt-flag="flags/canada.svg" value="CAD">
+                <b>CAD</b>&nbsp;-&nbsp;Canadian dollar
+              </option>
+              <option data-kt-flag="flags/switzerland.svg" value="CHF">
+                <b>CHF</b>&nbsp;-&nbsp;Swiss franc
+              </option>
+            </select>
+            <!--end::Select-->
+          </div>
+          <div class="mb-10">
+            <!--begin::Label-->
+            <label class="form-label fw-bold fs-6 text-gray-700">Languages</label>
+            <!--end::Label-->
+            <!--begin::Select-->
+            <select name="currnecy" aria-label="Select a Timezone" data-control="select2"
+              data-placeholder="Select currency" class="form-select form-select-solid">
+              <option value="" selected>General</option>
+              <option data-kt-flag="flags/united-states.svg" value="USD">
+                <b>USD</b>&nbsp;-&nbsp;USA dollar
+              </option>
+              <option data-kt-flag="flags/united-kingdom.svg" value="GBP">
+                <b>GBP</b>&nbsp;-&nbsp;British pound
+              </option>
+              <option data-kt-flag="flags/australia.svg" value="AUD">
+                <b>AUD</b>&nbsp;-&nbsp;Australian dollar
+              </option>
+              <option data-kt-flag="flags/japan.svg" value="JPY">
+                <b>JPY</b>&nbsp;-&nbsp;Japanese yen
+              </option>
+              <option data-kt-flag="flags/sweden.svg" value="SEK">
+                <b>SEK</b>&nbsp;-&nbsp;Swedish krona
+              </option>
+              <option data-kt-flag="flags/canada.svg" value="CAD">
+                <b>CAD</b>&nbsp;-&nbsp;Canadian dollar
+              </option>
+              <option data-kt-flag="flags/switzerland.svg" value="CHF">
+                <b>CHF</b>&nbsp;-&nbsp;Swiss franc
+              </option>
+            </select>
+            <!--end::Select-->
+          </div>
+          <div class="mb-10">
+            <!--begin::Label-->
+            <label class="form-label fw-bold fs-6 text-gray-700">Tax</label>
+            <!--end::Label-->
+            <!--begin::Select-->
+            <select name="currnecy" aria-label="Select a Timezone" data-control="select2"
+              data-placeholder="Select currency" class="form-select form-select-solid">
+              <option value="" selected>General</option>
+              <option data-kt-flag="flags/united-states.svg" value="USD">
+                <b>USD</b>&nbsp;-&nbsp;USA dollar
+              </option>
+              <option data-kt-flag="flags/united-kingdom.svg" value="GBP">
+                <b>GBP</b>&nbsp;-&nbsp;British pound
+              </option>
+              <option data-kt-flag="flags/australia.svg" value="AUD">
+                <b>AUD</b>&nbsp;-&nbsp;Australian dollar
+              </option>
+              <option data-kt-flag="flags/japan.svg" value="JPY">
+                <b>JPY</b>&nbsp;-&nbsp;Japanese yen
+              </option>
+              <option data-kt-flag="flags/sweden.svg" value="SEK">
+                <b>SEK</b>&nbsp;-&nbsp;Swedish krona
+              </option>
+              <option data-kt-flag="flags/canada.svg" value="CAD">
+                <b>CAD</b>&nbsp;-&nbsp;Canadian dollar
+              </option>
+              <option data-kt-flag="flags/switzerland.svg" value="CHF">
+                <b>CHF</b>&nbsp;-&nbsp;Swiss franc
+              </option>
+            </select>
+            <!--end::Select-->
+          </div>
+          <!--end::Input group-->
+          <!--begin::Separator-->
+          <div class="separator separator-dashed mb-8"></div>
+          <!--end::Separator-->
+          <!--begin::Input group-->
+          <div class="d-none mb-8">
+            <!--begin::Option-->
+            <label class="form-check form-switch form-switch-sm form-check-custom form-check-solid flex-stack mb-5">
+              <span class="form-check-label ms-0 fw-bold fs-6 text-gray-700">Payment method</span>
+              <input class="form-check-input" type="checkbox" checked="checked" value="" />
+            </label>
+            <!--end::Option-->
+            <!--begin::Option-->
+            <label class="form-check form-switch form-switch-sm form-check-custom form-check-solid flex-stack mb-5">
+              <span class="form-check-label ms-0 fw-bold fs-6 text-gray-700">Late fees</span>
+              <input class="form-check-input" type="checkbox" value="" />
+            </label>
+            <!--end::Option-->
+            <!--begin::Option-->
+            <label class="form-check form-switch form-switch-sm form-check-custom form-check-solid flex-stack">
+              <span class="form-check-label ms-0 fw-bold fs-6 text-gray-700">Notes</span>
+              <input class="form-check-input" type="checkbox" value="" />
+            </label>
+            <!--end::Option-->
+          </div>
+          <!--end::Input group-->
+          <!--begin::Separator-->
+          <!-- <div class="separator separator-dashed mb-8"></div> -->
+          <!--end::Separator-->
+          <!--begin::Actions-->
+          <div class="mb-0">
+            <!--begin::Row-->
+            <div class="row mb-5 align-itemes-center">
+              <!--begin::Col-->
+              <div class="col">
+                <select name="currnecy" aria-label="Select a Timezone" data-control="select2"
+                  data-placeholder="Select currency" class="form-select form-select-solid">
+                  <option value="" selected>General</option>
+                  <option data-kt-flag="flags/united-states.svg" value="USD">
+                    <b>USD</b>&nbsp;-&nbsp;USA dollar
+                  </option>
+                  <option data-kt-flag="flags/united-kingdom.svg" value="GBP">
+                    <b>GBP</b>&nbsp;-&nbsp;British pound
+                  </option>
+                  <option data-kt-flag="flags/australia.svg" value="AUD">
+                    <b>AUD</b>&nbsp;-&nbsp;Australian dollar
+                  </option>
+                  <option data-kt-flag="flags/japan.svg" value="JPY">
+                    <b>JPY</b>&nbsp;-&nbsp;Japanese yen
+                  </option>
+                  <option data-kt-flag="flags/sweden.svg" value="SEK">
+                    <b>SEK</b>&nbsp;-&nbsp;Swedish krona
+                  </option>
+                  <option data-kt-flag="flags/canada.svg" value="CAD">
+                    <b>CAD</b>&nbsp;-&nbsp;Canadian dollar
+                  </option>
+                  <option data-kt-flag="flags/switzerland.svg" value="CHF">
+                    <b>CHF</b>&nbsp;-&nbsp;Swiss franc
+                  </option>
+                </select>
+              </div>
+              <!--end::Col-->
+              <!--begin::Col-->
+              <div class="col">
+                <span class="text-dark fw-bolder d-block fs-2">12 $</span>
+              </div>
+              <!--end::Col-->
+            </div>
+            <!--end::Row-->
+            <button type="submit" href="#" class="btn btn-primary w-100">
+              <app-keenicon name="plus-square"></app-keenicon>
+              Create Work Order</button>
+          </div>
+          <!--end::Actions-->
+        </div>
+        <!--end::Card body-->
+      </div>
+      <!--end::Card-->
+    </div>
+    <!--end::Sidebar-->
+  </div>
