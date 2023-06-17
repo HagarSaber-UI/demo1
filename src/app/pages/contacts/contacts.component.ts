@@ -5,10 +5,10 @@ import { LayoutService } from '../../_metronic/layout';
 type Tabs = 'Sidebar' | 'Header' | 'Toolbar';
 
 @Component({
-  selector: 'app-builder',
-  templateUrl: './builder.component.html',
+  selector: 'app-contacts',
+  templateUrl: './contacts.component.html',
 })
-export class BuilderComponent implements OnInit {
+export class ContactsComponent implements OnInit {
   activeTab: Tabs = 'Sidebar';
   model: any;
   @ViewChild('form', { static: true }) form: NgForm;

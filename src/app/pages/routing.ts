@@ -10,13 +10,21 @@ const Routing: Routes = [
   {
     path: 'contacts',
     loadChildren: () =>
-      import('./builder/builder.module').then((m) => m.BuilderModule),
+      import('./contacts/contacts.module').then((m) => m.ContactsModule),
     data: { layout: 'light-sidebar' },
   },
   {
-    path: 'crafted/pages/profile',
+    path: 'projects/project',
     loadChildren: () =>
-      import('../modules/profile/profile.module').then((m) => m.ProfileModule),
+      import('../modules/project/project.module').then((m) => m.ProjectModule),
+    data: { layout: 'light-sidebar' },
+  },
+  {
+    path: 'projects/projects',
+    loadChildren: () =>
+      import('../modules/projects/projects.module').then(
+        (m) => m.ProjectsModule
+      ),
     data: { layout: 'light-sidebar' },
   },
   {
@@ -24,7 +32,7 @@ const Routing: Routes = [
     loadChildren: () =>
       import('../modules/account/account.module').then((m) => m.AccountModule),
     data: { layout: "'dark-header' , 'light-sidebar'" },
-    },
+  },
   {
     path: 'crafted/pages/wizards',
     loadChildren: () =>
