@@ -14,6 +14,7 @@ import {
   WidgetsModule,
 } from '../../_metronic/partials';
 import { SharedModule } from '../../_metronic/shared/shared.module';
+import { NotesComponent } from './notes/notes.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { SharedModule } from '../../_metronic/shared/shared.module';
     TasksComponent,
     ScheduleComponent,
     BillingComponent,
+    NotesComponent
   ],
   imports: [
     CommonModule,

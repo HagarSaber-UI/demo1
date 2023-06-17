@@ -6,6 +6,9 @@ import { ScheduleComponent } from './schedule/schedule.component';
 import { TeamComponent } from './team/team.component';
 import { ProjectComponent } from './project.component';
 import { BillingComponent } from './billing/billing.component';
+import { NotesComponent } from './notes/notes.component';
+import { FilesComponent } from './files/files.component';
+import { QuotesComponent } from './quotes/quotes.component';
 
 const routes: Routes = [
   {
@@ -32,6 +35,19 @@ const routes: Routes = [
         path: 'billing',
         component: BillingComponent,
       },
+      {
+        path: 'notes',
+        component: NotesComponent,
+      },
+      {
+        path: 'files',
+        component: FilesComponent,
+      },
+      {
+        path: 'quotes',
+        component: QuotesComponent,
+      },
+      
       { path: '', redirectTo: 'overview', pathMatch: 'full' },
       { path: '**', redirectTo: 'overview', pathMatch: 'full' },
     ],
