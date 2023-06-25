@@ -20,6 +20,12 @@ const Routing: Routes = [
     data: { layout: 'light-sidebar' },
   },
   {
+    path: 'vendors/vendor',
+    loadChildren: () =>
+      import('../modules/vendors/vendor/vendor.module').then((m) => m.VendorModule),
+    data: { layout: 'light-sidebar' },
+  },
+  {
     path: 'projects/projects',
     loadChildren: () =>
       import('../modules/projects/projects.module').then(
