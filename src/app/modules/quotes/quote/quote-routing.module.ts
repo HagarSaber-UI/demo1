@@ -1,24 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { InfoComponent } from './info/info.component';
-import { VendorComponent } from './vendor.component';
-import { LogsComponent } from './logs/logs.component';
-
+import { LanguagesComponent } from './languages/languages.component';
+import { QuoteComponent } from './quote.component';
+import { QuoteEditComponent } from './edit/edit.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: VendorComponent,
+    component: QuoteComponent,
     children: [
       {
-        path: 'info',
-        component: InfoComponent,
+        path: 'languages',
+        component: LanguagesComponent,
       },
       {
-        path: 'logs',
-        component: LogsComponent,
+        path: 'edit',
+        component: QuoteEditComponent,
       },
-     
       // {
       //   path: 'settings',
       //   component: SettingsComponent,
@@ -33,4 +31,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class VendorRoutingModule {}
+export class QuoteRoutingModule {}
