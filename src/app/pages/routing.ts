@@ -26,6 +26,12 @@ const Routing: Routes = [
     data: { layout: 'light-sidebar' },
   },
   {
+    path: 'quotes/quote',
+    loadChildren: () =>
+      import('../modules/quotes/quote/quote.module').then((m) => m.QuoteModule),
+    data: { layout: 'light-sidebar' },
+  },
+  {
     path: 'projects/projects',
     loadChildren: () =>
       import('../modules/projects/projects.module').then(

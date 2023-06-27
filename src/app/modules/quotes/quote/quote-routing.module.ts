@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LanguagesComponent } from './languages/languages.component';
 import { QuoteComponent } from './quote.component';
-import { QuoteEditComponent } from './edit/edit.component';
+import { QuoteProjectComponent } from './project/project.component';
 
 const routes: Routes = [
   {
@@ -14,8 +14,8 @@ const routes: Routes = [
         component: LanguagesComponent,
       },
       {
-        path: 'edit',
-        component: QuoteEditComponent,
+        path: 'project',
+        component: QuoteProjectComponent,
       },
       // {
       //   path: 'settings',
