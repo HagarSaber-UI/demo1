@@ -1,5 +1,12 @@
 <div class="row g-5 g-xxl-8">
 
+  
+
+
+  
+  
+
+
   <div class="col-xl-8">
 
     <div class="bg-white p-7 rounded mb-5 mb-xxl-8 card-box-shadow border border-gray-200">
@@ -17,341 +24,893 @@
       </div>
     </div>
 
-    <div class="card mb-5 mb-xxl-8 card-box-shadow border border-gray-200">
-      <div class="card-header align-items-center border-0">
+    <ngb-accordion #acc="ngbAccordion" [activeIds]="activeIds" class="d-flex flex-column gap-8">
+    
+      <ngb-panel id="one">
+  
+        <ng-template ngbPanelTitle>
 
-        <div class="d-flex align-items-center">
-          <div class="form-check me-2 form-check-solid">
-            <input class="form-check-input bg-muted" type="checkbox" id="kt_settings_notification_email" />
-          </div>
-          <h3 class="fw-bold text-dark mb-0">Language Independent</h3>
-        </div>
-
-        <app-keenicon name="down" class="fs-1 text-dark"></app-keenicon>
-
-      </div>
-
-      <div class="card-body">
-        <app-tables-widget13></app-tables-widget13>
-      </div>
-
-    </div>
-
-    <div class="bg-white px-7 rounded mb-5 mb-xxl-8 card-box-shadow border border-gray-200">
-
-      <div class="card">
-        <div class="card-header p-0 align-items-center border-0">
-          <div class="d-flex align-items-center">
-            <div class="form-check me-2 form-check-solid">
-              <input class="form-check-input bg-muted" type="checkbox" id="kt_settings_notification_email" />
+            <div class="d-flex align-items-center">
+              <div class="form-check me-2 form-check-solid">
+                <input class="form-check-input bg-muted" type="checkbox" id="kt_settings_notification_email" />
+              </div>
+              <h3 class="fw-bold text-dark mb-0">Language Independent</h3>
             </div>
-            <h3 class="fw-bold text-dark mb-0">English/German</h3>
-          </div>
-          <app-keenicon name="down" class="fs-1 text-dark"></app-keenicon>
+
+        </ng-template>
+  
+        <ng-template ngbPanelContent>
+          <div class="card-body">
+          <app-tables-widget13></app-tables-widget13>
         </div>
-      </div>
+        </ng-template>
+  
+      </ngb-panel>
+  
+      <ngb-panel>
+  
+        <ng-template ngbPanelTitle>
+          <div class="d-flex justify-content-between w-100">
 
-    </div>
+            <div class="d-flex align-items-center">
+              <div class="form-check me-2 form-check-solid">
+                <input class="form-check-input bg-muted" type="checkbox" id="kt_settings_notification_email" />
+              </div>
+              <h3 class="fw-bold text-dark mb-0">English/German</h3>
+            </div>
 
+            <div class="d-flex gap-6">
+              <span class="text-muted d-block fw-bold fs-5">Total</span>
+              <span class="text-dark d-block min-w-80px fw-bold fs-5">$1,150</span>
+            </div>
 
-    <div class="bg-white px-7 rounded mb-5 mb-xxl-8 card-box-shadow border border-gray-200">
-
-      <div class="card">
-
-        <div class="card-header p-0 align-items-center border-0">
+          </div>
+  
+        </ng-template>
+  
+        <ng-template ngbPanelContent>
+          <div class="card-body px-0">
+            <!-- begin::Table container -->
+            <div class="table-responsive">
+              <!-- begin::Table -->
+              <table class="table table-row-bordered table-row-gray-100 align-middle gs-0 gy-3">
+                <!-- begin::Table head -->
+                <thead>
+                  <tr class="fw-bolder text-muted">
+                    <th class="min-w-150px pb-6">Type</th>
+                    <th class="min-w-140px pb-6">Count</th>
+                    <th class="min-w-120px pb-6">Rate</th>
+                    <th class="min-w-120px pb-6">Total</th>
+                    <th class="min-w-120px pb-6">Actions</th>
+                  </tr>
+                </thead>
+                <!-- end::Table head -->
+                <!-- begin::Table body -->
+  
+                <tbody>
+  
+                  <tr>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+                        Preliminary Engineering
+                      </a>
+                    </td>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+                        300
+                      </a>
+                    </td>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6">
+                        0.124 Euros
+                      </a>
+                      <span class="text-muted fw-bold text-muted d-block fs-7">Word</span>
+                    </td>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+                        $120
+                      </a>
+                    </td>
+  
+                    <td >
+                      <a href="#" class="
+                          btn btn-icon btn-bg-light btn-active-color-primary btn-sm
+                          me-1
+                        ">
+                        <app-keenicon name="pencil" class="fs-3"></app-keenicon>
+                      </a>
+                      <a href="#" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm">
+                        <app-keenicon name="trash" class="fs-3 text-danger"></app-keenicon>
+                      </a>
+                    </td>
+  
+                  </tr>
+  
+                  <tr>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+                        Glossary Localization
+                      </a>
+                    </td>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+                        300
+                      </a>
+                    </td>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6">
+                        0.124 Euros
+                      </a>
+                      <span class="text-muted fw-bold text-muted d-block fs-7">Hours</span>
+                    </td>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+                        $120
+                      </a>
+                    </td>
+  
+                    <td >
+                      <a href="#" class="
+                          btn btn-icon btn-bg-light btn-active-color-primary btn-sm
+                          me-1
+                        ">
+                        <app-keenicon name="pencil" class="fs-3"></app-keenicon>
+                      </a>
+                      <a href="#" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm">
+                        <app-keenicon name="trash" class="fs-3 text-danger"></app-keenicon>
+                      </a>
+                    </td>
+  
+                  </tr>
+  
+                  <tr>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+                        Final Engineering
+                      </a>
+                    </td>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+                        300
+                      </a>
+                    </td>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6">
+                        0.124 Euros
+                      </a>
+                      <span class="text-muted fw-bold text-muted d-block fs-7">Character</span>
+                    </td>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+                        $120
+                      </a>
+                    </td>
+  
+                    <td >
+                      <a href="#" class="
+                          btn btn-icon btn-bg-light btn-active-color-primary btn-sm
+                          me-1
+                        ">
+                        <app-keenicon name="pencil" class="fs-3"></app-keenicon>
+                      </a>
+                      <a href="#" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm">
+                        <app-keenicon name="trash" class="fs-3 text-danger"></app-keenicon>
+                      </a>
+                    </td>
+  
+                  </tr>
+  
+                  <tr>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+                        Graphics Localization
+                      </a>
+                    </td>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+                        300
+                      </a>
+                    </td>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6">
+                        0.124 Euros
+                      </a>
+                      <span class="text-muted fw-bold text-muted d-block fs-7">Word</span>
+                    </td>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+                        $120
+                      </a>
+                    </td>
+  
+                    <td >
+                      <a href="#" class="
+                          btn btn-icon btn-bg-light btn-active-color-primary btn-sm
+                          me-1
+                        ">
+                        <app-keenicon name="pencil" class="fs-3"></app-keenicon>
+                      </a>
+                      <a href="#" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm">
+                        <app-keenicon name="trash" class="fs-3 text-danger"></app-keenicon>
+                      </a>
+                    </td>
+  
+                  </tr>
+  
+                  <tr>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+                        Preliminary Engineering
+                      </a>
+                    </td>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+                        300
+                      </a>
+                    </td>
+  <!-- hagarrrrrrrrrrrrrrrrrrrrrr -->
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6">
+                        0.124 Euros
+                      </a>
+                      <span class="text-muted fw-bold text-muted d-block fs-7">Word</span>
+                    </td>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+                        $120
+                      </a>
+                    </td>
+  
+  
+  
+                    <td >
+                      <a href="#" class="
+                          btn btn-icon btn-bg-light btn-active-color-primary btn-sm
+                          me-1
+                        ">
+                        <app-keenicon name="pencil" class="fs-3"></app-keenicon>
+                      </a>
+                      <a href="#" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm">
+                        <app-keenicon name="trash" class="fs-3 text-danger"></app-keenicon>
+                      </a>
+                    </td>
+  
+                  </tr>
+  
+                  <tr>
+                    <div class="py-6 px-0">
+                      <a href="#" class="btn btn-sm text-dark btn-light btn-flex flex-center btn-custom">
+                        <app-keenicon name="plus-square" class="fs-3 text-dark"></app-keenicon>
+                        <span class="text-dark fw-bold ms-2 fs-6">Add Task</span>
+                      </a>
+                    </div>
+                  </tr>
+  
+                  <div class="seperator"></div>
+  
+                </tbody>
+  
+                <!-- end::Table body -->
+              </table>
+              <!-- end::Table -->
+              <!-- 11 -->
+  
+              <div class="d-flex flex-end gap-6 pt-5">
+                <span class="text-muted d-block min-w-90px fw-bold fs-5">Subtotal</span>
+                <span class="text-dark d-block min-w-50px fw-bold fs-5">$1,250</span>
+              </div>
+  
+              <div class="d-flex flex-end gap-6 pt-5">
+                <span class="text-muted d-block min-w-90px fw-bold fs-5">Discount</span>
+                <span class="text-dark d-block min-w-50px fw-bold fs-5">$100</span>
+              </div>
+  
+              <div class="d-flex flex-end gap-6 pt-5">
+                <span class="text-muted d-block min-w-90px fw-bold fs-5">Total</span>
+                <span class="text-dark d-block min-w-50px fw-bold fs-5">$1,150</span>
+              </div>
+  
+            </div>
+            <!-- end::Table container -->
+          </div>
+        </ng-template>
+  
+      </ngb-panel>
+  
+      <ngb-panel id="two">
+  
+        <ng-template ngbPanelTitle>
           <div class="d-flex align-items-center">
             <div class="form-check me-2 form-check-solid">
               <input class="form-check-input bg-muted" type="checkbox" id="kt_settings_notification_email" />
             </div>
             <h3 class="fw-bold text-dark mb-0">English/French</h3>
           </div>
-          <app-keenicon name="down" class="fs-1 text-dark"></app-keenicon>
-        </div>
-
-        <div class="card-body px-0">
-          <!-- begin::Table container -->
-          <div class="table-responsive">
-            <!-- begin::Table -->
-            <table class="table table-row-bordered table-row-gray-100 align-middle gs-0 gy-3">
-              <!-- begin::Table head -->
-              <thead>
-                <tr class="fw-bolder text-muted">
-                  <th class="min-w-150px pb-6">Type</th>
-                  <th class="min-w-140px pb-6">Count</th>
-                  <th class="min-w-120px pb-6">Rate</th>
-                  <th class="min-w-120px pb-6">Total</th>
-                  <th class="min-w-120px pb-6">Actions</th>
-                </tr>
-              </thead>
-              <!-- end::Table head -->
-              <!-- begin::Table body -->
-
-              <tbody>
-
-                <tr>
-
-                  <td>
-                    <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
-                      Preliminary Engineering
-                    </a>
-                  </td>
-
-                  <td>
-                    <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
-                      300
-                    </a>
-                  </td>
-
-                  <td>
-                    <a href="#" class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6">
-                      0.124 Euros
-                    </a>
-                    <span class="text-muted fw-bold text-muted d-block fs-7">Word</span>
-                  </td>
-
-                  <td>
-                    <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
-                      $120
-                    </a>
-                  </td>
-
-                  <td class="text-end">
-                    <a href="#" class="
-                        btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                        me-1
-                      ">
-                      <app-keenicon name="pencil" class="fs-3"></app-keenicon>
-                    </a>
-                    <a href="#" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm">
-                      <app-keenicon name="trash" class="fs-3 text-danger"></app-keenicon>
-                    </a>
-                  </td>
-
-                </tr>
-
-                <tr>
-
-                  <td>
-                    <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
-                      Glossary Localization
-                    </a>
-                  </td>
-
-                  <td>
-                    <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
-                      300
-                    </a>
-                  </td>
-
-                  <td>
-                    <a href="#" class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6">
-                      0.124 Euros
-                    </a>
-                    <span class="text-muted fw-bold text-muted d-block fs-7">Hours</span>
-                  </td>
-
-                  <td>
-                    <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
-                      $120
-                    </a>
-                  </td>
-
-                  <td class="text-end">
-                    <a href="#" class="
-                        btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                        me-1
-                      ">
-                      <app-keenicon name="pencil" class="fs-3"></app-keenicon>
-                    </a>
-                    <a href="#" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm">
-                      <app-keenicon name="trash" class="fs-3 text-danger"></app-keenicon>
-                    </a>
-                  </td>
-
-                </tr>
-
-                <tr>
-
-                  <td>
-                    <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
-                      Final Engineering
-                    </a>
-                  </td>
-
-                  <td>
-                    <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
-                      300
-                    </a>
-                  </td>
-
-                  <td>
-                    <a href="#" class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6">
-                      0.124 Euros
-                    </a>
-                    <span class="text-muted fw-bold text-muted d-block fs-7">Character</span>
-                  </td>
-
-                  <td>
-                    <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
-                      $120
-                    </a>
-                  </td>
-
-                  <td class="text-end">
-                    <a href="#" class="
-                        btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                        me-1
-                      ">
-                      <app-keenicon name="pencil" class="fs-3"></app-keenicon>
-                    </a>
-                    <a href="#" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm">
-                      <app-keenicon name="trash" class="fs-3 text-danger"></app-keenicon>
-                    </a>
-                  </td>
-
-                </tr>
-
-                <tr>
-
-                  <td>
-                    <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
-                      Graphics Localization
-                    </a>
-                  </td>
-
-                  <td>
-                    <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
-                      300
-                    </a>
-                  </td>
-
-                  <td>
-                    <a href="#" class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6">
-                      0.124 Euros
-                    </a>
-                    <span class="text-muted fw-bold text-muted d-block fs-7">Word</span>
-                  </td>
-
-                  <td>
-                    <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
-                      $120
-                    </a>
-                  </td>
-
-                  <td class="text-end">
-                    <a href="#" class="
-                        btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                        me-1
-                      ">
-                      <app-keenicon name="pencil" class="fs-3"></app-keenicon>
-                    </a>
-                    <a href="#" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm">
-                      <app-keenicon name="trash" class="fs-3 text-danger"></app-keenicon>
-                    </a>
-                  </td>
-
-                </tr>
-
-                <tr>
-
-                  <td>
-                    <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
-                      Preliminary Engineering
-                    </a>
-                  </td>
-
-                  <td>
-                    <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
-                      300
-                    </a>
-                  </td>
-<!-- hagarrrrrrrrrrrrrrrrrrrrrr -->
-                  <td>
-                    <a href="#" class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6">
-                      0.124 Euros
-                    </a>
-                    <span class="text-muted fw-bold text-muted d-block fs-7">Word</span>
-                  </td>
-
-                  <td>
-                    <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
-                      $120
-                    </a>
-                  </td>
-
-
-
-                  <td class="text-end">
-                    <a href="#" class="
-                        btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                        me-1
-                      ">
-                      <app-keenicon name="pencil" class="fs-3"></app-keenicon>
-                    </a>
-                    <a href="#" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm">
-                      <app-keenicon name="trash" class="fs-3 text-danger"></app-keenicon>
-                    </a>
-                  </td>
-
-                </tr>
-
-                <tr>
-                  <div class="py-6 px-0">
-                    <a href="#" class="btn btn-sm text-dark btn-light btn-flex flex-center btn-custom">
-                      <app-keenicon name="plus-square" class="fs-3 text-dark"></app-keenicon>
-                      <span class="text-dark fw-bold ms-2 fs-6">Add Task</span>
-                    </a>
-                  </div>
-                </tr>
-
-                <div class="seperator"></div>
-
-              </tbody>
-
-              <!-- end::Table body -->
-            </table>
-            <!-- end::Table -->
-            <!-- 11 -->
-
-            <div class="d-flex flex-end gap-6 pt-5">
-              <span class="text-muted d-block min-w-90px fw-bold fs-5">Subtotal</span>
-              <span class="text-dark d-block min-w-50px fw-bold fs-5">$1,250</span>
+  
+        </ng-template>
+  
+        <ng-template ngbPanelContent>
+          <div class="card-body px-0">
+            <!-- begin::Table container -->
+            <div class="table-responsive">
+              <!-- begin::Table -->
+              <table class="table table-row-bordered table-row-gray-100 align-middle gs-0 gy-3">
+                <!-- begin::Table head -->
+                <thead>
+                  <tr class="fw-bolder text-muted">
+                    <th class="min-w-150px pb-6">Type</th>
+                    <th class="min-w-140px pb-6">Count</th>
+                    <th class="min-w-120px pb-6">Rate</th>
+                    <th class="min-w-120px pb-6">Total</th>
+                    <th class="min-w-120px pb-6">Actions</th>
+                  </tr>
+                </thead>
+                <!-- end::Table head -->
+                <!-- begin::Table body -->
+  
+                <tbody>
+  
+                  <tr>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+                        Preliminary Engineering
+                      </a>
+                    </td>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+                        300
+                      </a>
+                    </td>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6">
+                        0.124 Euros
+                      </a>
+                      <span class="text-muted fw-bold text-muted d-block fs-7">Word</span>
+                    </td>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+                        $120
+                      </a>
+                    </td>
+  
+                    <td >
+                      <a href="#" class="
+                          btn btn-icon btn-bg-light btn-active-color-primary btn-sm
+                          me-1
+                        ">
+                        <app-keenicon name="pencil" class="fs-3"></app-keenicon>
+                      </a>
+                      <a href="#" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm">
+                        <app-keenicon name="trash" class="fs-3 text-danger"></app-keenicon>
+                      </a>
+                    </td>
+  
+                  </tr>
+  
+                  <tr>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+                        Glossary Localization
+                      </a>
+                    </td>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+                        300
+                      </a>
+                    </td>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6">
+                        0.124 Euros
+                      </a>
+                      <span class="text-muted fw-bold text-muted d-block fs-7">Hours</span>
+                    </td>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+                        $120
+                      </a>
+                    </td>
+  
+                    <td >
+                      <a href="#" class="
+                          btn btn-icon btn-bg-light btn-active-color-primary btn-sm
+                          me-1
+                        ">
+                        <app-keenicon name="pencil" class="fs-3"></app-keenicon>
+                      </a>
+                      <a href="#" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm">
+                        <app-keenicon name="trash" class="fs-3 text-danger"></app-keenicon>
+                      </a>
+                    </td>
+  
+                  </tr>
+  
+                  <tr>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+                        Final Engineering
+                      </a>
+                    </td>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+                        300
+                      </a>
+                    </td>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6">
+                        0.124 Euros
+                      </a>
+                      <span class="text-muted fw-bold text-muted d-block fs-7">Character</span>
+                    </td>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+                        $120
+                      </a>
+                    </td>
+  
+                    <td >
+                      <a href="#" class="
+                          btn btn-icon btn-bg-light btn-active-color-primary btn-sm
+                          me-1
+                        ">
+                        <app-keenicon name="pencil" class="fs-3"></app-keenicon>
+                      </a>
+                      <a href="#" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm">
+                        <app-keenicon name="trash" class="fs-3 text-danger"></app-keenicon>
+                      </a>
+                    </td>
+  
+                  </tr>
+  
+                  <tr>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+                        Graphics Localization
+                      </a>
+                    </td>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+                        300
+                      </a>
+                    </td>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6">
+                        0.124 Euros
+                      </a>
+                      <span class="text-muted fw-bold text-muted d-block fs-7">Word</span>
+                    </td>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+                        $120
+                      </a>
+                    </td>
+  
+                    <td >
+                      <a href="#" class="
+                          btn btn-icon btn-bg-light btn-active-color-primary btn-sm
+                          me-1
+                        ">
+                        <app-keenicon name="pencil" class="fs-3"></app-keenicon>
+                      </a>
+                      <a href="#" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm">
+                        <app-keenicon name="trash" class="fs-3 text-danger"></app-keenicon>
+                      </a>
+                    </td>
+  
+                  </tr>
+  
+                  <tr>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+                        Preliminary Engineering
+                      </a>
+                    </td>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+                        300
+                      </a>
+                    </td>
+  <!-- hagarrrrrrrrrrrrrrrrrrrrrr -->
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6">
+                        0.124 Euros
+                      </a>
+                      <span class="text-muted fw-bold text-muted d-block fs-7">Word</span>
+                    </td>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+                        $120
+                      </a>
+                    </td>
+  
+  
+  
+                    <td >
+                      <a href="#" class="
+                          btn btn-icon btn-bg-light btn-active-color-primary btn-sm
+                          me-1
+                        ">
+                        <app-keenicon name="pencil" class="fs-3"></app-keenicon>
+                      </a>
+                      <a href="#" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm">
+                        <app-keenicon name="trash" class="fs-3 text-danger"></app-keenicon>
+                      </a>
+                    </td>
+  
+                  </tr>
+  
+                  <tr>
+                    <div class="py-6 px-0">
+                      <a href="#" class="btn btn-sm text-dark btn-light btn-flex flex-center btn-custom">
+                        <app-keenicon name="plus-square" class="fs-3 text-dark"></app-keenicon>
+                        <span class="text-dark fw-bold ms-2 fs-6">Add Task</span>
+                      </a>
+                    </div>
+                  </tr>
+  
+                  <div class="seperator"></div>
+  
+                </tbody>
+  
+                <!-- end::Table body -->
+              </table>
+              <!-- end::Table -->
+              <!-- 11 -->
+  
+              <div class="d-flex flex-end gap-6 pt-5">
+                <span class="text-muted d-block min-w-90px fw-bold fs-5">Subtotal</span>
+                <span class="text-dark d-block min-w-50px fw-bold fs-5">$1,250</span>
+              </div>
+  
+              <div class="d-flex flex-end gap-6 pt-5">
+                <span class="text-muted d-block min-w-90px fw-bold fs-5">Discount</span>
+                <span class="text-dark d-block min-w-50px fw-bold fs-5">$100</span>
+              </div>
+  
+              <div class="d-flex flex-end gap-6 pt-5">
+                <span class="text-muted d-block min-w-90px fw-bold fs-5">Total</span>
+                <span class="text-dark d-block min-w-50px fw-bold fs-5">$1,150</span>
+              </div>
+  
             </div>
-
-            <div class="d-flex flex-end gap-6 pt-5">
-              <span class="text-muted d-block min-w-90px fw-bold fs-5">Discount</span>
-              <span class="text-dark d-block min-w-50px fw-bold fs-5">$100</span>
-            </div>
-
-            <div class="d-flex flex-end gap-6 pt-5">
-              <span class="text-muted d-block min-w-90px fw-bold fs-5">Total</span>
-              <span class="text-dark d-block min-w-50px fw-bold fs-5">$1,150</span>
-            </div>
-
+            <!-- end::Table container -->
           </div>
-          <!-- end::Table container -->
-        </div>
+        </ng-template>
+  
+      </ngb-panel>
+  
+      <ngb-panel >
+  
+        <ng-template ngbPanelTitle>
+          <div class="d-flex justify-content-between w-100">
 
-      </div>
-
-    </div>
-
-
-    <div class="bg-white px-7 rounded mb-5 mb-xxl-8 card-box-shadow border border-gray-200">
-
-      <div class="card">
-        <div class="card-header p-0 align-items-center border-0">
-          <div class="d-flex align-items-center">
-            <div class="form-check me-2 form-check-solid">
-              <input class="form-check-input bg-muted" type="checkbox" id="kt_settings_notification_email" />
+            <div class="d-flex align-items-center">
+              <div class="form-check me-2 form-check-solid">
+                <input class="form-check-input bg-muted" type="checkbox" id="kt_settings_notification_email" />
+              </div>
+              <h3 class="fw-bold text-dark mb-0">English/Arabic</h3>
             </div>
-            <h3 class="fw-bold text-dark mb-0">English/Arabic</h3>
-          </div>
-          <app-keenicon name="down" class="fs-1 text-dark"></app-keenicon>
-        </div>
-      </div>
 
-    </div>
+            <div class="d-flex gap-6">
+              <span class="text-muted d-block fw-bold fs-5">Total</span>
+              <span class="text-dark d-block min-w-80px fw-bold fs-5">$1,150</span>
+            </div>
+            
+          </div>
+  
+        </ng-template>
+  
+        <ng-template ngbPanelContent>
+          <div class="card-body px-0">
+            <!-- begin::Table container -->
+            <div class="table-responsive">
+              <!-- begin::Table -->
+              <table class="table table-row-bordered table-row-gray-100 align-middle gs-0 gy-3">
+                <!-- begin::Table head -->
+                <thead>
+                  <tr class="fw-bolder text-muted">
+                    <th class="min-w-150px pb-6">Type</th>
+                    <th class="min-w-140px pb-6">Count</th>
+                    <th class="min-w-120px pb-6">Rate</th>
+                    <th class="min-w-120px pb-6">Total</th>
+                    <th class="min-w-120px pb-6">Actions</th>
+                  </tr>
+                </thead>
+                <!-- end::Table head -->
+                <!-- begin::Table body -->
+  
+                <tbody>
+  
+                  <tr>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+                        Preliminary Engineering
+                      </a>
+                    </td>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+                        300
+                      </a>
+                    </td>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6">
+                        0.124 Euros
+                      </a>
+                      <span class="text-muted fw-bold text-muted d-block fs-7">Word</span>
+                    </td>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+                        $120
+                      </a>
+                    </td>
+  
+                    <td >
+                      <a href="#" class="
+                          btn btn-icon btn-bg-light btn-active-color-primary btn-sm
+                          me-1
+                        ">
+                        <app-keenicon name="pencil" class="fs-3"></app-keenicon>
+                      </a>
+                      <a href="#" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm">
+                        <app-keenicon name="trash" class="fs-3 text-danger"></app-keenicon>
+                      </a>
+                    </td>
+  
+                  </tr>
+  
+                  <tr>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+                        Glossary Localization
+                      </a>
+                    </td>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+                        300
+                      </a>
+                    </td>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6">
+                        0.124 Euros
+                      </a>
+                      <span class="text-muted fw-bold text-muted d-block fs-7">Hours</span>
+                    </td>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+                        $120
+                      </a>
+                    </td>
+  
+                    <td >
+                      <a href="#" class="
+                          btn btn-icon btn-bg-light btn-active-color-primary btn-sm
+                          me-1
+                        ">
+                        <app-keenicon name="pencil" class="fs-3"></app-keenicon>
+                      </a>
+                      <a href="#" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm">
+                        <app-keenicon name="trash" class="fs-3 text-danger"></app-keenicon>
+                      </a>
+                    </td>
+  
+                  </tr>
+  
+                  <tr>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+                        Final Engineering
+                      </a>
+                    </td>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+                        300
+                      </a>
+                    </td>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6">
+                        0.124 Euros
+                      </a>
+                      <span class="text-muted fw-bold text-muted d-block fs-7">Character</span>
+                    </td>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+                        $120
+                      </a>
+                    </td>
+  
+                    <td >
+                      <a href="#" class="
+                          btn btn-icon btn-bg-light btn-active-color-primary btn-sm
+                          me-1
+                        ">
+                        <app-keenicon name="pencil" class="fs-3"></app-keenicon>
+                      </a>
+                      <a href="#" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm">
+                        <app-keenicon name="trash" class="fs-3 text-danger"></app-keenicon>
+                      </a>
+                    </td>
+  
+                  </tr>
+  
+                  <tr>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+                        Graphics Localization
+                      </a>
+                    </td>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+                        300
+                      </a>
+                    </td>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6">
+                        0.124 Euros
+                      </a>
+                      <span class="text-muted fw-bold text-muted d-block fs-7">Word</span>
+                    </td>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+                        $120
+                      </a>
+                    </td>
+  
+                    <td >
+                      <a href="#" class="
+                          btn btn-icon btn-bg-light btn-active-color-primary btn-sm
+                          me-1
+                        ">
+                        <app-keenicon name="pencil" class="fs-3"></app-keenicon>
+                      </a>
+                      <a href="#" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm">
+                        <app-keenicon name="trash" class="fs-3 text-danger"></app-keenicon>
+                      </a>
+                    </td>
+  
+                  </tr>
+  
+                  <tr>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+                        Preliminary Engineering
+                      </a>
+                    </td>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+                        300
+                      </a>
+                    </td>
+  <!-- hagarrrrrrrrrrrrrrrrrrrrrr -->
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary d-block mb-1 fs-6">
+                        0.124 Euros
+                      </a>
+                      <span class="text-muted fw-bold text-muted d-block fs-7">Word</span>
+                    </td>
+  
+                    <td>
+                      <a href="#" class="text-dark fw-bolder text-hover-primary fs-6">
+                        $120
+                      </a>
+                    </td>
+  
+  
+  
+                    <td >
+                      <a href="#" class="
+                          btn btn-icon btn-bg-light btn-active-color-primary btn-sm
+                          me-1
+                        ">
+                        <app-keenicon name="pencil" class="fs-3"></app-keenicon>
+                      </a>
+                      <a href="#" class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm">
+                        <app-keenicon name="trash" class="fs-3 text-danger"></app-keenicon>
+                      </a>
+                    </td>
+  
+                  </tr>
+  
+                  <tr>
+                    <div class="py-6 px-0">
+                      <a href="#" class="btn btn-sm text-dark btn-light btn-flex flex-center btn-custom">
+                        <app-keenicon name="plus-square" class="fs-3 text-dark"></app-keenicon>
+                        <span class="text-dark fw-bold ms-2 fs-6">Add Task</span>
+                      </a>
+                    </div>
+                  </tr>
+  
+                  <div class="seperator"></div>
+  
+                </tbody>
+  
+                <!-- end::Table body -->
+              </table>
+              <!-- end::Table -->
+              <!-- 11 -->
+  
+              <div class="d-flex flex-end gap-6 pt-5">
+                <span class="text-muted d-block min-w-90px fw-bold fs-5">Subtotal</span>
+                <span class="text-dark d-block min-w-50px fw-bold fs-5">$1,250</span>
+              </div>
+  
+              <div class="d-flex flex-end gap-6 pt-5">
+                <span class="text-muted d-block min-w-90px fw-bold fs-5">Discount</span>
+                <span class="text-dark d-block min-w-50px fw-bold fs-5">$100</span>
+              </div>
+  
+              <div class="d-flex flex-end gap-6 pt-5">
+                <span class="text-muted d-block min-w-90px fw-bold fs-5">Total</span>
+                <span class="text-dark d-block min-w-50px fw-bold fs-5">$1,150</span>
+              </div>
+  
+            </div>
+            <!-- end::Table container -->
+          </div>
+        </ng-template>
+  
+      </ngb-panel>
+  
+  
+      
+  
+    </ngb-accordion>
+
+  
 
   </div>
 
@@ -417,7 +976,7 @@
             <div class="d-flex gap-4 align-items-center">
 
               <a href="#" class="btn btn-sm text-dark btn-primary btn-flex flex-center btn-custom">
-                <app-keenicon name="check" class="fs-3 text-white"></app-keenicon>
+                <app-keenicon name="check-square" class="fs-3 text-white"></app-keenicon>
                 <span class="text-white fw-bold ms-2 fs-6">Apply</span>
               </a>
 
@@ -448,7 +1007,7 @@
           <div class="col-lg-6">
             <div class="d-flex gap-4 align-items-center">
               <a href="#" class="btn btn-sm text-dark btn-primary btn-flex flex-center btn-custom">
-                <app-keenicon name="check" class="fs-3 text-white"></app-keenicon>
+                <app-keenicon name="check-square" class="fs-3 text-white"></app-keenicon>
                 <span class="text-white fw-bold ms-2 fs-6">Apply</span>
               </a>
 

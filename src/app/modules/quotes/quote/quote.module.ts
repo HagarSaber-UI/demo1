@@ -12,6 +12,7 @@ import { LanguagesComponent } from './languages/languages.component';
 import { QuoteProjectComponent } from './project/project.component';
 
 import { CardsModule } from "../../../_metronic/partials/content/cards/cards.module";
+import { NgbAccordionConfig, NgbAccordionModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
     declarations: [QuoteComponent,
@@ -23,7 +24,12 @@ import { CardsModule } from "../../../_metronic/partials/content/cards/cards.mod
         DropdownMenusModule,
         WidgetsModule,
         SharedModule,
-        CardsModule
-    ]
+        CardsModule,
+        NgbAccordionModule,
+        CommonModule,
+        NgbAccordionModule,
+        NgbAlertModule
+    ],
+    providers: [NgbAccordionConfig]
 })
 export class QuoteModule {}
