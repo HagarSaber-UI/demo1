@@ -9,13 +9,13 @@ import {
 } from '../../../_metronic/partials';
 import { SharedModule } from '../../../_metronic/shared/shared.module';
 import { LanguagesComponent } from './languages/languages.component';
-import { QuoteEditComponent } from './edit/edit.component';
+import { QuoteProjectComponent } from './project/project.component';
 
 import { CardsModule } from "../../../_metronic/partials/content/cards/cards.module";
 
 @NgModule({
     declarations: [QuoteComponent,
-        LanguagesComponent,QuoteEditComponent
+        LanguagesComponent,QuoteProjectComponent
     ],
     imports: [
         CommonModule,
