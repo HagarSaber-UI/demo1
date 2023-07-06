@@ -12,5 +12,5 @@ export class LanguagesComponent implements OnInit {
 
   ngOnInit(): void {}
 
-
+  activeIds:string[] = ['one','two']
 }
