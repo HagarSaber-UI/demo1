@@ -1,0 +1,262 @@
+<div class="card mb-5 mb-xl-8 card-box-shadow border border-gray-200">
+  <div class="card-header border-0 pt-5">
+    <div class="align-items-start flex-column">
+      <div class="position-relative my-1">
+        <app-keenicon
+          name="magnifier"
+          class="fs-5 text-gray-500 position-absolute top-50 translate-middle ps-15"
+        ></app-keenicon>
+        <input
+          type="text"
+          class="w-325px fs-6 form-control form-control-solid form-control-lg px-15"
+          name="searchTerm"
+          id="table-complete-search"
+          value=""
+          placeholder="Search by name, company or pm"
+          [(ngModel)]="service.searchTerm"
+        />
+        <!-- <span class="col col-form-label" *ngIf="service.loading$ | async"
+		  >Loading...</span
+		> -->
+      </div>
+    </div>
+
+    <div class="card-toolbar">
+      <div class="d-flex align-items-center">
+        <span class="fw-bold text-dark me-3 w-70px"> Sort By:</span>
+        <select
+          name="page"
+          class="min-w-80px form-select form-select-solid form-select-lg"
+        >
+          <option value="">Creation Date: Ascending</option>
+          <option selected value="5">Creation Date: Ascending</option>
+          <option value="GBP">1</option>
+          <option value="AUD">2</option>
+          <option value="JPY">3</option>
+          <option value="SEK">4</option>
+          <option value="CAD">5</option>
+          <option value="CHF">6</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-body py-3">
+    <div class="table-responsive">
+      <table class="table align-middle gs-0 gy-7 table-row-dashed table-row-gray-300">
+        <thead>
+          <tr class="fw-bolder text-muted">
+            <th
+              scope="col"
+              class="min-w-200px rounded-start cursor-pointer"
+              sortable="projectId"
+            >
+              Project
+            </th>
+            <th
+              scope="col"
+              class="min-w-125px cursor-pointer"
+              sortable="type"
+              (sort)="onSort($event)"
+            >
+              Type
+            </th>
+            <th
+              scope="col"
+              class="min-w-125px cursor-pointer"
+              sortable="name"
+              (sort)="onSort($event)"
+            >
+              Name/Company
+            </th>
+            <th
+              scope="col"
+              class="min-w-150px cursor-pointer"
+              sortable="accountManager"
+              (sort)="onSort($event)"
+            >
+              Account Manager
+            </th>
+            <th
+              scope="col"
+              class="min-w-150px cursor-pointer"
+              sortable="status"
+              (sort)="onSort($event)"
+            >
+              Status
+            </th>
+            <th class="cursor-pointer" scope="col" sortable="cost" (sort)="onSort($event)">Cost</th>
+            <th class="cursor-pointer" scope="col" sortable="dueDate" (sort)="onSort($event)">
+              Due Date
+            </th>
+            <th scope="col" class="min-w-200px text-end rounded-end cursor-pointer">
+              Actions
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let country of countries$ | async">
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <div class="d-flex justify-content-start flex-column">
+                  <span class="text-gray-500 fw-bold d-block fs-7">
+                    <!-- first td -->
+                    <ngb-highlight
+                      [result]="country.projectId"
+                      [term]="service.searchTerm"
+                    ></ngb-highlight>
+                    |
+                    <ngb-highlight
+                      [result]="country.projectDate"
+                      [term]="service.searchTerm"
+                    ></ngb-highlight>
+                  </span>
+                  <span class="text-dark fw-bold d-block fs-7">
+                    <ngb-highlight
+                      [result]="country.projectName"
+                      [term]="service.searchTerm"
+                    ></ngb-highlight>
+                  </span>
+                </div>
+              </div>
+            </td>
+
+            <td>
+              <div class="d-flex align-items-center">
+                <app-keenicon name="screen" class="fs-3 me-2"></app-keenicon>
+                <a
+                  href="#"
+                  class="text-dark fw-bolder text-hover-primary d-block fs-6"
+                >
+                  <ngb-highlight
+                    [result]="country.type"
+                    [term]="service.searchTerm"
+                  ></ngb-highlight>
+                </a>
+              </div>
+            </td>
+
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <a
+                  href="#"
+                  class="text-dark fw-bolder text-hover-primary mb-1 fs-6"
+                >
+                  <ngb-highlight
+                    [result]="country.name"
+                    [term]="service.searchTerm"
+                  ></ngb-highlight>
+                </a>
+                <span class="text-gray-500 fw-bold d-block fs-7">
+                  <ngb-highlight
+                    [result]="country.company"
+                    [term]="service.searchTerm"
+                  ></ngb-highlight>
+                </span>
+              </div>
+            </td>
+
+            <td>
+              <a
+                href="#"
+                class="text-dark fw-bolder text-hover-primary mb-1 fs-6"
+              >
+                <ngb-highlight
+                  [result]="country.accountManager"
+                  [term]="service.searchTerm"
+                ></ngb-highlight>
+              </a>
+            </td>
+
+            <td>
+              <span class="badge badge-light-warning fs-7 fw-bold">
+                <ngb-highlight
+                  [result]="country.status"
+                  [term]="service.searchTerm"
+                ></ngb-highlight>
+              </span>
+			 	<!-- <span class="badge badge-light-warning fs-7 fw-bold">Pending Approval</span> -->
+            	<!-- <span class="badge badge-light-danger fs-7 fw-bold">Canceled</span> -->
+				<!-- <span class="badge badge-light-info  fs-7 fw-bold">Submitted</span> -->
+            </td>
+
+
+
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <p class="text-dark fw-bolder text-hover-primary mb-1 fs-6">
+                  <ngb-highlight
+                    [result]="country.cost"
+                    [term]="service.searchTerm"
+                  ></ngb-highlight>
+                </p>
+              </div>
+            </td>
+
+            <td>
+              <div class="d-flex justify-content-start flex-column">
+                <p class="text-dark fw-bolder text-hover-primary mb-1 fs-6">
+                  <ngb-highlight
+                    [result]="country.dueDate"
+                    [term]="service.searchTerm"
+                  ></ngb-highlight>
+                </p>
+              </div>
+            </td>
+
+            <td class="text-end">
+              <a
+                href="#"
+                class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-3"
+              >
+                <app-keenicon name="magnifier" class="fs-3"></app-keenicon>
+              </a>
+
+              <a
+                href="#"
+                class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm"
+              >
+                <app-keenicon name="pencil" class="fs-3"></app-keenicon>
+              </a>
+            </td>
+          </tr>
+        </tbody>
+
+      </table>
+    </div>
+  </div>
+
+  <div class="card-footer border-0">
+	<div class="d-flex flex-stack flex-wrap">
+	  <div class="fs-6 fw-bold text-gray-700">
+		<div class="d-inline-flex align-items-center">
+		  <span class="me-3">Showing</span>
+		  <select
+			name="page"
+			class="form-select form-select-solid form-select-lg"
+			name="pageSize"
+			[(ngModel)]="service.pageSize"
+		  >
+		  <option value="" disabled>Select..</option>
+		  <option [ngValue]="1">1</option>
+		  <option [ngValue]="2">2</option>
+		  <option [ngValue]="3">3</option>
+		  <option [ngValue]="4">4</option>
+		  <option [ngValue]="5">5</option>
+		  <option [ngValue]="6">6</option>
+  
+		  </select>
+		</div>
+	  </div>
+
+	  <ngb-pagination
+	  [collectionSize]="(total$ | async)!"
+	  [(page)]="service.page"
+	  [pageSize]="service.pageSize"
+	>
+	</ngb-pagination>
+	</div>
+  </div>
+
+</div>
