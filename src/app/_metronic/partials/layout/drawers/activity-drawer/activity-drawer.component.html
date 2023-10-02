@@ -62,12 +62,29 @@
       </div>
     </div>
 
-    <!-- <div class="card-footer py-5 text-center" id="kt_activities_footer">
-      <a to="/crafted/pages/project" class="btn btn-bg-body text-primary">
-        View All Activities
-        <app-keenicon name="arrow-right" class="fs-3 text-primary"></app-keenicon>
-      </a>
-    </div> -->
+    <div class="d-flex flex-stack py-5" id="kt_activities_footer">
+
+
+      <div class="d-flex align-items-center gap-2 gap-lg-3">
+
+        <button class="btn btn-sm btn-flex btn-primary fw-bold btn-flex flex-center btn-custom btn-active-primary">
+          <app-keenicon name="magnifier" class="fs-3 text-secondary"></app-keenicon>
+          <span class="text-secondary fw-bold ms-2 fs-6">Search</span>
+        </button>
+
+    <button class="btn btn-sm btn-flex btn-white fw-bold btn-flex flex-center btn-custom btn-active-light-dark"
+    data-bs-toggle="modal" data-bs-target="#kt_modal_create_app">
+      <span class="text-dark fw-bold ms-2 fs-6">Cancel</span>
+    </button>
+    
+      </div>
+
+      <button class="btn btn-sm btn-flex btn-light fw-bold btn-flex flex-center btn-custom btn-active-light-dark">
+        <app-keenicon name="arrow-circle-right" class="fs-3 text-dark"></app-keenicon>
+        <span class="text-dark fw-bold ms-2 fs-6">Reset</span>
+      </button>
+
+    </div>
 
   </div>
 </div>
