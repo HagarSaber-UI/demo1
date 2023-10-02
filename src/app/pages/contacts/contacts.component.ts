@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { LayoutService } from '../../_metronic/layout';
+import { NgbdTableComplete } from './table/table-complete';
 
 type Tabs = 'Sidebar' | 'Header' | 'Toolbar';
 
@@ -14,6 +15,7 @@ export class ContactsComponent implements OnInit {
   @ViewChild('form', { static: true }) form: NgForm;
   configLoading: boolean = false;
   resetLoading: boolean = false;
+service: any;
   constructor(private layout: LayoutService) {}
 
   ngOnInit(): void {
@@ -35,4 +37,7 @@ export class ContactsComponent implements OnInit {
     this.configLoading = true;
     this.layout.saveBaseConfig(this.model); // it will refresh the page
   }
+
+
+  
 }
