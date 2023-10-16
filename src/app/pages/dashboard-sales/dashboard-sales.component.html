@@ -153,7 +153,7 @@
     <!-- Begin :: Card One 1 -->
 
     <app-mixed-widget3
-    class="card mb-5 mb-xl-8"
+    class="card mb-5 mb-xl-10"
     chartColor="white"
     chartHeight="150px"
     ></app-mixed-widget3>
@@ -163,7 +163,7 @@
 
     <!-- Begin :: Card Two 2 -->
 
-    <div class="card mb-5 mb-xl-8">
+    <div class="card mb-5 mb-md-0">
       <div class="card-title px-8 pt-7 pb-4">
         <h3 class="card-title text-gray-800 fw-bold">Breakdown</h3>
       </div>
@@ -240,12 +240,24 @@
 
   <div class="col-xxl-8 d-flex">
 
-    <div class="card mb-5 mb-xl-8 w-100 p-0">
+    <div class="card mb-5 mb-md-0 w-100 p-0">
           <!-- begin::Header -->
 <div class="card-header border-0 pt-7">
   <div class="d-flex w-100 justify-content-between">
     <span class="card-label fw-bolder fs-4 mb-1">Monthly Targets</span>
     <!-- date pick here -->
+    <div class="group rounded-2 bg-light d-flex align-items-center">
+			<input
+				class="form-control border-0 w-150px bg-light"
+				placeholder="Enter Date Here"
+				name="dp"
+				[(ngModel)]="model"
+				ngbDatepicker
+				#d="ngbDatepicker"
+        (click)="d.toggle()"
+			/>
+      <app-keenicon name="calendar" class="fs-1 me-3 text-gray-600"></app-keenicon>
+		</div>
 
   </div>
 

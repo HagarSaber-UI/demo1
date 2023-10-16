@@ -2,7 +2,7 @@ import { Component, ViewChild , Input, OnInit} from '@angular/core';
 import { ModalConfig, ModalComponent } from '../../_metronic/partials';
 import { getCSSVariableValue } from './../../_metronic/kt/_utils';
 import { LayoutService } from './../../_metronic/layout/core/layout.service';
-
+import {NgbCalendar,NgbDate,NgbDatepickerModule,NgbDateStruct,NgbInputDatepickerConfig} from '@ng-bootstrap/ng-bootstrap';
 
 type Tabs =
   | 'kt_table_widget_7_tab_1'
@@ -14,9 +14,33 @@ type Tabs =
   selector: 'app-dashboard-sales',
   templateUrl: './dashboard-sales.component.html',
   styleUrls: ['./dashboard-sales.component.scss'],
+  providers: [NgbInputDatepickerConfig]
 })
+
 export class DashboardSalesComponent implements OnInit {
   chartOptions: any = {};
+
+
+	model: NgbDateStruct;
+  
+	constructor(config: NgbInputDatepickerConfig, private layout: LayoutService) {
+		// customize default values of datepickers used by this component tree
+		config.minDate = { year: 1900, month: 1, day: 1 };
+		config.maxDate = { year: 2099, month: 12, day: 31 };
+
+		// days that don't belong to current month are not visible
+		config.outsideDays = 'hidden';
+
+		// weekends are disabled
+
+		// setting datepicker popup to close only on click outside
+		// config.autoClose = 'outside';
+
+		// setting datepicker popup to open above the input
+		config.placement = ['top-start', 'top-end'];
+	}
+
+
   
 
   modalConfig: ModalConfig = {
@@ -27,7 +51,6 @@ export class DashboardSalesComponent implements OnInit {
   @ViewChild('modal') private modalComponent: ModalComponent;
   
   activeTab: Tabs = 'kt_table_widget_7_tab_1';
-  constructor(private layout: LayoutService) {}
 
   setTab(tab: Tabs) {
     this.activeTab = tab;
@@ -66,6 +89,11 @@ export class DashboardSalesComponent implements OnInit {
   }
 
 }
+
+
+export class DateRangePickerOverviewExample {}
+
+
 
 const initChart = function (
   chartSize: number = 110,

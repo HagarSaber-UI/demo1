@@ -7,7 +7,11 @@ import { InlineSVGModule } from 'ng-inline-svg-2';
 import { SharedModule } from "./../../_metronic/shared/shared.module";
 import { DropdownMenusModule } from '../../_metronic/partials';
 import { NgApexchartsModule } from 'ng-apexcharts';
-
+import {NgbCalendar,NgbDate,NgbDatepickerModule,NgbDateStruct,NgbInputDatepickerConfig} from '@ng-bootstrap/ng-bootstrap';
+import { FormsModule } from '@angular/forms';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [DashboardSalesComponent],
@@ -26,6 +30,12 @@ import { NgApexchartsModule } from 'ng-apexcharts';
     SharedModule,
     DropdownMenusModule,
     NgApexchartsModule,
+    NgbDatepickerModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MatNativeDateModule
+
     
   ],
 })
