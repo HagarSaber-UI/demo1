@@ -24,12 +24,12 @@ function getChartOptions(chartHeight: string) {
     series: [
       {
         name: 'Net Profit',
-        data: [35, 65, 75, 55, 45, 60, 55],
+        data: [15, 35, 70, 65, 45, 40, 95],
       },
-      {
-        name: 'Revenue',
-        data: [40, 70, 80, 60, 50, 65, 60],
-      },
+      // {
+      //   name: 'Revenue',
+      //   data: [40, 70, 80, 60, 50, 65, 60],
+      // },
     ],
     chart: {
       fontFamily: 'inherit',
@@ -46,7 +46,7 @@ function getChartOptions(chartHeight: string) {
       bar: {
         horizontal: false,
         columnWidth: '30%',
-        borderRadius: 5,
+        borderRadius: 3,
       },
     },
     legend: {
@@ -86,8 +86,8 @@ function getChartOptions(chartHeight: string) {
       },
     },
     fill: {
-      type: ['solid', 'solid'],
-      opacity: [0.25, 1],
+      type: ['solid'],
+      opacity: [1],
     },
     states: {
       normal: {
@@ -123,7 +123,7 @@ function getChartOptions(chartHeight: string) {
         show: false,
       },
     },
-    colors: ['#ffffff', '#ffffff'],
+    colors: ['#304D4A'],
     grid: {
       borderColor: borderColor,
       strokeDashArray: 4,

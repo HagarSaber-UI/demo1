@@ -3,7 +3,8 @@ import { Component, OnInit } from '@angular/core';
 type Tabs =
   | 'kt_table_widget_7_tab_1'
   | 'kt_table_widget_7_tab_2'
-  | 'kt_table_widget_7_tab_3';
+  | 'kt_table_widget_7_tab_3'
+  | 'kt_table_widget_7_tab_4';
 
 @Component({
   selector: 'app-tables-widget7',

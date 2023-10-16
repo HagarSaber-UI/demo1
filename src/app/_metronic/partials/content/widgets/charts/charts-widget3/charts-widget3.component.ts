@@ -18,7 +18,7 @@ export class ChartsWidget3Component implements OnInit {
 function getChartOptions(height: number) {
   const labelColor = getCSSVariableValue('--bs-gray-500');
   const borderColor = getCSSVariableValue('--bs-gray-200');
-  const baseColor = getCSSVariableValue('--bs-info');
+  const baseColor = getCSSVariableValue('--bs-primary');
   const lightColor = getCSSVariableValue('--bs-info-light');
 
   return {
@@ -31,7 +31,7 @@ function getChartOptions(height: number) {
     chart: {
       fontFamily: 'inherit',
       type: 'area',
-      height: 350,
+      height: 200,
       toolbar: {
         show: false,
       },
@@ -64,7 +64,7 @@ function getChartOptions(height: number) {
       labels: {
         style: {
           colors: labelColor,
-          fontSize: '12px',
+          fontSize: '0px',
         },
       },
       crosshairs: {
@@ -88,7 +88,7 @@ function getChartOptions(height: number) {
       labels: {
         style: {
           colors: labelColor,
-          fontSize: '12px',
+          fontSize: '0px',
         },
       },
     },

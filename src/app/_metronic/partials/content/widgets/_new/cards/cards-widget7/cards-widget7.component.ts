@@ -10,7 +10,7 @@ export class CardsWidget7Component implements OnInit {
   @Input() icon: boolean = false;
   @Input() stats: number = 357;
   @Input() description: string = 'Professionals';
-  @Input() labelColor: string = 'dark';
+  @Input() labelColor: string = 'danger';
   @Input() textColor: string = 'gray-300';
   items: Array<{ name: string; initials?: string; state?: string, src?: string }>;
 
@@ -18,11 +18,11 @@ export class CardsWidget7Component implements OnInit {
 
   ngOnInit(): void {
     this.items = [
-      { name: 'Alan Warden', initials: 'A', state: 'warning' },
+      { name: 'Alan Warden', initials: 'S', state: 'success' },
       { name: 'Michael Eberon', src: './assets/media/avatars/300-11.jpg' },
       { name: 'Susan Redwood', initials: 'S', state: 'primary' },
       { name: 'Melody Macy', src: './assets/media/avatars/300-2.jpg' },
-      { name: 'Perry Matthew', initials: 'P', state: 'danger' },
+      { name: 'Perry Matthew', initials: 'P', state: 'info' },
       { name: 'Barry Walter', src: './assets/media/avatars/300-12.jpg' },
     ];
   }
