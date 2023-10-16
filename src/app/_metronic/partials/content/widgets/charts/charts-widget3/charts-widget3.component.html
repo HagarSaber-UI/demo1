@@ -1,37 +1,87 @@
 <!-- begin::Header -->
 <div class="card-header border-0 pt-5">
-  <h3 class="card-title align-items-start flex-column">
-    <span class="card-label fw-bolder fs-3 mb-1">Recent Transactions</span>
+  <div class="d-flex w-100 justify-content-between">
+    <!-- begin::Title -->
+    <div class="card-title mb-4 d-flex flex-column">
+      <!--begin::Info-->
+      <div class="d-flex align-items-center">
+        <!--begin::Currency-->
+        <span class="fs-4 fw-semibold text-gray-400 me-1 align-self-start">$</span>
+        <!--end::Currency-->
+  
+        <!--begin::Amount-->
+        <span class="fs-2hx fw-bold text-dark me-2 lh-1 ls-n2">3,274.94</span>
+        <!--end::Amount-->
+  
+        <!--begin::Badge-->
+        <span class="badge badge-light-success fs-base">
+          <app-keenicon name="arrow-up" class="fs-5 text-success ms-n1"></app-keenicon>
+          9.2%
+        </span>
+        <!--end::Badge-->
+      </div>
+      <!--end::Info-->
+  
+      <!--begin::Subtitle-->
+      <span class="text-gray-400 pt-1 fw-semibold fs-6">Avg.Project Earnings</span>
+      <!--end::Subtitle-->
+    </div>
+    <!-- end::Title -->
+    <div class="d-flex border-0">
+      <!-- <h3 class="card-title fw-bolder text-white">Sales Statistics</h3> -->
+          <div class="card-toolbar ms-auto">
+          <!-- begin::Menu-->
+          <button class="btn btn-icon btn-color-gray-400 btn-active-color-primary justify-content-end"
+            data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end" data-kt-menu-overflow="true">
+            <app-keenicon name="dots-square" class="fs-1 text-gray-600"></app-keenicon>
+          </button> 
+          <app-dropdown-menu2></app-dropdown-menu2> 
+          <!--end::Menu -->
+        </div>
+    </div>
 
-    <span class="text-muted fw-bold fs-7">More than 1000 new records</span>
-  </h3>
+  </div>
 
   <!-- begin::Toolbar -->
-  <div class="card-toolbar" data-kt-buttons="true">
+  <div class="card-toolbar w-100 d-flex flex-stack" data-kt-buttons="true">
     <a
       class="
-        btn btn-sm btn-color-muted btn-active btn-active-primary
+        btn btn-sm btn-color-muted btn-active btn-active-danger
         active
         px-4
         me-1
       "
       id="kt_charts_widget_3_year_btn"
     >
-      Year
+      1d
     </a>
-
+  
     <a
-      class="btn btn-sm btn-color-muted btn-active btn-active-primary px-4 me-1"
+      class="btn btn-sm btn-color-muted btn-active btn-active-danger px-4 me-1"
       id="kt_charts_widget_3_month_btn"
     >
-      Month
+      5d
     </a>
-
+  
     <a
-      class="btn btn-sm btn-color-muted btn-active btn-active-primary px-4"
+      class="btn btn-sm btn-color-muted btn-active btn-active-danger px-4"
       id="kt_charts_widget_3_week_btn"
     >
-      Week
+      1m
+    </a>
+  
+    <a
+      class="btn btn-sm btn-color-muted btn-active btn-active-danger px-4"
+      id="kt_charts_widget_3_week_btn"
+    >
+      6m
+    </a>
+  
+    <a
+      class="btn btn-sm btn-color-muted btn-active btn-active-danger px-4"
+      id="kt_charts_widget_3_week_btn"
+    >
+      1y
     </a>
   </div>
   <!-- end::Toolbar -->
@@ -39,9 +89,10 @@
 <!-- end::Header -->
 
 <!-- begin::Body -->
-<div class="card-body">
+<div class="card-body px-2 py-6">
+  
   <!-- begin::Chart -->
-  <div #chartRef id="kt_charts_widget_3_chart" [style.height]="'350px'">
+  <div #chartRef id="kt_charts_widget_3_chart" class="mb-5" [style.height]="'200px'">
     <apx-chart
       [series]="chartOptions.series"
       [chart]="chartOptions.chart"
@@ -59,5 +110,35 @@
     ></apx-chart>
   </div>
   <!-- end::Chart -->
+
+  <div class="d-flex flex-column px-8">
+
+    <div class="item d-flex flex-stack mb-4">
+      <span class="text-gray-600 fw-bold fs-7">3:10 PM</span>
+      <div>
+        <span class="text-dark fw-bold fs-7 me-5">$2,756.26</span>
+        <span class="text-danger fw-bold fs-7">-139.34</span>
+      </div>
+    </div>
+
+    <div class="item d-flex flex-stack mb-4">
+      <span class="text-gray-600 fw-bold fs-7">2:30 PM</span>
+      <div>
+        <span class="text-dark fw-bold fs-7 me-5">$3,207.03</span>
+        <span class="text-success fw-bold fs-7">+576.24</span>
+      </div>
+    </div>
+
+    <div class="item d-flex flex-stack mb-4">
+      <span class="text-gray-600 fw-bold fs-7">3:55 PM</span>
+      <div>
+        <span class="text-dark fw-bold fs-7 me-5">$3,274.94</span>
+        <span class="text-success fw-bold fs-7">+124.03</span>
+      </div>
+    </div>
+    
+  </div>
+
+
 </div>
 <!-- end::Body -->

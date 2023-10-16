@@ -13,8 +13,8 @@ export class ListsWidget26Component implements OnInit {
   ngOnInit(): void {
     this.rows = [
       { description: 'Avg. Client Rating' },
-      { description: 'Instagram Followers' },
-      { description: 'Google Ads CPC' },
+      { description: 'Avg. Quotes' },
+      { description: 'Avg. Agent Earnings' },
     ];
   }
 }

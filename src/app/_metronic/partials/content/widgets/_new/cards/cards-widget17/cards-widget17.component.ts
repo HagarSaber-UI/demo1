@@ -84,6 +84,6 @@ const initChart = function (
 
   // Init
   drawCircle('#E4E6EF', options.lineWidth, 100 / 100);
-  drawCircle(getCSSVariableValue('--bs-primary'), options.lineWidth, 100 / 150);
+  drawCircle(getCSSVariableValue('--bs-primary-active'), options.lineWidth, 100 / 150);
   drawCircle(getCSSVariableValue('--bs-success'), options.lineWidth, 100 / 250);
 };

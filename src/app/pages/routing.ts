@@ -8,6 +8,12 @@ const Routing: Routes = [
     data: { layout: 'light-sidebar' },
   },
   {
+    path: 'dashboard-sales',
+    loadChildren: () =>
+      import('./dashboard-sales/dashboard-sales.module').then((m) => m.DashboardSalesModule),
+    data: { layout: 'light-sidebar' },
+  },
+  {
     path: 'contacts',
     loadChildren: () =>
       import('./contacts/contacts.module').then((m) => m.ContactsModule),

@@ -1,84 +1,106 @@
-<div class="card-header border-0 py-5" [ngClass]="'bg-' + chartColor">
-  <h3 class="card-title fw-bolder text-white">Sales Statistics</h3>
-  <div class="card-toolbar">
-    <!-- begin::Menu -->
-    <button
-      type="button"
-      class="
-        btn btn-sm btn-icon btn-color-white btn-active-white btn-active-color-
-        border-0
-        me-n3
-      "
-      data-kt-menu-trigger="click"
-      data-kt-menu-placement="bottom-end"
-      data-kt-menu-flip="top-end"
+<div class="card h-100">
+
+  
+
+  <div class="card-body bg-white p-0">
+    <div class="card pt-4 card-rounded-bottom" style="background: linear-gradient(102deg, #E2BA7C 0%, #CB9F5A 100%);">
+      <div class="d-flex px-8 border-0">
+        <!-- <h3 class="card-title fw-bolder text-white">Sales Statistics</h3> -->
+            <div class="card-toolbar ms-auto">
+            <!-- begin::Menu-->
+            <button class="btn btn-icon btn-color-gray-400 btn-active-color-primary justify-content-end"
+              data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end" data-kt-menu-overflow="true">
+              <app-keenicon name="dots-square" class="fs-1 text-white"></app-keenicon>
+            </button> 
+            <app-dropdown-menu2></app-dropdown-menu2> 
+            <!--end::Menu -->
+          </div>
+      </div>
+  
+      <div class="text px-8 h-200px card-rounded-bottom" 
+      style=
+      "background-image: url('./assets/media/patterns/man630.png');
+      background-size: cover;">
+        <h3 class="fw-bolder fs-1 text-white">Quotes</h3>
+        <div class="fs-5 fw-bold text-white">There are 4 new quote(s)</div>  
+      </div>
+    </div>
+  
+    <!-- end::Chart -->
+
+  </div>
+
+  <div class="px-8 pb-3 position-relative" style="margin-top: -8.5rem;">
+      <!-- begin::Row -->
+      <div class="row g-5">
+        <div class="col-6">
+        <div class="bg-light px-8 py-4 rounded-2 mb-5">
+          <app-keenicon name="dollar" class="fs-2x text-gray-800 d-block mt-2 mb-7"></app-keenicon>
+          <a href="#" class="fw-bold fs-2tx text-gray-700"> 46 </a>
+          <div class="fs-6 fw-bold text-gray-400">New Quotes</div>
+        </div>
+      </div>
+
+      <div class="col-6">
+        <div class="bg-light px-8 py-4 rounded-2 mb-5">
+          <app-keenicon name="flask" class="fs-2x text-gray-800 d-block mt-2 mb-7"></app-keenicon>
+          <a href="#" class="fw-bold fs-2tx text-gray-700"> 37 </a>
+          <div class="fs-6 fw-bold text-gray-400">Submitted</div>
+        </div>
+      </div>
+      </div>
+      <!-- end::Row -->
+
+      <!-- begin::Row -->
+      <div class="row g-5">
+        <!-- begin::Col -->
+        <div class="col-6">
+        <div class="bg-light px-8 py-4 rounded-2 mb-5">
+          <app-keenicon name="timer" class="fs-2x text-gray-800 d-block mt-2 mb-7"></app-keenicon>
+          <a href="#" class="fw-bold fs-2tx text-gray-700"> 822 </a>
+          <div class="fs-6 fw-bold text-gray-400">Pending</div>
+        </div>
+        </div>
+        <!-- end::Col -->
+        <!-- begin::Col -->
+        <div class="col-6">
+        <div class="bg-light px-8 py-4 rounded-2 mb-5">
+          <app-keenicon name="cup" class="fs-2x text-gray-800 d-block mt-2 mb-7"></app-keenicon>
+          <a href="#" class="fw-bold fs-2tx text-gray-700"> 4,7 </a>
+          <div class="fs-6 fw-bold text-gray-400">Completed</div>
+        </div>
+        </div>
+        <!-- end::Col -->
+      </div>
+      <!-- end::Row -->
+  </div>
+
+
+</div>
+
+
+
+    <!-- begin::Chart -->
+    <!-- <div
+  
+      #chartRef
+      class="mixed-widget-2-chart card-rounded-bottom"
+      
     >
-      <app-keenicon name="category" class="fs-2"></app-keenicon>
-    </button>
-    <app-dropdown-menu1></app-dropdown-menu1>
-    <!-- end::Menu -->
-  </div>
-</div>
-<!-- end::Header -->
-<!-- begin::Body -->
-<div class="card-body p-0">
-  <!-- begin::Chart -->
-  <div
-    #chartRef
-    class="mixed-widget-2-chart card-rounded-bottom"
-    [ngClass]="'bg-' + chartColor"
-  >
-    <apx-chart
-      [series]="chartOptions.series"
-      [chart]="chartOptions.chart"
-      [xaxis]="chartOptions.xaxis"
-      [yaxis]="chartOptions.yaxis"
-      [dataLabels]="chartOptions.dataLabels"
-      [stroke]="chartOptions.stroke"
-      [legend]="chartOptions.legend"
-      [fill]="chartOptions.fill"
-      [states]="chartOptions.states"
-      [tooltip]="chartOptions.tooltip"
-      [colors]="chartOptions.colors"
-      [markers]="chartOptions.markers"
-      [plotOptions]="chartOptions.plotOptions"
-    ></apx-chart>
-  </div>
-  <!-- end::Chart -->
-  <!-- begin::Stats -->
-  <div class="card-p mt-n20 position-relative">
-    <!-- begin::Row -->
-    <div class="row g-0">
-      <!-- begin::Col -->
-      <div class="col bg-light-warning px-6 py-8 rounded-2 me-7 mb-7">
-        <app-keenicon name="chart-simple" class="fs-3x text-warning d-block my-2"></app-keenicon>
-        <a href="#" class="text-warning fw-bold fs-6"> Weekly Sales </a>
-      </div>
-      <!-- end::Col -->
-      <!-- begin::Col -->
-      <div class="col bg-light-primary px-6 py-8 rounded-2 mb-7">
-        <app-keenicon name="briefcase" class="fs-3x text-primary d-block my-2"></app-keenicon>
-        <a href="#" class="text-primary fw-bold fs-6"> New Projects </a>
-      </div>
-      <!-- end::Col -->
-    </div>
-    <!-- end::Row -->
-    <!-- begin::Row -->
-    <div class="row g-0">
-      <!-- begin::Col -->
-      <div class="col bg-light-danger px-6 py-8 rounded-2 me-7">
-        <app-keenicon name="abstract-26" class="fs-3x text-danger d-block my-2"></app-keenicon>
-        <a href="#" class="text-danger fw-bold fs-6 mt-2"> Item Orders </a>
-      </div>
-      <!-- end::Col -->
-      <!-- begin::Col -->
-      <div class="col bg-light-success px-6 py-8 rounded-2">
-        <app-keenicon name="sms" class="fs-3x text-success d-block my-2"></app-keenicon>
-        <a href="#" class="text-success fw-bold fs-6 mt-2"> Bug Reports </a>
-      </div>
-      <!-- end::Col -->
-    </div>
-    <!-- end::Row -->
-  </div>
-  <!-- end::Stats -->
-</div>
+      <apx-chart
+        [series]="chartOptions.series"
+        [chart]="chartOptions.chart"
+        [xaxis]="chartOptions.xaxis"
+        [yaxis]="chartOptions.yaxis"
+        [dataLabels]="chartOptions.dataLabels"
+        [stroke]="chartOptions.stroke"
+        [legend]="chartOptions.legend"
+        [fill]="chartOptions.fill"
+        [states]="chartOptions.states"
+        [tooltip]="chartOptions.tooltip"
+        [colors]="chartOptions.colors"
+        [markers]="chartOptions.markers"
+        [plotOptions]="chartOptions.plotOptions"
+      ></apx-chart>
+    </div>  -->
+  
